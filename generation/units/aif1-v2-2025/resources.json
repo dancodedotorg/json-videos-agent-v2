@@ -1,0 +1,1183 @@
+{
+  "unit_summary": {
+    "title": "Unit 1 - Problem Solving with AI",
+    "name": "aif1-v2-2025",
+    "link": "/courses/artificial-intelligence-foundations-2026/units/1",
+    "lessons": [
+      {
+        "key": "Lesson 1: Talking to Machines",
+        "position": 1,
+        "displayName": "Lesson 1: Talking to Machines",
+        "preparation": "- Print copies of the Problem Solving with AI Unit Guide (one for each student)",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394839,
+              "key": "plan_a_perfect_trip_with_chatgpt",
+              "name": "Plan a Perfect Trip with ChatGPT",
+              "url": "https://www.youtube.com/watch?v=J3Oh2-cVrgs",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Video"
+            },
+            {
+              "id": 17394840,
+              "key": "problem_solving_with_ai",
+              "name": "Problem Solving with AI",
+              "url": "https://www.youtube.com/watch?v=O_VjO1cx-No",
+              "downloadUrl": "https://videos.code.org/levelbuilder/ai2025problemsolving_2_compressed-mp4.mp4",
+              "download_url": "https://videos.code.org/levelbuilder/ai2025problemsolving_2_compressed-mp4.mp4",
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Video"
+            },
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [
+          {
+            "key": "abstraction",
+            "word": "abstraction",
+            "definition": "focusing on the important information and ignoring irrelevant details"
+          },
+          {
+            "key": "artificial_intelligence_ai_",
+            "word": "artificial intelligence (AI)",
+            "definition": "a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions"
+          },
+          {
+            "key": "probability",
+            "word": "probability",
+            "definition": "the likelihood that a specific outcome might occur"
+          },
+          {
+            "key": "prompt",
+            "word": "prompt",
+            "definition": "a question, instruction, scenario, or statement provided by the user to guide the AI's response"
+          }
+        ],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821859,
+            "description": "Analyze patterns in AI-generated responses to explain how input prompts influence outputs."
+          },
+          {
+            "id": 7821843,
+            "description": "Experiment with different prompts to observe how AI’s responses change."
+          },
+          {
+            "id": 7821868,
+            "description": "Explain that AI models use probability and statistics to generate responses."
+          },
+          {
+            "id": 7821862,
+            "description": "Refine AI-generated outputs by iterating on prompts and recognizing patterns in responses."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "CS",
+            "categoryDescription": "Computing Systems",
+            "shortcode": "3A-CS-01",
+            "description": "Explain how abstractions hide the underlying implementation details of computing systems embedded in everyday objects."
+          },
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "AP",
+            "categoryDescription": "Algorithms & Programming",
+            "shortcode": "3B-AP-08",
+            "description": "Describe how artificial intelligence drives many software and physical systems."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/1",
+        "title": "Lesson 1: Talking to Machines"
+      },
+      {
+        "key": "Lesson 2: Beyond Words",
+        "position": 2,
+        "displayName": "Lesson 2: Beyond Words",
+        "preparation": "",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [
+          {
+            "key": "multimodal_model",
+            "word": "multimodal model",
+            "definition": "an AI system that can process information from multiple types of input"
+          }
+        ],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821850,
+            "description": "Compare how AI-generated outputs change based on the type of input provided."
+          },
+          {
+            "id": 7821831,
+            "description": "Experiment with different media inputs to observe AI’s interpretation and limitations."
+          },
+          {
+            "id": 7821852,
+            "description": "Explain that multimodal AI models process information from multiple types of input."
+          },
+          {
+            "id": 7821839,
+            "description": "Identify privacy and ethical concerns when using AI with multimedia data."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "AP",
+            "categoryDescription": "Algorithms & Programming",
+            "shortcode": "3A-AP-18",
+            "description": "Create artifacts by using procedures within a program, combinations of data and procedures, or independent but interrelated programs."
+          },
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "AP",
+            "categoryDescription": "Algorithms & Programming",
+            "shortcode": "3A-AP-21",
+            "description": "Evaluate and refine computational artifacts to make them more usable and accessible."
+          },
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "IC",
+            "categoryDescription": "Impacts of Computing",
+            "shortcode": "3A-IC-24",
+            "description": "Evaluate the ways computing impacts personal, ethical, social, economic, and cultural practices."
+          },
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "IC",
+            "categoryDescription": "Impacts of Computing",
+            "shortcode": "3A-IC-29",
+            "description": "Explain the privacy concerns related to the collection and generation of data through automated processes that may not be evident to users."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/2",
+        "title": "Lesson 2: Beyond Words"
+      },
+      {
+        "key": "Lesson 3: The AI's Brain",
+        "position": 3,
+        "displayName": "Lesson 3: The AI's Brain",
+        "preparation": "- Print copies of the Unplugged Neural Networks Activity Guide (one for each student)",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394835,
+              "key": "how_chatbots_and_large_language_models_work",
+              "name": "How Chatbots and Large Language Models Work",
+              "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Video"
+            },
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            },
+            {
+              "id": 17394843,
+              "key": "unplugged_neural_networks",
+              "name": "Unplugged Neural Networks",
+              "url": "https://docs.google.com/document/d/168FsA22aT-Tup4H9OHIvffToo6N2PDSL8u07AgdJgec/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [
+          {
+            "key": "large_language_model_llm_",
+            "word": "large language model (LLM)",
+            "definition": "a general purpose form of AI that is trained on a very, very large body of knowledge"
+          },
+          {
+            "key": "neural_network",
+            "word": "neural network",
+            "definition": "an interconnected network that makes decisions using weights and hidden layers. It is used to represent the relationship between words"
+          },
+          {
+            "key": "training",
+            "word": "training",
+            "definition": "the process of teaching an AI model by exposing it to large amounts of data, allowing it to learn patterns, improve accuracy, and refine its predictions over time"
+          },
+          {
+            "key": "training_data",
+            "word": "training data",
+            "definition": "the structured or unstructured information, such as text, images, or code, used to train an AI model and shape its ability to recognize patterns and generate accurate responses"
+          }
+        ],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821854,
+            "description": "Analyze how training data shapes AI behavior and biases."
+          },
+          {
+            "id": 7821869,
+            "description": "Evaluate how AI’s learning affects accuracy and reliability."
+          },
+          {
+            "id": 7821845,
+            "description": "Experiment with AI responses to identify learning patterns."
+          },
+          {
+            "id": 7821841,
+            "description": "Explain how AI models, especially LLMs, use neural networks and training data."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "AP",
+            "categoryDescription": "Algorithms & Programming",
+            "shortcode": "3B-AP-08",
+            "description": "Describe how artificial intelligence drives many software and physical systems."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/3",
+        "title": "Lesson 3: The AI's Brain"
+      },
+      {
+        "key": "Lesson 4: Smart or Just Predictable?",
+        "position": 4,
+        "displayName": "Lesson 4: Smart or Just Predictable?",
+        "preparation": "",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [
+          {
+            "key": "hallucination",
+            "word": "hallucination",
+            "definition": "when the model makes up false or misleading information that sounds real but isn’t true"
+          }
+        ],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821832,
+            "description": "Compare AI and human performance to identify AI’s strengths and weaknesses."
+          },
+          {
+            "id": 7821864,
+            "description": "Evaluate AI’s reliability and when human oversight is needed."
+          },
+          {
+            "id": 7821847,
+            "description": "Justify when AI should or shouldn’t be used in real-world cases."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "IC",
+            "categoryDescription": "Impacts of Computing",
+            "shortcode": "3A-IC-24",
+            "description": "Evaluate the ways computing impacts personal, ethical, social, economic, and cultural practices."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/4",
+        "title": "Lesson 4: Smart or Just Predictable?"
+      },
+      {
+        "key": "Lesson 5: Uncovering Contradictions",
+        "position": 5,
+        "displayName": "Lesson 5: Uncovering Contradictions",
+        "preparation": "- Print copies of the Examine AI Contradictions activity guide (one for each pair of students)",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394833,
+              "key": "examining_ai_contradictions",
+              "name": "Examining AI Contradictions",
+              "url": "https://docs.google.com/document/d/1h9wgXbJZFF6FMUopFYq-SqhExAi7Yn4E2QBAuv9_oV0/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            },
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [
+          {
+            "key": "context",
+            "word": "context",
+            "definition": "additional information or data surrounding a prompt or query that helps the AI generate more accurate and relevant responses"
+          },
+          {
+            "key": "contradiction",
+            "word": "contradiction",
+            "definition": "when an AI generates conflicting or opposing responses based on a similar input, making it impossible for both responses to be correct at the same time"
+          }
+        ],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821857,
+            "description": "Analyze how AI’s reliance on probability-based models can lead to inconsistencies."
+          },
+          {
+            "id": 7821848,
+            "description": "Evaluate the implications of AI-generated contradictions in real-world applications."
+          },
+          {
+            "id": 7821856,
+            "description": "Experiment with AI to uncover contradictions and explain why they occur."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "CS",
+            "categoryDescription": "Computing Systems",
+            "shortcode": "3A-CS-03",
+            "description": "Develop guidelines that convey systematic troubleshooting strategies that others can use to identify and fix errors."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/5",
+        "title": "Lesson 5: Uncovering Contradictions"
+      },
+      {
+        "key": "Lesson 6: Understanding Bias",
+        "position": 6,
+        "displayName": "Lesson 6: Understanding Bias",
+        "preparation": "- Print copies of the AI Audit activity guide (one for each student)",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394826,
+              "key": "ai_audit",
+              "name": "AI Audit",
+              "url": "https://docs.google.com/document/d/1AWjOcaVEHH6Ac4AvFvkzW7q2YRMmgviebXg5H8zi5WM/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            },
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [
+          {
+            "key": "ai_bias",
+            "word": "AI bias",
+            "definition": "when a model favors certain information over others"
+          },
+          {
+            "key": "alignment",
+            "word": "alignment",
+            "definition": "ensuring an AI system’s goals and outputs match human values, fairness, and safety"
+          }
+        ],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821842,
+            "description": "Analyze AI-generated responses to identify bias and assess its impact on fairness."
+          },
+          {
+            "id": 7821837,
+            "description": "Experiment with AI prompts and data inputs to explore how they affect AI bias."
+          },
+          {
+            "id": 7821846,
+            "description": "Explain how AI bias emerges from training data and influences AI-generated outputs."
+          },
+          {
+            "id": 7821840,
+            "description": "Identify strategies for mitigating bias in AI systems and evaluating ethical considerations."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "IC",
+            "categoryDescription": "Impacts of Computing",
+            "shortcode": "3A-IC-25",
+            "description": "Test and refine computational artifacts to reduce bias and equity deficits."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/6",
+        "title": "Lesson 6: Understanding Bias"
+      },
+      {
+        "key": "Lesson 7: AI's Wild Imagination",
+        "position": 7,
+        "displayName": "Lesson 7: AI's Wild Imagination",
+        "preparation": "- Print copies of the Hallucination Case Studies activity guide (one per student)\n- Print copies of the Jigsaw Articles (one copy group of four students)",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394834,
+              "key": "hallucination_case_studies",
+              "name": "Hallucination Case Studies",
+              "url": "https://docs.google.com/document/d/1sULqyWw0YVmt_n3XNSwuTJqGhUqB2HQtDVnr2Ufrf3o/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            },
+            {
+              "id": 17394836,
+              "key": "jigsaw_articles",
+              "name": "Jigsaw Articles",
+              "url": "https://docs.google.com/document/d/1Ts7OnRbtooAKrlj92wMV76XE_PANXwENCMIFz7gFUPM/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Handout"
+            },
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821853,
+            "description": "Evaluate AI-generated content for accuracy and potential hallucinations."
+          },
+          {
+            "id": 7821851,
+            "description": "Explain the potential risks and consequences of AI hallucinations in real-world scenarios."
+          },
+          {
+            "id": 7821834,
+            "description": "Identify strategies to reduce AI hallucinations."
+          },
+          {
+            "id": 7821860,
+            "description": "Recognize AI hallucinations and describe how they happen."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "IC",
+            "categoryDescription": "Impacts of Computing",
+            "shortcode": "3A-IC-24",
+            "description": "Evaluate the ways computing impacts personal, ethical, social, economic, and cultural practices."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/7",
+        "title": "Lesson 7: AI's Wild Imagination"
+      },
+      {
+        "key": "Lesson 8: Debugging and Refining Outputs",
+        "position": 8,
+        "displayName": "Lesson 8: Debugging and Refining Outputs",
+        "preparation": "- Prepare a classroom anchor chart containing five columns - Task, Context, Format, Reference, and Tone.",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394830,
+              "key": "ai_s_hottest_new_job_pays_up_to_250k_a_year_so_i_applied_wsj_",
+              "name": "AI’s Hottest New Job Pays Up to $250K a Year. So I Applied. | WSJ ",
+              "url": "https://www.youtube.com/watch?v=whkge1rEamU",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Video"
+            },
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [
+          {
+            "key": "prompt_engineering",
+            "word": "prompt engineering",
+            "definition": "the process of creating precise and effective prompts to guide generative AI models"
+          }
+        ],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821838,
+            "description": "Apply debugging techniques to improve AI-generated responses."
+          },
+          {
+            "id": 7821835,
+            "description": "Explain how prompt refinement improves AI outputs."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "CS",
+            "categoryDescription": "Computing Systems",
+            "shortcode": "3A-CS-03",
+            "description": "Develop guidelines that convey systematic troubleshooting strategies that others can use to identify and fix errors."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/8",
+        "title": "Lesson 8: Debugging and Refining Outputs"
+      },
+      {
+        "key": "Lesson 9: AI as a Co-Creator",
+        "position": 9,
+        "displayName": "Lesson 9: AI as a Co-Creator",
+        "preparation": "- Print copies of the Collaborate on a Product Launch activity guide (one for each student)",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394831,
+              "key": "collaborate_on_a_product_launch",
+              "name": "Collaborate on a Product Launch",
+              "url": "https://docs.google.com/document/d/1DVcGVVtJlZkDlP2v-JGoFNcGLcCqvEh7RTpjRGmfDjU/edit?usp=drive_link",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            },
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [
+          {
+            "key": "co_creating",
+            "word": "co-creating",
+            "definition": "humans and AI working together, with humans providing creativity and direction, while AI assists by processing data, generating suggestions, or automating tasks"
+          }
+        ],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821867,
+            "description": "Analyze the strengths and weaknesses of AI-generated creative work compared to human-created content."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "AP",
+            "categoryDescription": "Algorithms & Programming",
+            "shortcode": "3A-AP-21",
+            "description": "Evaluate and refine computational artifacts to make them more usable and accessible."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/9",
+        "title": "Lesson 9: AI as a Co-Creator"
+      },
+      {
+        "key": "Lesson 10: Remixing, Creativity, and Originality",
+        "position": 10,
+        "displayName": "Lesson 10: Remixing, Creativity, and Originality",
+        "preparation": "- Prepare copies of the AI Remix Challenge activity guide (one for each student)",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394829,
+              "key": "ai_remix_challenge",
+              "name": "AI Remix Challenge",
+              "url": "https://docs.google.com/document/d/1tm3V4fSes25EiVYMKfYIGgFVe8ZZykhVanhopJeHeVs/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            },
+            {
+              "id": 17394832,
+              "key": "create_a_game_using_ai",
+              "name": "Create a Game Using AI",
+              "url": "https://www.youtube.com/shorts/WVWayzc07Ug?si=5o6-VsfhK2XMcEN5",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Video"
+            },
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821861,
+            "description": "Analyze the role of human creativity in AI-assisted content generation."
+          },
+          {
+            "id": 7821849,
+            "description": "Evaluate the strengths and limitations of generative AI."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "IC",
+            "categoryDescription": "Impacts of Computing",
+            "shortcode": "3A-IC-24",
+            "description": "Evaluate the ways computing impacts personal, ethical, social, economic, and cultural practices."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/10",
+        "title": "Lesson 10: Remixing, Creativity, and Originality"
+      },
+      {
+        "key": "Lesson 11: Ownership, Ethics, and Creativity",
+        "position": 11,
+        "displayName": "Lesson 11: Ownership, Ethics, and Creativity",
+        "preparation": "- Review the Ownership and AI Stations Resource to see how to set up your room for the Stations activity in the lesson\n- Print copies of the Station Instructions from the Ownership and AI Stations resource.\n- Print copies of the Ownership and AI Stations activity guide (one for each student)",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394837,
+              "key": "ownership_and_ai_stations",
+              "name": "Ownership and AI Stations",
+              "url": "https://docs.google.com/document/d/1BBvvbW5e3rCXOLsvZ58fHR2SNNzHU27uSnBsXxUDUsY/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            },
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394838,
+              "key": "ownership_and_ai_stations_1",
+              "name": "Ownership and AI Stations",
+              "url": "https://docs.google.com/document/d/1Eh2TASGZ7z0Wncry96Yg1ZZgiPQOOpUqizRQY8RnxO0/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Resource"
+            },
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [
+          {
+            "key": "attribution",
+            "word": "attribution",
+            "definition": "the act of giving credit to the original creator of a work, especially in the context of using or referencing their material"
+          },
+          {
+            "key": "copyright",
+            "word": "copyright",
+            "definition": "the legal right granted to the creator of an original work to use, distribute, and modify it"
+          },
+          {
+            "key": "ethics",
+            "word": "ethics",
+            "definition": "a guide for responsible choices about emerging technologies, ensuring privacy, consent, and safety for everyone"
+          },
+          {
+            "key": "transparency",
+            "word": "transparency",
+            "definition": "the practice of openly disclosing how something works, especially in terms of decision-making, data use, or AI processes"
+          }
+        ],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821836,
+            "description": "Evaluate the role of AI as a collaborator in creative work, including how it can support or undermine the contributions of human creators."
+          },
+          {
+            "id": 7821844,
+            "description": "Justify how AI should be used in creative situations, considering ethical, practical, and societal values."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "IC",
+            "categoryDescription": "Impacts of Computing",
+            "shortcode": "3A-IC-28",
+            "description": "Explain the beneficial and harmful effects that intellectual property laws can have on innovation."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/11",
+        "title": "Lesson 11: Ownership, Ethics, and Creativity"
+      },
+      {
+        "key": "Lesson 12: AI's Role in Society",
+        "position": 12,
+        "displayName": "Lesson 12: AI's Role in Society",
+        "preparation": "",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394827,
+              "key": "ai_in_grocery_stores_-_1",
+              "name": "AI In Grocery Stores - 1 ",
+              "url": "https://drive.google.com/file/d/1-MykYtR1K7qzncS7F7v34_2kCkJCa7DN/view",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Resource"
+            },
+            {
+              "id": 17394828,
+              "key": "ai_in_the_community",
+              "name": "AI in the Community",
+              "url": "https://docs.google.com/document/d/1swk3Ytu52zPLdffHXsKMbNDrTTI87NIX9nZzSHQtBag/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            },
+            {
+              "id": 17394841,
+              "key": "problem_solving_with_ai_unit_guide",
+              "name": "Problem Solving with AI Unit Guide",
+              "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            },
+            {
+              "id": 17394842,
+              "key": "unicef_youth_advocate_ayshka_on_mental_health",
+              "name": "UNICEF Youth Advocate Ayshka on Mental Health",
+              "url": "https://youtu.be/zsiMg1zRdWU?si=hcMihJqh28_QfkwD",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Video"
+            }
+          ],
+          "Teacher": [
+            {
+              "id": 17394219,
+              "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+              "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+              "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Teacher",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Answer Key"
+            }
+          ]
+        },
+        "vocabularies": [],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821863,
+            "description": "Assess the environmental costs of AI, including energy consumption and carbon emissions."
+          },
+          {
+            "id": 7821858,
+            "description": "Evaluate AI’s societal impact by investigating its effects on different community groups."
+          },
+          {
+            "id": 7821833,
+            "description": "Propose equitable AI solutions to ensure responsible and inclusive implementation."
+          }
+        ],
+        "standards": [
+          {
+            "frameworkName": "CSTA K-12 Computer Science Standards (2017)",
+            "parentCategoryShortcode": null,
+            "parentCategoryDescription": null,
+            "categoryShortcode": "IC",
+            "categoryDescription": "Impacts of Computing",
+            "shortcode": "3A-IC-24",
+            "description": "Evaluate the ways computing impacts personal, ethical, social, economic, and cultural practices."
+          }
+        ],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/12",
+        "title": "Lesson 12: AI's Role in Society"
+      },
+      {
+        "key": "Lesson 13: AI Time Capsule Project",
+        "position": 13,
+        "displayName": "Lesson 13: AI Time Capsule Project",
+        "preparation": "- Print copies of the AI Time Capsule Project Planning Guide (one per student)",
+        "resources": {
+          "Student": [
+            {
+              "id": 17394224,
+              "key": "ai_time_capsule_project_planning_guide",
+              "name": "AI Time Capsule Project Planning Guide",
+              "url": "https://docs.google.com/document/d/12ERoL_ehwCFg2KE9PhQpNr59XCZIT_CtnLKkTfNyAkQ/edit?usp=drivesdk",
+              "downloadUrl": null,
+              "download_url": null,
+              "audience": "Student",
+              "embeddabilityType": "embed_and_resource_dropdown",
+              "curriculumCategory": "",
+              "type": "Activity Guide"
+            }
+          ]
+        },
+        "vocabularies": [],
+        "programmingExpressions": [],
+        "objectives": [
+          {
+            "id": 7821870,
+            "description": "Create a presentation that explains how you collaborated with AI to shape and improve your final prediction."
+          },
+          {
+            "id": 7821855,
+            "description": "Develop a future prediction by combining research with AI-generated insights."
+          },
+          {
+            "id": 7821866,
+            "description": "Evaluate AI outputs for accuracy, inclusivity, and real-world relevance."
+          },
+          {
+            "id": 7821865,
+            "description": "Refine predictions by improving prompts and applying human reasoning."
+          }
+        ],
+        "standards": [],
+        "link": "/courses/artificial-intelligence-foundations-2026/units/1/lessons/13",
+        "title": "Lesson 13: AI Time Capsule Project"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+# Google APIs
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-genai
+
+# ElevenLabs TTS
+elevenlabs
+
+# PDF generation
+xhtml2pdf
+
+# HTTP client
+httpx
+
+# Markdown rendering
+markdown
+
+# Image processing
+Pillow
+
+# Audio processing (Gemini TTS PCM → MP3 conversion)
+pydub
+
+# Data validation
+pydantic
+
+# Utilities
+python-dotenv

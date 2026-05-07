@@ -1,0 +1,27 @@
+{
+    "Panels": {
+        "panels": {
+            "text": "str",
+            "imageUrl": "str"
+        }
+    },
+    "Aichat": {
+        "longInstructions": "str"
+    },
+    "FreeResponse": {
+        "longInstructions": "str",
+        "teacherMarkdown": "str"
+    },
+    "Multi": {
+        "questions": {
+            "text": "str"
+        },
+        "answers": {
+            "text": "str",
+            "correct": "bool"
+        }
+    },
+    "External": {
+        "markdown": "str"
+    }
+}

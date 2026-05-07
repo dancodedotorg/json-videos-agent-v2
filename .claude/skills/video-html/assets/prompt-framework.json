@@ -1,0 +1,47 @@
+{
+  "Library_Name": "Educational Video Visual Framework v3",
+
+  "Video_Constants": {
+    "_note": "Decided ONCE per video before any scene generation. Do not re-select per scene. Declare in the Video Visual Constants block of the scene plan (Step 2). Subject selection (human, abstract, literal object) is a per-scene decision made by the Video Director based on scene content — it is not a video-level constant.",
+
+    "Visual_Presets": {
+      "Minimal_Vector": "Clean vector illustration, strong precise linework, hard-edged geometric shading, clean bezier curves, consistent line-weight, harmonious limited color palette, matte finish.",
+      "Textured_Editorial": "Detailed graphic novel realism, textured linework, screen-print aesthetic, stylized gouache paint texture, warm color palette, opaque flat color blocks, hand-crafted aesthetic, visible grain finish.",
+      "Digital_Glass": "Clean modern vector forms, translucent frosted-glass layers, soft vibrant gradients, sharp vector-edge highlights, contemporary UI illustration style, sleek and precise."
+    }
+  },
+
+  "Technical_Specs": {
+    "_note": "Select per scene based on the target template. The spec encodes the aspect ratio — use the matching --aspect-ratio flag when calling gemini-image-gen.py.",
+
+    "Graphic_Staging": "Centered graphic weight, three-quarter perspective, 16:9 aspect ratio, uniform lighting, balanced negative space. → Template: header-with-image. → Flag: --aspect-ratio 16:9",
+
+    "Isometric_Structure": "Isometric perspective with 30-degree angles, 16:9 aspect ratio, non-converging parallel lines, flat-lit surfaces. → Template: header-with-image (best for technical/spatial concepts: servers, networks, data structures, systems, architecture). → Flag: --aspect-ratio 16:9",
+
+    "Vertical_Hierarchy": "Vertical portrait composition, 9:16 aspect ratio, bottom-to-top visual flow, flat orthographic rendering. → Templates: two-column-quote-with-image, bullets-with-image. → Flag: --aspect-ratio 9:16"
+  },
+
+  "Defaults": {
+    "_note": "Include ALL FOUR of these in every prompt without exception. They are not choices — they are always-on guardrails.",
+
+    "Clean_Design": "A clean, wordless design entirely devoid of letters, numbers, or symbols. Surfaces are smooth and uncluttered.",
+
+    "Simple_Environment": "A minimalist environment with large areas of empty space. The composition is focused and free of distracting background elements.",
+
+    "Slide_Safe_Zone": "All essential action and subjects are strictly contained within the inner 60% of the frame. The outer margins remain empty.",
+
+    "Complementary_Palette": "Muted, desaturated tones in all background and environmental elements. Saturated color is reserved for the primary subject only. The overall palette harmonizes with a teal and purple branded interface without competing."
+  },
+
+  "Optional_Modifiers": {
+    "_note": "Add situationally — pick only what the scene genuinely needs. Do not add all of them.",
+
+    "Sequence_Anchor": "The setting, lighting temperature, character design, and color treatment must visually match the sequence established in this video's earlier scenes. Reuse the same environment and subject appearance.",
+
+    "Dynamic_Action": "The primary subject is in active motion or mid-gesture, conveying energy, movement, and forward momentum.",
+
+    "Calm_Focus": "The primary subject is still and composed, conveying concentration, stability, or quiet clarity.",
+
+    "Isometric_Detail": "Rich isometric scene with layered depth: foreground subject, midground environment, and simplified background plane. Each layer is clearly separated by elevation."
+  }
+}
