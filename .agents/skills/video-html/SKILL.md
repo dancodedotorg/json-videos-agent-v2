@@ -31,7 +31,7 @@ All steps below use VIDEO_ROOT derived above.
 
 - `pipeline.script` must be `"complete"` in `script.json`
 - Check `pipeline.audio`: if `"complete"`, present the audio check-in at Step 2 before proceeding
-- Scripts are bundled in `.claude/skills/video-html/scripts/`
+- Scripts are bundled in `.agents/skills/video-html/scripts/`
 
 ## Gotchas
 
@@ -122,7 +122,7 @@ Load only what's needed to plan slides:
 
 **Only if creating a new template from scratch (not for routine generation):**
 - `references/design-guide.md` — color palette, typography scale, layout constraints for template authoring
-- `.claude/skills/video-html/assets/boilerplate.html` — canonical boilerplate CSS block to copy into the new template
+- `.agents/skills/video-html/assets/boilerplate.html` — canonical boilerplate CSS block to copy into the new template
 
 Do not load individual HTML templates yet — load only the ones needed for the approved scene plan in Step 5.
 
@@ -253,7 +253,7 @@ Once the content spec is approved, load only the templates and tools the plan ac
 - This includes SVG pattern templates (`svg-flow`, `svg-bar-chart`, `svg-word-display`) — load only the specific ones in the plan, not all three.
 
 **If any Image Gen scenes exist (always for Mode C; per plan for Mode D):**
-- `.claude/skills/video-html/scripts/gemini-image-gen.py`
+- `.agents/skills/video-html/scripts/gemini-image-gen.py`
 
 ---
 

@@ -37,7 +37,7 @@ OUTPUT_PATH = `<VIDEO_ROOT>/script_assembled_base64.json`
 ### 1. Embed all assets (images + audio)
 
 ```bash
-python .claude/skills/video-assemble/scripts/embed-data.py <SCRIPT_PATH> <OUTPUT_PATH>
+python .agents/skills/video-assemble/scripts/embed-data.py <SCRIPT_PATH> <OUTPUT_PATH>
 ```
 
 This writes `script_assembled_base64.json` with all local assets embedded as base64 data URIs in a single pass:

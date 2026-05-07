@@ -35,7 +35,7 @@ from lib.codeorg import (
 )
 
 # Resolve repo root from __file__ location (cwd-independent)
-# google-fetch.py -> scripts -> lesson-ground -> skills -> .claude -> repo root
+# google-fetch.py -> scripts -> lesson-ground -> skills -> .agents -> repo root
 _REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(_REPO_ROOT / "generation" / "tools"))
 from text_utils import normalize_text, normalize_data

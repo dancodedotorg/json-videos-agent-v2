@@ -37,7 +37,7 @@ def main():
 
     print(f"Initializing {len(lessons)} lessons for unit '{unit}'...\n")
 
-    init_script = _REPO_ROOT / ".claude" / "skills" / "lesson-init" / "scripts" / "init_lesson.py"
+    init_script = _REPO_ROOT / ".agents" / "skills" / "lesson-init" / "scripts" / "init_lesson.py"
     success, failure = 0, 0
 
     for lesson in lessons:

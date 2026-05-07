@@ -128,11 +128,11 @@ All slides follow a fixed-canvas approach: designed at **1600×900px**, scaled t
 - **No external dependencies** except Google Fonts (Barlow Semi Condensed + Figtree)
 - **Every slide includes the same boilerplate** `<style>` block — never modify it. There is no resize script.
 
-See `.claude/skills/video-html/references/design-guide.md` for the full color palette, typography scale, and layout principles.
+See `.agents/skills/video-html/references/design-guide.md` for the full color palette, typography scale, and layout principles.
 
 ## Generating Slides
 
-**Full guidance is in `.claude/skills/video-html/references/`.** Two key files:
+**Full guidance is in `.agents/skills/video-html/references/`.** Two key files:
 
 - `template-selection.md` — visual approach overview (text vs. image gen vs. SVG) and template catalog; used during planning
 - `generation-guide.md` — connected sequences, slide text density, HTML requirements, animation guidelines; used during generation
@@ -141,7 +141,7 @@ Key points:
 
 - There are three visual approaches: text-based HTML templates, AI image generation, and inline SVG
 - Always read the full script before assessing individual scenes — connected sequences must be identified and planned as a group before any generation begins
-- Use the `/video-html` skill (`.claude/skills/video-html/`) as the task specification when starting a new slide generation session
+- Use the `/video-html` skill (`.agents/skills/video-html/`) as the task specification when starting a new slide generation session
 
 ## Tools
 
@@ -163,7 +163,7 @@ Canonical path helper module. Provides functions like `unit_root()`, `lesson_roo
 
 Always use `python` (not `python3`) when running scripts from the shell.
 
-**Skill script paths:** Script paths inside skill instructions (e.g., `scripts/foo.py`) are relative to the skill's own directory, not the project root. When running commands from a skill, expand them to their full project-relative form: `.claude/skills/<skill-name>/scripts/foo.py`. For example, `python scripts/fetch_unit.py` in the `unit-init` skill becomes `python .claude/skills/unit-init/scripts/fetch_unit.py`.
+**Skill script paths:** Script paths inside skill instructions (e.g., `scripts/foo.py`) are relative to the skill's own directory, not the project root. When running commands from a skill, expand them to their full project-relative form: `.agents/skills/<skill-name>/scripts/foo.py`. For example, `python scripts/fetch_unit.py` in the `unit-init` skill becomes `python .agents/skills/unit-init/scripts/fetch_unit.py`.
 
 ## Player Development
 

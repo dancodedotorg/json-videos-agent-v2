@@ -28,7 +28,7 @@ TOOLS_DIR = Path(__file__).parent
 GOOGLE_FETCH = TOOLS_DIR / "google-fetch.py"
 
 # Resolve repo root from __file__ location (cwd-independent)
-# ground-lesson.py -> scripts -> lesson-ground -> skills -> .claude -> repo root
+# ground-lesson.py -> scripts -> lesson-ground -> skills -> .agents -> repo root
 _REPO_ROOT = Path(__file__).resolve().parents[4]
 
 KNOWN_TYPES = {

@@ -13,7 +13,7 @@ from google.oauth2.service_account import Credentials
 from google.auth.transport.requests import AuthorizedSession
 
 # Resolve repo root from __file__ location (cwd-independent)
-# lib/google_auth.py -> scripts/lib -> scripts -> lesson-ground -> skills -> .claude -> repo root
+# lib/google_auth.py -> scripts/lib -> scripts -> lesson-ground -> skills -> .agents -> repo root
 _REPO_ROOT = Path(__file__).resolve().parents[5]
 load_dotenv(_REPO_ROOT / "generation" / "tools" / ".env")
 
