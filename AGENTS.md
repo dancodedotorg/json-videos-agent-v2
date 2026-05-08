@@ -1,6 +1,6 @@
 # json-video-player
 
-A browser-based "fake video player" that plays structured JSON files instead of real video. Each JSON file describes a sequence of scenes, where each scene is a self-contained HTML document rendered in an iframe. Designed to be LLM-friendly: simple enough for an AI to generate, human-editable, and exportable to MP4 via FFmpeg.js.
+A browser-based "fake video player" that plays structured JSON files instead of real video. Each JSON file describes a sequence of scenes, where each scene is a self-contained HTML document rendered in an iframe. Designed to be LLM-friendly: simple enough for an AI to generate, human-editable, and exportable to MP4 via FFmpeg.js. 
 
 ## Project Structure
 
