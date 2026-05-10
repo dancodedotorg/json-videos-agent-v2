@@ -11,7 +11,7 @@ Generate the voiceover script for a video.
 
 - [ ] Path detection + prereq check
 - [ ] Mode selection (wait for user)
-- [ ] Read all source material
+- [ ] Load source materials as artifacts
 - [ ] Apply target_objectives lens
 - [ ] Generate scenes (read mode style guide first)
 - [ ] Write scenes to script.json via write-scenes.py
@@ -36,7 +36,6 @@ All steps below use SCRIPT_PATH and SOURCE_PATH derived above.
 ## Gotchas
 
 - **Slides with no speaker notes:** synthesize narration from the slide title and visible content — do not skip the slide.
-- **JSON source files require preprocessing:** always run `base64_clean.py` before reading any `.json` in SOURCE_PATH. Skipping this step will likely cause token overload or read errors.
 - **`write-scenes.py` writes to disk:** write scenes to a temp `scenes_draft.json` in the video folder, then run the script. Do not manually edit `script.json` to insert scenes.
 
 ## Step 1: Read script.json metadata
@@ -60,28 +59,30 @@ Ask the user to choose a generation mode before doing anything:
 
 Wait for the user's response before proceeding. If `co-create`, also ask for the brief.
 
-## Step 3: Read Source Material
+## Step 3: Load Source Material as Artifacts
 
-Start by listing all files in SOURCE_PATH so you know exactly what exists before deciding what to read — this catches manually-added files that weren't produced by the fetch pipeline.
+**Phase A — Ensure artifacts are loaded:**
 
-Read **all** source files for complete grounding context. Run base64_clean.py on JSON files as a safety precaution before reading.
+Call `load_lesson_sources(unit=UNIT, lesson=LESSON_SLUG)`. This tool reads source files from disk and saves them as session artifacts. It is idempotent — if artifacts for this lesson already exist in the session it returns `status: already_loaded` immediately. If it returns `status: error`, stop and tell the user to run `/lesson-ground $UNIT $LESSON_SLUG` first.
 
-**PDF files** (read directly — the Read tool supports PDFs up to 20 pages per request):
-- If `source/slides_notes.pdf` exists: read it first — it contains slide images + speaker notes side-by-side, giving complete visual and text context for each slide. For presentations over 20 slides, read pages 1-20 first, then continue in 20-page increments.
-- If `source/panels_level_*.pdf` files exist: read them — each is one Code.org Panels level (a slideshow), showing panel images alongside text content.
-- If `source/external_level_*.pdf` files exist: read them — each is one Code.org External level rendered as a full HTML page with images inlined.
-- If any other `source/*.pdf` files exist (e.g. Google Doc exports from `google_doc` type): read those too, using page ranges for large files.
+**Phase B — Load artifacts into context:**
 
-**JSON files** (run base64_clean.py first):
-- If `source/slides_data.json` exists: run `python .agents/skills/video-script/scripts/base64_clean.py <SOURCE_PATH>/slides_data.json` and read the `_cleaned.json` output.
-- If `source/lesson_*_levels.json` exists: run `python .agents/skills/video-script/scripts/base64_clean.py` on it and read the `_cleaned` version.
+Use `load_artifacts` to retrieve the source files by their artifact names. Artifact names follow the pattern `<LESSON_SLUG>__<filename>`. Use the list returned by `load_lesson_sources` (or load all artifacts with the `<LESSON_SLUG>__` prefix) to know what is available. Load all of them.
 
-**Markdown files** (read directly):
-- If `source/*.md` files exist: read those — this includes `objectives.md` and `vocabulary.md`.
+Key artifact names to expect:
+- `<LESSON_SLUG>__slides_notes.pdf` — slide images + speaker notes; load this first when present
+- `<LESSON_SLUG>__slides_data.json` — structured slide data (base64 already cleaned)
+- `<LESSON_SLUG>__lesson_levels.json` — lesson level data (base64 already cleaned)
+- `<LESSON_SLUG>__panels_level_*.pdf` — Code.org Panels levels
+- `<LESSON_SLUG>__external_level_*.pdf` — Code.org External levels
+- `<LESSON_SLUG>__objectives.md` — lesson objectives
+- `<LESSON_SLUG>__vocabulary.md` — vocabulary terms
 
-Do NOT read `source/slide_NN.png` or other image files.
+PDFs are injected as native multimodal content — Gemini reads them in full without page-range limits. JSON files have base64 payloads pre-stripped by `load_lesson_sources`, so no `base64_clean.py` step is needed.
 
-When `lesson_*_levels.json` is the primary source, use the level content to understand the lesson structure. Each entry has a `type` and relevant content fields:
+Do NOT use `read_file` for source materials — use `load_artifacts` instead.
+
+When `lesson_levels.json` is the primary source, use the level content to understand the lesson structure. Each entry has a `type` and relevant content fields:
 - `Panels`: slide-style content with `text` (markdown) and optional `imageUrl`
 - `Aichat`: AI chat activity with `longInstructions` describing the student task
 - `FreeResponse`: reflection prompt with `longInstructions` and optional `teacherMarkdown`

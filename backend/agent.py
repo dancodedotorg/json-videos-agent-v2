@@ -21,7 +21,9 @@ from google.adk import Agent  # noqa: E402  (import after env setup)
 from google.adk.environment import LocalEnvironment  # noqa: E402
 from google.adk.skills import load_skill_from_dir  # noqa: E402
 from google.adk.tools.environment import EnvironmentToolset  # noqa: E402
+from google.adk.tools.load_artifacts_tool import LoadArtifactsTool  # noqa: E402
 from google.adk.tools.skill_toolset import SkillToolset  # noqa: E402
+from backend.tools.load_lesson_sources import load_lesson_sources  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -69,7 +71,13 @@ root_agent = Agent(
         "- load_skill_resource — load references/ files called out in skill instructions "
         "(e.g. references/concept-style-guide.md). Always use this for skill reference files, "
         "not read_file.\n"
-        "- read_file — read project files such as script.json or source materials; "
+        "- load_lesson_sources — call with unit and lesson slug to save lesson source materials "
+        "(PDFs, JSON, markdown) as session artifacts. Idempotent. Call this before video-script "
+        "runs on a lesson whose artifacts are not yet loaded.\n"
+        "- load_artifacts — retrieve previously saved artifact content into the current turn's "
+        "context as multimodal parts. Prefer this over read_file for PDFs and large JSON source "
+        "files; artifact content is not persisted in session history.\n"
+        "- read_file — read project files such as script.json; "
         "paths are relative to the project root\n"
         "- write_file — write project files; automatically creates any needed parent directories; "
         "paths are relative to the project root\n"
@@ -80,5 +88,5 @@ root_agent = Agent(
         "then follow them precisely. Pause at every human check-in point and wait for "
         "the user's response before continuing."
     ),
-    tools=[skill_toolset, env_toolset],
+    tools=[skill_toolset, env_toolset, LoadArtifactsTool(), load_lesson_sources],
 )

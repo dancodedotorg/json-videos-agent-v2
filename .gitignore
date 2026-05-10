@@ -3,6 +3,7 @@ pages/
 .env
 .venv
 *.pyc
+.adk/
 
 json_video_agent/
 lesson_summary_experiments/
