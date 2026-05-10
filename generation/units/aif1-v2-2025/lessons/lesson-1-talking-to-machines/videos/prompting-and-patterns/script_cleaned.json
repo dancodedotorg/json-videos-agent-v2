@@ -1,0 +1,102 @@
+{
+  "video_name": "prompting-and-patterns",
+  "unit": "aif1-v2-2025",
+  "lesson": "lesson-1-talking-to-machines",
+  "target_objectives": [
+    "Analyze patterns in AI-generated responses to explain how input prompts influence outputs.",
+    "Experiment with different prompts to observe how AI's responses change.",
+    "Refine AI-generated outputs by iterating on prompts and recognizing patterns in responses."
+  ],
+  "target_vocabulary": [
+    "prompt"
+  ],
+  "width": 1600,
+  "height": 900,
+  "pipeline": {
+    "grounding": "complete",
+    "script": "complete",
+    "html": "pending",
+    "audio_tags": "complete",
+    "audio": "complete",
+    "assembled": false
+  },
+  "tts": {
+    "provider": "gemini",
+    "mode": "per_scene",
+    "voice": "Puck"
+  },
+  "scenes": [
+    {
+      "comment": "Title slide: 'Let's Revisit: Prompts and Patterns' with a subtitle 'How your input shapes AI's output'",
+      "speech": "In this video, we're going to revisit prompts - how they shape what AI gives you, and how you can get better results by refining your prompt over time.",
+      "elevenlabs": "[happy] In this video, we're going to revisit prompts - how they shape what AI gives you, and how you can get better results by refining your prompt over time.",
+      "gemini": "[warmly] In this video, we're going to revisit prompts - how they shape what AI gives you, and how you can get better results by refining your prompt over time.",
+      "duration": "10.34s",
+      "audio": "audio/scene_01.mp3"
+    },
+    {
+      "comment": "Definition card for the word 'prompt' with the key term highlighted and a speech bubble icon representing user input to an AI chat",
+      "speech": "A prompt is a question, instruction, scenario, or statement you give to an AI to guide its response. It's the main input you control. And the details you include in it have a big impact on what you get back.",
+      "elevenlabs": "[thoughtful] A prompt is a question, instruction, scenario, or statement you give to an AI to guide its response. It's the main input you control. And the details you include in it have a big impact on what you get back.",
+      "gemini": "[clearly] A prompt is a question, instruction, scenario, or statement you give to an AI to guide its response. It's the main input you control. And the details you include in it have a big impact on what you get back.",
+      "duration": "15.38s",
+      "audio": "audio/scene_02.mp3"
+    },
+    {
+      "comment": "Side-by-side comparison: vague prompt 'Give me 3 gift ideas' on the left with a generic AI response, vs. a detailed prompt with the person's age, interests, and past gifts on the right with a focused AI response",
+      "speech": "In the gift recommendation activity, you saw this directly. When you typed 'Give me 3 gift ideas,' you got generic suggestions. When you added specific details - the person's age, interests, past gifts they loved - the AI's output changed completely. The prompt is what made the difference.",
+      "elevenlabs": "[excited] In the gift recommendation activity, you saw this directly. When you typed 'Give me 3 gift ideas,' you got generic suggestions. When you added specific details - the person's age, interests, past gifts they loved - the AI's output changed completely. The prompt is what made the difference.",
+      "gemini": "[excitedly] In the gift recommendation activity, you saw this directly. When you typed 'Give me 3 gift ideas,' you got generic suggestions. When you added specific details - the person's age, interests, past gifts they loved - the AI's output changed completely. The prompt is what made the difference.",
+      "duration": "22.50s",
+      "audio": "audio/scene_03.mp3"
+    },
+    {
+      "comment": "Simple two-row diagram: 'vague prompt' arrow to 'broad, generic output'; 'specific prompt' arrow to 'focused, relevant output' - with a label 'More context = more relevant response'",
+      "speech": "Here's the pattern: the AI's response reflects the information in your prompt. A vague prompt produces a vague response. A specific prompt produces a specific response. This is the core pattern - and once you see it, you can use it to get better outputs every time.",
+      "elevenlabs": "[happy] Here's the pattern: the AI's response reflects the information in your prompt. A vague prompt produces a vague response. A specific prompt produces a specific response. This is the core pattern - and once you see it, you can use it to get better outputs every time.",
+      "gemini": "[deliberately] Here's the pattern: the AI's response reflects the information in your prompt. A vague prompt produces a vague response. A specific prompt produces a specific response. This is the core pattern - and once you see it, you can use it to get better outputs every time.",
+      "duration": "21.38s",
+      "audio": "audio/scene_04.mp3"
+    },
+    {
+      "comment": "Chat interface mockup showing a text prompt with a small image thumbnail attached below it, and an AI response that references both the text and visual content",
+      "speech": "In Level 4, you added an image alongside your text prompt. The AI used both - the text and the image - to shape its response. Adding a visual of someone's style changed the gift suggestions again. Different input, different output.",
+      "elevenlabs": "[surprised] In Level 4, you added an image alongside your text prompt. The AI used both - the text and the image - to shape its response. Adding a visual of someone's style changed the gift suggestions again. Different input, different output.",
+      "gemini": "[thoughtfully] In Level 4, you added an image alongside your text prompt. The AI used both - the text and the image - to shape its response. Adding a visual of someone's style changed the gift suggestions again. Different input, different output.",
+      "duration": "17.70s",
+      "audio": "audio/scene_05.mp3"
+    },
+    {
+      "comment": "Three-step visual sequence: a generic prompt, then a revised specific prompt, then a back-and-forth chat exchange - each step showing a slightly more targeted AI response",
+      "speech": "In Level 5, you ran through the full process on your own. You started with a generic prompt, made it more specific, added an image, and went back and forth with the AI multiple times. Each revision was a chance to see how the response shifted.",
+      "elevenlabs": "[excited] In Level 5, you ran through the full process on your own. You started with a generic prompt, made it more specific, added an image, and went back and forth with the AI multiple times. Each revision was a chance to see how the response shifted.",
+      "gemini": "[excitedly] In Level 5, you ran through the full process on your own. You started with a generic prompt, made it more specific, added an image, and went back and forth with the AI multiple times. Each revision was a chance to see how the response shifted.",
+      "duration": "17.02s",
+      "audio": "audio/scene_06.mp3"
+    },
+    {
+      "comment": "Annotated chat exchange showing an AI response that's off-target, followed by a revised prompt with added detail, with labels marking what changed and why the output improved",
+      "speech": "What makes iteration useful is that the AI's response tells you something. If the output isn't useful, your prompt is probably missing context. Add more detail. Try a different phrasing. Each revision helps you see the pattern more clearly - what you put in shapes what you get out.",
+      "elevenlabs": "[thoughtful] What makes iteration useful is that the AI's response tells you something. If the output isn't useful, your prompt is probably missing context. Add more detail. Try a different phrasing. Each revision helps you see the pattern more clearly - what you put in shapes what you get out.",
+      "gemini": "[deliberately] What makes iteration useful is that the AI's response tells you something. If the output isn't useful, your prompt is probably missing context. Add more detail. Try a different phrasing. Each revision helps you see the pattern more clearly - what you put in shapes what you get out.",
+      "duration": "21.58s",
+      "audio": "audio/scene_07.mp3"
+    },
+    {
+      "comment": "Reflection question displayed prominently: 'How did your AI-generated output change as you made updates to your prompt?' with two labeled examples below - one explaining 'what changed' and one explaining 'why it changed'",
+      "speech": "In Level 6, you reflected on how your output changed as you updated your prompt. A strong answer explains the why, not just the what. The AI's response changed because your input changed. Prompts with more specific context produced more relevant results. That's the core pattern.",
+      "elevenlabs": "[thoughtful] In Level 6, you reflected on how your output changed as you updated your prompt. A strong answer explains the why, not just the what. The AI's response changed because your input changed. Prompts with more specific context produced more relevant results. That's the core pattern.",
+      "gemini": "[seriously] In Level 6, you reflected on how your output changed as you updated your prompt. A strong answer explains the why, not just the what. The AI's response changed because your input changed. Prompts with more specific context produced more relevant results. That's the core pattern.",
+      "duration": "23.70s",
+      "audio": "audio/scene_08.mp3"
+    },
+    {
+      "comment": "Question of the Day displayed in large text on a clean slide: 'How can I use AI effectively?' with space below for the viewer to think",
+      "speech": "So, how can you use AI effectively? Start with a clear prompt, notice the pattern in what you get back, and keep refining. Using AI well is a skill you build through experimentation - and now you have a framework for it.",
+      "elevenlabs": "[happy] So, how can you use AI effectively? Start with a clear prompt, notice the pattern in what you get back, and keep refining. Using AI well is a skill you build through experimentation - and now you have a framework for it.",
+      "gemini": "[warmly] So, how can you use AI effectively? Start with a clear prompt, notice the pattern in what you get back, and keep refining. Using AI well is a skill you build through experimentation - and now you have a framework for it.",
+      "duration": "16.50s",
+      "audio": "audio/scene_09.mp3"
+    }
+  ]
+}

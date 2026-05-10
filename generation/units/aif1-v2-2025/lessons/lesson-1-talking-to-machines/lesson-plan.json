@@ -1,0 +1,28 @@
+{
+  "unit": "aif1-v2-2025",
+  "lesson": "lesson-1-talking-to-machines",
+  "videos": [
+    {
+      "name": "how-ai-thinks",
+      "target_objectives": [
+        "Explain that AI models use probability and statistics to generate responses."
+      ],
+      "target_vocabulary": [
+        "abstraction",
+        "artificial intelligence (AI)",
+        "probability"
+      ]
+    },
+    {
+      "name": "prompting-and-patterns",
+      "target_objectives": [
+        "Analyze patterns in AI-generated responses to explain how input prompts influence outputs.",
+        "Experiment with different prompts to observe how AI's responses change.",
+        "Refine AI-generated outputs by iterating on prompts and recognizing patterns in responses."
+      ],
+      "target_vocabulary": [
+        "prompt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+- abstraction: focusing on the important information and ignoring irrelevant details
+- artificial intelligence (AI): a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions
+- probability: the likelihood that a specific outcome might occur
+- prompt: a question, instruction, scenario, or statement provided by the user to guide the AI's response

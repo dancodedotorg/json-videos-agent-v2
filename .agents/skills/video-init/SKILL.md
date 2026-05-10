@@ -1,26 +1,17 @@
 ---
 name: video-init
-description: Initializes a new video project folder within an existing grounded lesson. Checks lesson grounding, prompts objective selection, creates the video folder with audio/images/scenes, and writes an initial script.json. Invoke with /video-init <unit-slug> <lesson-slug> <video-name>.
-allowed-tools: Bash(mkdir *) Write Read
-metadata:
-  disable-model-invocation: "true"
-  argument-hint: "<unit-slug> <lesson-slug> <video-name>"
+description: Initializes a new video project folder within an existing grounded lesson. Checks lesson grounding, prompts objective selection, creates the video folder with audio/images/scenes, and writes an initial script.json.
 ---
 
 # video-init
 
 Initialize a new video at `generation/units/<unit>/lessons/<lesson>/videos/<video>/`.
 
-Parse `$ARGUMENTS` as three parts: `UNIT` (first word), `LESSON` (second word), `VIDEO` (third word).
-
-Example: `/video-init problem-solving-with-ai lesson-2-beyond-words objective-1`
+Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
 
 ## Step 0: Resolve lesson slug
 
-List the lesson folders for this unit:
-```bash
-ls generation/units/$UNIT/lessons/
-```
+Use `execute` to list `generation/units/$UNIT/lessons/`:
 
 Match LESSON against the folder names to determine LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If no folder matches, stop with `❌ No lesson matching "$LESSON" found.` If ambiguous, ask the user to clarify.
 
@@ -65,17 +56,11 @@ Which vocabulary terms should this video define? (enter letters, or press Enter 
 
 Wait for both responses. Store as TARGET_OBJECTIVES and TARGET_VOCABULARY. If the user skips vocabulary, assign terms whose words appear in the selected objective texts.
 
-## Step 3: Create folder structure
+## Step 3: Write script.json
 
-```bash
-mkdir -p generation/units/$UNIT/lessons/$LESSON/videos/$VIDEO/audio
-mkdir -p generation/units/$UNIT/lessons/$LESSON/videos/$VIDEO/images
-mkdir -p generation/units/$UNIT/lessons/$LESSON/videos/$VIDEO/scenes
-```
+The `write_file` tool creates parent directories automatically, so no separate folder creation step is needed.
 
-## Step 4: Write script.json
-
-Write `generation/units/$UNIT/lessons/$LESSON/videos/$VIDEO/script.json`:
+Use `write_file` to write `generation/units/$UNIT/lessons/$LESSON/videos/$VIDEO/script.json`:
 
 ```json
 {
@@ -112,5 +97,5 @@ Print:
   Target objectives: <N> selected
   Source materials: shared from generation/units/$UNIT/lessons/$LESSON/source/
 
-Next: /video-script $UNIT $LESSON $VIDEO
+Next: continue with the video-script skill for $UNIT / $LESSON / $VIDEO
 ```

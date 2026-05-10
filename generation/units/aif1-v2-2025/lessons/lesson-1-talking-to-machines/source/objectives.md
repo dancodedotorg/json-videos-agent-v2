@@ -1,0 +1,4 @@
+- Analyze patterns in AI-generated responses to explain how input prompts influence outputs.
+- Experiment with different prompts to observe how AI's responses change.
+- Explain that AI models use probability and statistics to generate responses.
+- Refine AI-generated outputs by iterating on prompts and recognizing patterns in responses.

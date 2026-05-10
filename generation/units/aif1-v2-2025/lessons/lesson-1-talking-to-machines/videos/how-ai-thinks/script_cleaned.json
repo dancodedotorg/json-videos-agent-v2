@@ -1,0 +1,74 @@
+{
+  "video_name": "how-ai-thinks",
+  "unit": "aif1-v2-2025",
+  "lesson": "lesson-1-talking-to-machines",
+  "target_objectives": [
+    "Analyze patterns in AI-generated responses to explain how input prompts influence outputs.",
+    "Explain that AI models use probability and statistics to generate responses."
+  ],
+  "target_vocabulary": [
+    "probability"
+  ],
+  "width": 1600,
+  "height": 900,
+  "pipeline": {
+    "grounding": "complete",
+    "script": "complete",
+    "audio_tags": "pending",
+    "audio": "pending",
+    "html": "pending",
+    "assembled": false
+  },
+  "grounding": {},
+  "tts": {},
+  "scenes": [
+    {
+      "comment": "Title slide: 'Let's Revisit: How AI Thinks and Responds' with a subtle 'reinforcement' visual cue.",
+      "speech": "Hey there! Today we're going to revisit how AI works behind the scenes, focusing on how it uses probability to generate responses and how your prompts really make a difference."
+    },
+    {
+      "comment": "Visual illustrating the \"Yes, and...\" game with a few speech bubbles building on a sentence.",
+      "speech": "Remember that \"Yes, and...\" warm-up activity? You started with a sentence and then, one by one, built on it with new ideas. Generative AI actually works in a similar way."
+    },
+    {
+      "comment": "Diagram showing \"The dog barked at the...\" leading to multiple possible next words with varying probabilities.",
+      "speech": "You can think of AI as a \"Yes, and\" machine. It takes the words you give it and then tries to predict the most probable next word or phrase to continue the thought."
+    },
+    {
+      "comment": "Visual of a student thinking about possible words to complete \"The dog barked at the...\", showing different options like \"squirrel\" or \"mailman\".",
+      "speech": "In the lesson, you predicted what word would likely come next in \"The dog barked at the...\". You probably thought of common options like \"squirrel\" or \"mailman,\" but also realized there were many possibilities."
+    },
+    {
+      "comment": "Definition card for \"probability\" with a simple example.",
+      "speech": "This idea of likelihood is called **probability**: the chance that a specific outcome might occur. AI models use probability and statistics to figure out which word or phrase is most likely to come next."
+    },
+    {
+      "comment": "Screenshot-style view of an AI chat interface with \"Complete this sentence: The dog barked at the...\" typed in, and a generic response below.",
+      "speech": "You then experimented with this in an AI chat activity, prompting it to complete sentences. You saw how the AI picked words based on which ones were most probable, often mirroring your own predictions."
+    },
+    {
+      "comment": "Flowchart showing AI analyzing patterns in text to determine the most probable next word.",
+      "speech": "AI uses pattern recognition, analyzing massive amounts of text to predict what makes the most sense. It's constantly calculating the probabilities of different words appearing together."
+    },
+    {
+      "comment": "Illustration of a simple, vague prompt box versus a detailed, specific prompt box, highlighting the difference.",
+      "speech": "But AI isn't just randomly picking words. The way you *prompt* it has a huge impact on its output. A prompt is basically your instruction or question to the AI."
+    },
+    {
+      "comment": "Sequence of AI chat screenshots: 1) \"Give me 3 gift ideas\" with generic output. 2) \"Give me 3 gift ideas under $30 for a 15-year-old girl who likes watercolor paintings. Her favorite birthday gift last year was a purple Polaroid camera.\" with a more tailored response. 3) The same specific prompt with an image added, showing an even more refined output.",
+      "speech": "You saw this in action with the \"Gift Recommendations\" activity. Starting with a generic prompt like \"Give me 3 gift ideas\" yielded very general responses. But when you added specific details—like age, interests, and past gifts—the AI's recommendations became much more tailored and useful. Adding an image made the AI's response even better."
+    },
+    {
+      "comment": "Graphic emphasizing \"Specific Details + Diverse Inputs = Better AI Outputs\".",
+      "speech": "This shows that the more specific and detailed your prompt is, and the more context you provide, the better the AI can analyze patterns and use probability to give you relevant and helpful outputs."
+    },
+    {
+      "comment": "Thought bubble or journal entry visual, representing a student reflecting on how prompts change AI output.",
+      "speech": "Reflecting on your activities, you observed directly how updating your prompts and adding different types of input like images changed the AI's output. This is a key insight into working effectively with AI."
+    },
+    {
+      "comment": "Summary card: \"AI uses Probability. Your Prompts Matter.\".",
+      "speech": "So, to wrap up: AI \"thinks\" by using probability and statistics to predict the most likely next piece of information. And you have a powerful role in shaping its responses by crafting clear, detailed, and specific prompts."
+    }
+  ]
+}

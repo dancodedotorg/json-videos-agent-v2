@@ -1,0 +1,20 @@
+{
+  "video_name": "test-video-1",
+  "unit": "aif1-v2-2025",
+  "lesson": "lesson-1-talking-to-machines",
+  "target_objectives": ["Analyze patterns in AI-generated responses to explain how input prompts influence outputs.", "Experiment with different prompts to observe how AI\'s responses change.", "Explain that AI models use probability and statistics to generate responses.", "Refine AI-generated outputs by iterating on prompts and recognizing patterns in responses."],
+  "target_vocabulary": ["Artificial Intelligence (AI)", "Prompt", "Large Language Model (LLM)", "Training Data", "Machine Learning", "Algorithm", "Bias", "Ethics", "Neural Network", "Data Set"],
+  "width": 1600,
+  "height": 900,
+  "pipeline": {
+    "grounding": "complete",
+    "script": "pending",
+    "audio_tags": "pending",
+    "audio": "pending",
+    "html": "pending",
+    "assembled": false
+  },
+  "grounding": {},
+  "tts": {},
+  "scenes": []
+}

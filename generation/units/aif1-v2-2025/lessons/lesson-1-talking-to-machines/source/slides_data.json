@@ -1,0 +1,176 @@
+[
+  {
+    "index": 0,
+    "slide_id": "gca418c6afa_0_1070",
+    "notes": "",
+    "png_base64": null
+  },
+  {
+    "index": 1,
+    "slide_id": "gca418c6afa_0_109",
+    "notes": "Warm Up (10 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 2,
+    "slide_id": "g2694c47731d_0_16",
+    "notes": "Yes, and… \n\n☑️ Do This: Group students in pairs or groups of three and read aloud the sentence on the board. Have students take turns one-by-one building on the conversation by starting their next sentence with \"Yes, and..\"\n\nTeaching Tip\nFor example:\nOpening Statement: \"A mysterious talking cat started showing up to math class.\"\nStudent 1: \"Yes, and he said his name is Whiskers.\"\nStudent 2: \"Yes, and he happens to be very good at multiplication.\"\nStudent 1: \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n\"The class down the hall just discovered a hidden tunnel beneath the school.\"\n\"The principal announced that prom will be held on a spaceship this year.\"\n\"Every locker in the main hallway suddenly started playing music.\"",
+    "png_base64": null
+  },
+  {
+    "index": 3,
+    "slide_id": "g341232c2a83_0_6",
+    "notes": "💬 Discuss: Summarize the story you came up with. What were the last two sentences of your conversation?\nHave several groups summarize where their conversation went. Then have them share out their last sentence or two that they came up with.\n\n💡 Discussion Goal: Students should recognize that all groups started with the same sentence starter but may have ended up with very different conversations. Have students note any patterns between the stories as well as any differences. This game leads into the main activity by explaining how AI generates content.",
+    "png_base64": null
+  },
+  {
+    "index": 4,
+    "slide_id": "g35826f29e68_0_0",
+    "notes": "☑️ Do This: Have students read the different sentences on this slide.\n\n🎙️ Say: Generative AI is like a “Yes, and” machine. It builds on existing sentences by finding a word or phrase that would make sense to come next.",
+    "png_base64": null
+  },
+  {
+    "index": 5,
+    "slide_id": "g1b0012b9552_0_230",
+    "notes": "☑️ Do This: Introduce the lesson objectives.",
+    "png_base64": null
+  },
+  {
+    "index": 6,
+    "slide_id": "g1b0012b9552_0_235",
+    "notes": "☑️ Do This: Introduce the Question of the Day.",
+    "png_base64": null
+  },
+  {
+    "index": 7,
+    "slide_id": "gca418c6afa_0_49",
+    "notes": "Activity (30 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 8,
+    "slide_id": "g338b488f2e8_1_0",
+    "notes": "🎥 Video: Show Problem Solving with AI video. \n\nTeaching Tip\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the Guide to Curriculum Videos.",
+    "png_base64": null
+  },
+  {
+    "index": 9,
+    "slide_id": "g3590e20c01c_0_0",
+    "notes": "📄 Distribute: Give each student a copy of the Problem Solving with AI Unit Guide.",
+    "png_base64": null
+  },
+  {
+    "index": 10,
+    "slide_id": "g341232c2a83_0_19",
+    "notes": "AI Predictions (10 mins)\n\n☑️ Do This: Define artificial intelligence.",
+    "png_base64": null
+  },
+  {
+    "index": 11,
+    "slide_id": "g341232c2a83_0_55",
+    "notes": "💬 Discuss: Predict the word that you think will probably come next in the following sentence: The dog barked at the...\nAsk students to predict the word that they think will probably come next (i.e. the most common word) and provide a reason for why they chose that word. Have all students raise their hand when they think of an answer. Start calling on students and have other students put down their hand if someone is called on who has the same answer.\n\n💡 Discussion Goal: Students will see that there are several common possibilities that are chosen. Common words might include squirrel, mailman, stranger, etc. However, there will also be outliers that might not be as common (e.g. my aunt Lucy). Having students recognize that there are more and less common responses is a first step towards understanding how probability works while making this sort of prediction.",
+    "png_base64": null
+  },
+  {
+    "index": 12,
+    "slide_id": "g341232c2a83_0_40",
+    "notes": "☑️ Do This: Model the AI Chat in Lesson 1, Level 1 for students. \n\n💻 Transition: Have students experiment with using the AI Chat to complete the sentence.\n\nTeaching Tip\nHave AI generate several outcomes to complete the sentence. You can keep prompting AI Chat using the same prompt or follow up by prompting it to \"generate three more answers\". You may also want to have students try out the prompt on their devices and compare responses.",
+    "png_base64": null
+  },
+  {
+    "index": 13,
+    "slide_id": "g341232c2a83_0_64",
+    "notes": "💬 Discuss: How does AI's output compare to the word you predicted?\n\n💡 Discussion Goal: Students should start to see how AI selects words based on probability. It tends to choose the most likely next word, which often mirrors our own prediction of the most-likely next word.",
+    "png_base64": null
+  },
+  {
+    "index": 14,
+    "slide_id": "g341232c2a83_0_25",
+    "notes": "☑️ Do This: Define probability.",
+    "png_base64": null
+  },
+  {
+    "index": 15,
+    "slide_id": "g2694c47731d_3_332",
+    "notes": "☑️ Do This: Read through this scenario of probability-driven predictions that make sense and are successful. Make sure students understand that the grey box represents the user input, and the blue box below represents the AI Chat response.\n\n🎙️ Say: AI uses the computational skill of pattern recognition to generate its most likely response. For example, it reads over thousands of sentences that contain the different phrases above (e.g. \"heard the knock at the…\") and starts to recognize a pattern.",
+    "png_base64": null
+  },
+  {
+    "index": 16,
+    "slide_id": "g341232c2a83_0_87",
+    "notes": "☑️ Do This: Examine this scenario where probability-driven predictions fail because they don't rely on meaning.",
+    "png_base64": null
+  },
+  {
+    "index": 17,
+    "slide_id": "g341a65f858a_0_13",
+    "notes": "☑️ Do This: Explain that AI focused on the words \"key\", \"on\", and \"table\" and abstracted away unnecessary details of the prompt.\n\n🎙️ Say: Since AI doesn't understand meaning, it drew a single key resting on the table in an unrealistic way. It prioritized the literal meaning of the essential details of the sentence rather than considering the sentence as a whole.",
+    "png_base64": null
+  },
+  {
+    "index": 18,
+    "slide_id": "g341a65f858a_0_27",
+    "notes": "☑️ Do This: Define abstraction.\n\nTeaching Tip\nAbstraction is one of the four pillars of computational thinking– a framework designed for solving problems. This concept will be repeated throughout AIF units.",
+    "png_base64": null
+  },
+  {
+    "index": 19,
+    "slide_id": "g341232c2a83_0_104",
+    "notes": "Prompting AI (20 mins)\n\n☑️ Do This: Define prompt.",
+    "png_base64": null
+  },
+  {
+    "index": 20,
+    "slide_id": "g341232c2a83_0_111",
+    "notes": "💻 Transition: Direct students to Lesson 1, Level 2 to complete Levels 2 through 4.\nLevel 2: Students input \"Give me 3 gift ideas\" into AI Chat.\nLevel 3: Students input a more specific prompt that defines the person who is getting the gift.\nLevel 4: Students add an image to accompany the specific prompt that they reuse from Level 3.",
+    "png_base64": null
+  },
+  {
+    "index": 21,
+    "slide_id": "g341232c2a83_0_77",
+    "notes": "🎥 Video: Show the \"Plan a Perfect Trip with ChatGPT\" video.\n\nQuestions to consider with the video:\nWhat tips might you give to someone else who is looking to improve their prompts?\n\n💡 Discussion Goal: Students might point out that they should include both information that they are interested in getting, but also information that they are not. They might also mention that including demographic information and specific numbers are helpful for more useful responses.\n\nTeaching Tip\nVideos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the Guide to Curriculum Videos.",
+    "png_base64": null
+  },
+  {
+    "index": 22,
+    "slide_id": "g341232c2a83_0_100",
+    "notes": "💻 Transition: Direct students to Lesson 1, Level 5. Students choose one of the AI Chat levels that is configured for a specific task. They start by giving the AI Chat a generic prompt first (such as \"Help me prepare for my class presentation.\"), then make it more specific, then make it more specific and add an image. Students should update their prompt or interact with the AI Chat in at least three back and forth interactions.\n\nTeaching Tip\nThis is a choice level, so students only need to complete one of the levels. However, if students finish early or are looking for an additional challenge, they can choose Option D: Debate an AI Partner level. This option is more challenging because it requires students to engage in a back-and-forth exchange with AI, refine their arguments, and adapt their reasoning based on AI's responses. Unlike other choices that focus on planning tasks, this level encourages students to critically analyze AI-generated arguments and practice constructing persuasive responses.",
+    "png_base64": null
+  },
+  {
+    "index": 23,
+    "slide_id": "g338936f2b73_0_0",
+    "notes": "☑️ Do This: Direct students to Lesson 1, Level 6 to complete the formative assessment. Display students' anonymous responses.\n\nAssessment Opportunity\nThis level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\nIf students are only describing what happened rather than why it happened, prompt them to revisit earlier lesson segments on probability-driven outputs. Consider a quick group discussion where students share examples of prompts that worked well and why those prompts influenced AI's response.\nIf students seem uncertain about constructing high-quality prompts, have them re-examine Level 5 where best prompting strategies are summarized. They can also do a brief pair activity—each student provides a vague prompt, then a specific prompt, and compares the results.\nIf many students need more help, provide short demos or additional videos showing how multimodal inputs can change the AI's outputs. Or point them to the optional video about planning a family trip to emphasize how refining prompts improves results. Encourage a follow-up activity where students generate multiple answers to the same prompt, then analyze and explain what changed.",
+    "png_base64": null
+  },
+  {
+    "index": 24,
+    "slide_id": "gca418c6afa_0_13",
+    "notes": "Wrap Up (5 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 25,
+    "slide_id": "g111726a1132_0_199",
+    "notes": "☑️ Do This: Review the lesson objectives.",
+    "png_base64": null
+  },
+  {
+    "index": 26,
+    "slide_id": "g1b0012b9552_0_737",
+    "notes": "☑️ Do This: Review the Question of the Day.",
+    "png_base64": null
+  },
+  {
+    "index": 27,
+    "slide_id": "g2694c47731d_3_41",
+    "notes": "Rapid Roundtable (5 mins)\n\n☑️ Do This: Have students sit in a circle or small groups. Pose the Question of the Day to students. One by one, they quickly state their answer to the Question of the Day. Responses should be brief (one sentence or key phrase). They should see how many unique answers they can come up with. \n\nTeaching Tip\nIf students are struggling to answer the Question of the Day, have them think about which prompting strategies got them the most helpful AI Chat outputs. For example, ask students what details they included in their prompts or how they selected an image to add to their prompt.",
+    "png_base64": null
+  },
+  {
+    "index": 28,
+    "slide_id": "g2694c47731d_3_56",
+    "notes": "☑️ Do This: Review the Key Vocabulary.",
+    "png_base64": null
+  }
+]

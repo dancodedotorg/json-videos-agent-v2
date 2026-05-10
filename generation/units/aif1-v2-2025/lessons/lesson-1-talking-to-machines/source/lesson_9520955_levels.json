@@ -1,0 +1,48 @@
+{
+  "83052": {
+    "id": 83052,
+    "type": "Aichat",
+    "longInstructions": "## Finish the Sentence\n\nUse AI Chat to finish the sentence.\n\n### Do This:\n1. Think about how you would complete the following sentence: *\"The dog barked at the...\"*\n2. **Copy and paste** the following prompt:\n\n>Complete this sentence: The dog barked at the...\n3. Press **Send**.\n4. Then read **AI Chat's response** and compare it to your own.\n\n**Try it out!**\n\n---\n**Want to try another prompt?**\nCome up with a sentence of your own and see how AI chooses to finish it. Some examples:\n> I'm excited to learn how to...\n\n> What I really want for my birthday is..."
+  },
+  "83053": {
+    "id": 83053,
+    "type": "Aichat",
+    "longInstructions": "## Gift Recommendations, Part 1\n\nUse AI Chat to get gift recommendations for your friend.\n\n### Do This:\n\n1. **Copy and paste** the following prompt:\n\n>Give me 3 gift ideas.\n2. Press **Send**.\n3. Then read **AI Chat's response**.\n\n**Try it out!**"
+  },
+  "83054": {
+    "id": 83054,
+    "type": "Aichat",
+    "longInstructions": "## Gift Recommendations, Part 2\n\nUse AI Chat to get gift recommendations for your friend.\n\n### Do This:\n\n1. **Try the provided prompt first** by copying and pasting it into AI Chat:\n\n>Give me 3 gift ideas under $30 for a 15-year-old girl who likes watercolor paintings. Her favorite birthday gift last year was a purple Polaroid camera.\n\n2. Press **Send**.\n3. Read **AI Chat's response**.\n4. **Now, modify the prompt** to make it about someone you know. Change details like **age, interests, or past gifts** to see how AI adapts its recommendations.\n5. Press **Send** again and compare the response to the original.\n\n**Try it out!**"
+  },
+  "83097": {
+    "id": 83097,
+    "type": "Aichat",
+    "longInstructions": "## Gift Recommendations, Part 3\n\nUse AI Chat to get gift recommendations for your friend.\n\n### Do This:\n\n1. Put your customized prompt from level 3 or a similar prompt in the chat. *Don't have a prompt? That's ok! You can copy one from below the instructions.*\n2. Pick a room image from the pre-loaded folder that matches your friend's style.\n3. Add the image alongside your prompt.\n5. Add a sentence asking AI Chat to base its suggestions on the image.\n6. Press **Send** and read **AI Chat's response**.\n7. **Compare the response** to the one you received in Level 3. How did including an image change AI's recommendations?\n\n**Try it out!**\n\n**Need a starting prompt?**\n>Give me 3 gift ideas under $30 for a 15-year-old girl who likes watercolor paintings. Her favorite birthday gift last year was a purple Polaroid camera.\n\n**How do I add an image?**\n- Click the button labeled **Add** below your chat input.\n- Choose **From Library**\n- Then browse the existing images.\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\n- You should see the image get added to the message being sent to AI Chat."
+  },
+  "83098": {
+    "id": 83098,
+    "type": "Aichat",
+    "longInstructions": "## AI as a Presentation Coach\n\nUse AI Chat to help you coach you through an upcoming presentation.\n\n### Do This:\n\n1. Start by entering a **generic prompt** and read AI Chat's response. For example:\n\n>Help me prepare for my class presentation.\n2. *Revise your prompt* and add specific examples, like **what topics you plan to present** or **what emotions you might feel while presenting**. Press **Send** and read AI Chat's updated response.\n2. Finally, re-submit your previous prompt and **add some images**.\n3. Press **Send** and read AI Chat's response.\n\n**Try it out!**\n\n**How do I add an image?**\n- Click the button labeled **Add** below your chat input.\n- Choose **From Library**\n- Then browse the existing images.\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\n- You should see the image get added to the message being sent to AI Chat."
+  },
+  "83099": {
+    "id": 83099,
+    "type": "Aichat",
+    "longInstructions": "## Using AI as Tutor\n\nUse AI Chat to help explain difficult topics.\n\n### Do This:\n\n1. Start by entering a **generic prompt** and read AI Chat's response. For example:\n\n>Help me understand my geometry class.\n2. Revise your prompt and add specific examples, like **what topics you are learning in class** or **which concepts you already understand**. Press **Send** and read AI Chat's updated response.\n3. Finally, re-submit your previous prompt and **add an image**.\n4. Press **Send** and read AI Chat's response.\n\n**Try it out!**\n\n**How do I add an image?**\n- Click the button labeled **Add** below your chat input.\n- Choose **From Library**\n- Then browse the existing images.\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\n- You should see the image get added to the message being sent to AI Chat."
+  },
+  "83100": {
+    "id": 83100,
+    "type": "Aichat",
+    "longInstructions": "## Plan Your Outfits\n\nUse AI Chat to help you plan your outfits for the week.\n\n### Do This:\n\n1. Start by entering a **generic prompt** and read AI Chat's response. For example:\n\n>Help me plan my outfits for the week.\n2. Revise your prompt and add specific examples, like **what outfits you like to wear** or **what type of shoes you own**. Read AI Chat's updated response.\n2. Finally, revise your last prompt by **adding an image**.\n3. Press **Send** and read AI Chat's response.\n\n**Try it out!**\n\n**How do I add an image?**\n- Click the button labeled **Add** below your chat input.\n- Choose **From Library**\n- Then browse the existing images.\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\n- You should see the image get added to the message being sent to AI Chat."
+  },
+  "83101": {
+    "id": 83101,
+    "type": "Aichat",
+    "longInstructions": "## AI as a Debate Partner\n\nUse AI Chat to engage in a debate about a topic of your choice.\n\n### Do This:\n\n1. Start with a **broad, open-ended debate prompt** (e.g., \"Should schools ban homework?\" or \"Is AI better at making decisions than humans?\").\n2. Read **AI Chat's response**, then **counter** its argument by providing an opposing viewpoint.\n3. **Revise your prompt** by making it more specific (e.g., \"Argue why schools should ban homework for middle school students.\").\n4. **Add an image** related to your debate topic (e.g., a news article screenshot, a relevant chart, or a meme) and see how AI's response changes.\n5. **Compare AI's responses** - how did the AI adjust its reasoning as your inputs became more refined?\n\n**Try it out!**\n\n#### What if AI just agrees with you?\nIf AI Chat keeps agreeing with everything you say, try rephrasing your prompt to make it push back more. Use phrases like:\n- *Take the opposite side and defend it.*\n- *Debate me and don't back down.*\n\nThis helps guide the AI into a more spirited and critical debate!\n\n**How do I add my own image?**\n- Download or save images related to your topic to your computer.\n- Click the button labeled **Add** below your chat input.\n- Browse the File Explorer to find the images related to your deb\n- You should see the image get added to the message being sent to AI Chat."
+  },
+  "83218": {
+    "id": 83218,
+    "type": "FreeResponse",
+    "longInstructions": "Think back to your exploration with the AI chatbot in Level 5.\n\n**How did your AI-generated output change as you made updates to your prompt?**",
+    "teacherMarkdown": "**Assessment Opportunity**\nThis level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\n- If students are only describing what happened rather than why it happened, prompt them to revisit earlier lesson segments on probability-driven outputs. Consider a quick group discussion where students share examples of prompts that worked well and why those prompts influenced AI's response.\n- If students seem uncertain about constructing high-quality prompts, have them re-examine Level 5 where best prompting strategies are summarized. They can also do a brief pair activity - each student provides a vague prompt, then a specific prompt, and compares the results.\n- If many students need more help, provide short demos or additional videos showing how multimodal inputs can change the AI's outputs. Or point them to the optional video about planning a family trip to emphasize how refining prompts improves results. Encourage a follow-up activity where students generate multiple answers to the same prompt, then analyze and explain what changed."
+  }
+}

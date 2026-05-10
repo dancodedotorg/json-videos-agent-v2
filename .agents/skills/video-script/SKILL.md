@@ -1,10 +1,6 @@
 ---
 name: video-script
-description: Generates the voiceover script (scene comments and speech) for a video project by reading source materials. Includes human check-ins for mode selection and script approval. Invoke with /video-script <unit-slug> <lesson-slug> <video-name>.
-allowed-tools: Read Write Bash(python:*)
-metadata:
-  disable-model-invocation: "true"
-  argument-hint: "<unit-slug> <lesson-slug> <video-name>"
+description: Generates the voiceover script (scene comments and speech) for a video project by reading source materials. Includes human check-ins for mode selection and script approval.
 ---
 
 # video-script
@@ -23,9 +19,9 @@ Generate the voiceover script for a video.
 
 ## Path detection
 
-Parse `$ARGUMENTS` (3 words): UNIT=first, LESSON=second, VIDEO=third
+Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
 
-List `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
+Use `execute` to list `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
 
 - Script path: `generation/units/$UNIT/lessons/$LESSON_SLUG/videos/$VIDEO/script.json`
 - Source path: `generation/units/$UNIT/lessons/$LESSON_SLUG/source/`
@@ -77,8 +73,8 @@ Read **all** source files for complete grounding context. Run base64_clean.py on
 - If any other `source/*.pdf` files exist (e.g. Google Doc exports from `google_doc` type): read those too, using page ranges for large files.
 
 **JSON files** (run base64_clean.py first):
-- If `source/slides_data.json` exists: run `python scripts/base64_clean.py <SOURCE_PATH>/slides_data.json` and read the `_cleaned.json` output.
-- If `source/lesson_*_levels.json` exists: run `python scripts/base64_clean.py` on it and read the `_cleaned` version.
+- If `source/slides_data.json` exists: run `python .agents/skills/video-script/scripts/base64_clean.py <SOURCE_PATH>/slides_data.json` and read the `_cleaned.json` output.
+- If `source/lesson_*_levels.json` exists: run `python .agents/skills/video-script/scripts/base64_clean.py` on it and read the `_cleaned` version.
 
 **Markdown files** (read directly):
 - If `source/*.md` files exist: read those — this includes `objectives.md` and `vocabulary.md`.
@@ -103,12 +99,12 @@ If `target_objectives` is set in script.json, use those objectives as the **prim
 
 ## Step 5: Generate Scenes
 
-Before generating, read the style guide for the chosen mode and follow all guidance there:
+Before generating, use `load_skill_resource` to read the style guide for the chosen mode and follow all guidance there:
 
-- **concept**: Read `references/concept-style-guide.md` in full. That file covers: required intro scene, one scene per slide, handling slides with no speaker notes, scene length targets, tone, and `comment` field conventions.
-- **summary**: Read `references/summary-style-guide.md` in full. That file covers: required intro scene, grouping criteria, key-takeaway framing, scene length targets, and what to compress or skip.
-- **re-teach**: Read `references/reteach-style-guide.md` in full. That file covers: required intro scene, structure and length targets, content rules (elaboration pass, activity walkthroughs, no new analogies), lesson-referencing conventions (student actions only, never teacher actions), tone and language, and Question of the Day handling.
-- **co-create**: Read `references/co-create-style-guide.md` in full. That file covers: what a complete brief contains, defaults for thin briefs, scene structure, tone, and when to flag brief/objective conflicts.
+- **concept**: Use `load_skill_resource` to read `references/concept-style-guide.md` in full. That file covers: required intro scene, one scene per slide, handling slides with no speaker notes, scene length targets, tone, and `comment` field conventions.
+- **summary**: Use `load_skill_resource` to read `references/summary-style-guide.md` in full. That file covers: required intro scene, grouping criteria, key-takeaway framing, scene length targets, and what to compress or skip.
+- **re-teach**: Use `load_skill_resource` to read `references/reteach-style-guide.md` in full. That file covers: required intro scene, structure and length targets, content rules (elaboration pass, activity walkthroughs, no new analogies), lesson-referencing conventions (student actions only, never teacher actions), tone and language, and Question of the Day handling.
+- **co-create**: Use `load_skill_resource` to read `references/co-create-style-guide.md` in full. That file covers: what a complete brief contains, defaults for thin briefs, scene structure, tone, and when to flag brief/objective conflicts.
 
 Each scene object:
 ```json
@@ -123,7 +119,7 @@ Each scene object:
 Write the generated scenes array to a temp file alongside the script, then use `write-scenes.py` to merge it in:
 
 ```bash
-python scripts/write-scenes.py SCRIPT_PATH SCENES_DRAFT_PATH
+python .agents/skills/video-script/scripts/write-scenes.py SCRIPT_PATH SCENES_DRAFT_PATH
 ```
 
 Where `SCENES_DRAFT_PATH` is a JSON file containing only the scenes array (e.g., `generation/units/UNIT/lessons/LESSON/videos/VIDEO/scenes_draft.json`). The script replaces the `scenes` field in `script.json` and sets `pipeline.script = "complete"` atomically — do not manually edit `script.json` to insert scenes.
@@ -139,4 +135,4 @@ Present the generated script to the user in a readable format (numbered list of 
 > - Approve and move on to HTML slides
 
 Iterate on revisions until the user approves. Then tell them:
-- "Run /video-html $UNIT $LESSON $VIDEO to generate HTML slides."
+- "Tell the user to continue with the video-html skill for $UNIT / $LESSON / $VIDEO to generate HTML slides."

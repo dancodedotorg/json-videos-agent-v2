@@ -1,11 +1,7 @@
 ---
 name: video-html
-description: Generates HTML slides for each scene in a video project. Use when pipeline.script = "complete" and HTML slides are needed. Includes a script evaluation pre-pass that can propose scene splits or minor speech adjustments (with human approval) before generating HTML. Two modes: C (AI-generated image per scene, uniform) or D (full toolkit — HTML templates, SVG, and image gen per scene based on content). Presents a scene plan for user approval before generating anything.
+description: Generates HTML slides for each scene in a video project. Use when pipeline.script is complete and HTML slides are needed. Includes a script evaluation pre-pass that can propose scene splits or speech adjustments with human approval. Supports Mode C (AI-generated image per scene) or Mode D (full toolkit with HTML templates, SVG, and per-scene image generation). Presents a scene plan for user approval before generating anything.
 compatibility: Requires Python 3, GOOGLE_API_KEY in generation/tools/.env, and internet access for Gemini image generation.
-allowed-tools: Read Write Bash(python *)
-metadata:
-  disable-model-invocation: "true"
-  argument-hint: "<unit-slug> <lesson-slug> <video-name>"
 ---
 
 # video-html
@@ -14,9 +10,9 @@ Generate HTML slides for a video.
 
 ## Path detection
 
-Parse `$ARGUMENTS` (3 words): UNIT=first, LESSON=second, VIDEO=third
+Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
 
-List `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
+Use `execute` to list `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
 
 - Video root: `generation/units/$UNIT/lessons/$LESSON_SLUG/videos/$VIDEO/`
 - Script path: `<video-root>/script.json`
@@ -62,7 +58,7 @@ Copy this checklist into your reply at the start of a session:
 
 Run base64_clean to get a safe-to-read version:
 ```bash
-python scripts/base64_clean.py $VIDEO_ROOT/script.json
+python .agents/skills/video-html/scripts/base64_clean.py $VIDEO_ROOT/script.json
 ```
 Read the **entire** `$VIDEO_ROOT/script_cleaned.json` before assessing any individual scene. Never read the raw `script.json` — it may contain base64 image data.
 
@@ -79,7 +75,7 @@ Read the **entire** `$VIDEO_ROOT/script_cleaned.json` before assessing any indiv
 
 If **Yes**: Run:
 ```bash
-python scripts/update-pipeline.py $VIDEO_ROOT/script.json audio=pending audio_tags=pending
+python .agents/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json audio=pending audio_tags=pending
 ```
 Set AUDIO_LOCKED = false.
 
@@ -94,7 +90,7 @@ Script evaluation runs in Step 3a (Mode D only) — not here.
 
 ## Step 3: Mode Check-In
 
-Load `references/mode-selection.md` and present the mode options to the user exactly as described there. Wait for their response before continuing.
+Use `load_skill_resource` to read `references/mode-selection.md` and present the mode options to the user exactly as described there. Wait for their response before continuing.
 
 ---
 
@@ -104,7 +100,7 @@ Load `references/mode-selection.md` and present the mode options to the user exa
 
 If AUDIO_LOCKED = true: print "Audio locked — scene splits and speech edits are disabled." and proceed to Step 4.
 
-Otherwise: load `references/script-editing.md` and follow its evaluation process.
+Otherwise: use `load_skill_resource` to read `references/script-editing.md` and follow its evaluation process.
 - If no edits are needed: print the "No script edits needed" message and continue to Step 4.
 - If edits are proposed: present them for approval (format in script-editing.md), wait for response, iterate if the user requests modifications, then apply approved edits to script.json before continuing to Step 4.
 
@@ -115,14 +111,14 @@ Otherwise: load `references/script-editing.md` and follow its evaluation process
 Load only what's needed to plan slides:
 
 **Always load:**
-- `references/template-selection.md` — visual approach overview and template catalog for planning
+- Use `load_skill_resource` to read `references/template-selection.md` — visual approach overview and template catalog for planning
 
 **For Mode C, or Mode D plans that include any Image Gen scenes:**
-- `references/image-generation.md` — Visual Director formula and prompt assembly process
+- Use `load_skill_resource` to read `references/image-generation.md` — Visual Director formula and prompt assembly process
 
 **Only if creating a new template from scratch (not for routine generation):**
-- `references/design-guide.md` — color palette, typography scale, layout constraints for template authoring
-- `.agents/skills/video-html/assets/boilerplate.html` — canonical boilerplate CSS block to copy into the new template
+- Use `load_skill_resource` to read `references/design-guide.md` — color palette, typography scale, layout constraints for template authoring
+- Use `load_skill_resource` to read `assets/boilerplate.html` — canonical boilerplate CSS block to copy into the new template
 
 Do not load individual HTML templates yet — load only the ones needed for the approved scene plan in Step 5.
 
@@ -244,12 +240,12 @@ After approval, **no copy decisions and no layout decisions remain** — Step 8 
 Once the content spec is approved, load only the templates and tools the plan actually calls for:
 
 **Always load:**
-- `references/generation-guide.md` — script alignment, connected sequences, slide text density, HTML requirements
-- `references/svg-patterns.md` — layout conventions and procedures for named SVG patterns (Mode D only)
+- Use `load_skill_resource` to read `references/generation-guide.md` — script alignment, connected sequences, slide text density, HTML requirements
+- Use `load_skill_resource` to read `references/svg-patterns.md` — layout conventions and procedures for named SVG patterns (Mode D only)
 
 **Load each template that appears in the approved plan** (not all — only the ones being used):
-- For Mode C: load `full-image.html`
-- For Mode D: load each named template (e.g. `title-slide.html`, `svg-bar-chart.html`, etc.)
+- For Mode C: use `load_skill_resource` to read `assets/full-image.html`
+- For Mode D: use `load_skill_resource` to read each named template (e.g. `assets/title-slide.html`, `assets/svg-bar-chart.html`, etc.)
 - This includes SVG pattern templates (`svg-flow`, `svg-bar-chart`, `svg-word-display`) — load only the specific ones in the plan, not all three.
 
 **If any Image Gen scenes exist (always for Mode C; per plan for Mode D):**
@@ -307,7 +303,7 @@ Each scene uses whatever approach the approved plan specifies.
 2. Assemble the prompt using the formula in `references/image-generation.md`
 3. Run the tool:
    ```bash
-   python scripts/gemini-image-gen.py "FINAL_PROMPT" --aspect-ratio 16:9 --output-dir $VIDEO_ROOT/images
+   python .agents/skills/video-html/scripts/gemini-image-gen.py "FINAL_PROMPT" --aspect-ratio 16:9 --output-dir $VIDEO_ROOT/images
    ```
    Add `--reference-image /path/to/prior_scene.png` for connected image sequences.
 4. Capture the filename from the filepath printed to stdout. The tool may print an absolute Windows path — extract just the filename.
@@ -336,7 +332,7 @@ Zero-pad to 2 digits. Each file is a complete self-contained HTML document (from
 ## Step 10: Insert into script.json
 
 ```bash
-python scripts/insert-slides.py $VIDEO_ROOT/script.json
+python .agents/skills/video-html/scripts/insert-slides.py $VIDEO_ROOT/script.json
 ```
 
 ---
@@ -347,19 +343,17 @@ Run the appropriate command based on the mode used:
 
 **Mode C:**
 ```bash
-python scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=ai_images
+python .agents/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=ai_images
 ```
 
 **Mode D — no image gen used:**
 ```bash
-python scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=html_templates_only
+python .agents/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=html_templates_only
 ```
 
 **Mode D — image gen used for one or more scenes:**
 ```bash
-python scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=html_including_image_templates
+python .agents/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=html_including_image_templates
 ```
 
-Tell the user:
-- New-style: "Run /video-audio-tags $UNIT $LESSON $VIDEO to add TTS expression tags."
-- Legacy: "Run /video-audio-tags $VIDEO to add TTS expression tags."
+Tell the user to continue with the video-audio-tags skill for $UNIT / $LESSON / $VIDEO to add TTS expression tags.

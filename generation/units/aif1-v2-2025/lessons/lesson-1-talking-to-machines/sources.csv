@@ -1,0 +1,11 @@
+description,type,value
+slides,google_slides,https://docs.google.com/presentation/d/1g31o1jws2MNSrNvh-hC4O9t_RNmo0CKO3-pUqVathsY/edit
+Lesson Levels,level_summary,9520955
+abstraction,vocabulary,abstraction: focusing on the important information and ignoring irrelevant details
+artificial intelligence (AI),vocabulary,"artificial intelligence (AI): a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions"
+probability,vocabulary,probability: the likelihood that a specific outcome might occur
+prompt,vocabulary,"prompt: a question, instruction, scenario, or statement provided by the user to guide the AI's response"
+Objective: Analyze patterns in AI-generated responses to explain how...,objective,Analyze patterns in AI-generated responses to explain how input prompts influence outputs.
+Objective: Experiment with different prompts to observe how AI's res...,objective,Experiment with different prompts to observe how AI's responses change.
+Objective: Explain that AI models use probability and statistics to ...,objective,Explain that AI models use probability and statistics to generate responses.
+Objective: Refine AI-generated outputs by iterating on prompts and r...,objective,Refine AI-generated outputs by iterating on prompts and recognizing patterns in responses.

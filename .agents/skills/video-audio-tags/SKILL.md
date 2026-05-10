@@ -1,10 +1,6 @@
 ---
 name: video-audio-tags
-description: Enhances the voiceover script with expression tags for both ElevenLabs and Gemini TTS. Produces both elevenlabs and gemini fields in one pass. Includes human check-in for approval. Invoke with /video-audio-tags <unit-slug> <lesson-slug> <video-name>.
-allowed-tools: Read Write
-metadata:
-  disable-model-invocation: "true"
-  argument-hint: "<unit-slug> <lesson-slug> <video-name>"
+description: Enhances the voiceover script with expression tags for both ElevenLabs and Gemini TTS. Produces both elevenlabs and gemini fields in one pass. Includes human check-in for approval.
 ---
 
 # video-audio-tags
@@ -13,9 +9,9 @@ Add expression tags to the voiceover script for a video.
 
 ## Path detection
 
-Parse `$ARGUMENTS` (3 words): UNIT=first, LESSON=second, VIDEO=third
+Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
 
-List `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
+Use `execute` to list `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
 
 - Script path: `generation/units/$UNIT/lessons/$LESSON_SLUG/videos/$VIDEO/script.json`
 
@@ -37,7 +33,7 @@ Read SCRIPT_PATH. Extract only the `scenes[].speech` fields — do not read HTML
 
 ## Step 2: Add Expression Tags
 
-Before generating any tags, read both reference files:
+Before generating any tags, use `load_skill_resource` to read both reference files:
 - `references/elevenlabs-tts-prompting-guide.md`
 - `references/gemini-tts-prompting-guide.md`
 
@@ -55,7 +51,7 @@ ElevenLabs voices have a neutral, flat default delivery — tags are the primary
 - Keep the actual speech text unchanged — only add tags, do not reword or alter punctuation
 - Each scene should have 1–2 tags maximum
 
-> For the full tag list, recommended educational tags, and examples, see `references/elevenlabs-tts-prompting-guide.md`
+> For the full tag list, recommended educational tags, and examples, see the elevenlabs-tts-prompting-guide.md already loaded above.
 
 ---
 
@@ -63,7 +59,7 @@ ElevenLabs voices have a neutral, flat default delivery — tags are the primary
 
 Gemini TTS uses a richer, more expressive tag set. Tags can appear at the start of a scene or inline to change delivery of specific phrases.
 
-> For the full tag list and advanced prompting strategies, see `references/gemini-tts-prompting-guide.md`.
+> For the full tag list and advanced prompting strategies, see the gemini-tts-prompting-guide.md already loaded above.
 
 **Recommended tags for educational content**:
 - `[warmly]` — friendly, inviting tone
@@ -106,4 +102,4 @@ Then ask:
 > Do the audio tags look right? You can ask me to adjust specific scenes, the overall energy level, or tags for a specific provider. Or say "looks good" to move on.
 
 Iterate on any requested changes. Then tell the user:
-- "Run /video-audio $UNIT $LESSON $VIDEO to generate the audio file."
+- "Tell the user to continue with the video-audio skill for $UNIT / $LESSON / $VIDEO to generate the audio file."

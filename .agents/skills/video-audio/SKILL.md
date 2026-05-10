@@ -1,11 +1,7 @@
 ---
 name: video-audio
-description: Generates TTS audio (MP3) and calculates per-scene durations for a video project. Asks the user to confirm provider and voice before running. Invoke with /video-audio <unit-slug> <lesson-slug> <video-name>.
+description: Generates TTS audio (MP3) and calculates per-scene durations for a video project. Asks the user to confirm provider and voice before running.
 compatibility: Requires Python 3.10+, elevenlabs, google-genai, pydub packages, and API keys in generation/tools/.env
-allowed-tools: Read Write Bash(python *)
-metadata:
-  disable-model-invocation: "true"
-  argument-hint: "<unit-slug> <lesson-slug> <video-name>"
 ---
 
 # video-audio
@@ -14,9 +10,9 @@ Generate audio and scene durations for a video.
 
 ## Path detection
 
-Parse `$ARGUMENTS` (3 words): UNIT=first, LESSON=second, VIDEO=third
+Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
 
-List `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
+Use `execute` to list `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
 
 - Script path: `generation/units/$UNIT/lessons/$LESSON_SLUG/videos/$VIDEO/script.json`
 
@@ -30,7 +26,7 @@ All steps below use SCRIPT_PATH derived above.
 
 ## Step 1: Human Check-In (ask before running)
 
-Read `references/providers.md` for current provider and voice options, then present the full menu inline and ask the user to choose:
+Use `load_skill_resource` to read `references/providers.md` for current provider and voice options, then present the full menu inline and ask the user to choose:
 
 > **Which provider and voice?**
 >
@@ -81,7 +77,7 @@ Tell the user:
 - For Gemini: how many individual MP3 files were created
 
 Then tell them the next step:
-- "Run /video-assemble $UNIT $LESSON $VIDEO to assemble the final player-ready script."
+- "Tell the user to continue with the video-assemble skill for $UNIT / $LESSON / $VIDEO to assemble the final player-ready script."
 
 ## Gotchas
 

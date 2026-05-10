@@ -1,10 +1,6 @@
 ---
 name: video-assemble
-description: Assembles the final player-ready script.json by embedding audio as base64 and inlining any local image paths. The output loads directly in the json-video-player. Invoke with /video-assemble <unit-slug> <lesson-slug> <video-name>.
-allowed-tools: Bash(python *) Read Write
-metadata:
-  disable-model-invocation: "true"
-  argument-hint: "<unit-slug> <lesson-slug> <video-name>"
+description: Assembles the final player-ready script.json by embedding audio as base64 and inlining any local image paths. The output loads directly in the json-video-player.
 ---
 
 # video-assemble
@@ -13,9 +9,9 @@ Produce the final player-ready `script.json` for a video.
 
 ## Path detection
 
-Parse `$ARGUMENTS` (3 words): UNIT=first, LESSON=second, VIDEO=third
+Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
 
-List `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
+Use `execute` to list `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
 
 - Video root: `generation/units/$UNIT/lessons/$LESSON_SLUG/videos/$VIDEO/`
 

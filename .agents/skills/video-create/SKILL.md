@@ -1,10 +1,6 @@
 ---
 name: video-create
-description: Orchestrates the full video generation pipeline from init through assembly. Runs all stages in sequence, pausing at each human check-in point. Invoke with /video-create <unit-slug> <lesson-slug> <video-name>.
-allowed-tools: Read Bash(python *) Write
-metadata:
-  disable-model-invocation: "true"
-  argument-hint: "<unit-slug> <lesson-slug> <video-name>"
+description: Orchestrates the full video generation pipeline from init through assembly. Runs all stages in sequence, pausing at each human check-in point.
 ---
 
 # video-create
@@ -13,7 +9,7 @@ Run the full video generation pipeline for a video.
 
 ## Path detection
 
-Parse `$ARGUMENTS` (3 words): UNIT=first, LESSON=second, VIDEO=third
+Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
 
 - Script path: `generation/units/$UNIT/lessons/$LESSON/videos/$VIDEO/script.json`
 - Lesson state: `generation/units/$UNIT/lessons/$LESSON/lesson-state.json`
@@ -47,7 +43,7 @@ Stage 6: /video-assemble   → embed assets, finalize JSON
 
 2. For each incomplete stage (where `pipeline.<stage> != "complete"` or `assembled != true`), execute that stage's logic following its SKILL.md instructions. Load the relevant skill file to get the exact steps.
 
-   - When running stages, pass the full argument string `$UNIT $LESSON $VIDEO` to each sub-skill so they resolve paths correctly.
+   - When running stages, carry the UNIT, LESSON, and VIDEO values through to each sub-skill so they resolve paths correctly.
 
 3. Between stages, pause and confirm with the user before proceeding to the next stage.
 
