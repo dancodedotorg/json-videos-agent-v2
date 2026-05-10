@@ -57,9 +57,9 @@ def main():
         data["pipeline"][key] = value
         print(f"  pipeline.{key} = {value!r}")
 
-    with open(script_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-        f.write("\n")
+    tmp = script_path.with_suffix(".tmp")
+    tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    tmp.replace(script_path)
 
     print(f"Updated {script_path}")
 

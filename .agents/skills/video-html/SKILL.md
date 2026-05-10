@@ -49,8 +49,7 @@ Copy this checklist into your reply at the start of a session:
 - [ ] Step 7: Generation context loaded
 - [ ] Step 8: HTML generated (all scenes)
 - [ ] Step 9: Scene files saved to scenes/
-- [ ] Step 10: insert-slides.py run
-- [ ] Step 11: pipeline.html = "complete" set
+- [ ] Step 10: pipeline.html = "complete" set
 
 ---
 
@@ -327,17 +326,11 @@ $VIDEO_ROOT/scenes/scene_02.html
 
 Zero-pad to 2 digits. Each file is a complete self-contained HTML document (from `<!DOCTYPE html>` to `</html>`).
 
----
-
-## Step 10: Insert into script.json
-
-```bash
-python .agents/skills/video-html/scripts/insert-slides.py $VIDEO_ROOT/script.json
-```
+HTML files are **not** inserted into `script.json` at this stage — `embed-data.py` reads them directly from the `scenes/` folder during assembly.
 
 ---
 
-## Step 11: Update script.json
+## Step 10: Update script.json
 
 Run the appropriate command based on the mode used:
 

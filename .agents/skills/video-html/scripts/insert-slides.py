@@ -89,10 +89,12 @@ def main():
         print(f"Scene {scene_num:02d}: inserted ({len(html):,} chars)")
         inserted += 1
 
-    # Save back in-place
+    # Save back atomically (temp + rename avoids corrupt file on crash)
     try:
-        with open(script_path, "w", encoding="utf-8") as f:
+        tmp_path = script_path + ".tmp"
+        with open(tmp_path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
+        os.replace(tmp_path, script_path)
     except OSError as e:
         print(f"ERROR: could not write script: {e}", file=sys.stderr)
         sys.exit(1)

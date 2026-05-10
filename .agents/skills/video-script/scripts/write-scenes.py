@@ -50,7 +50,9 @@ def main():
         script["pipeline"] = {}
     script["pipeline"]["script"] = "complete"
 
-    script_path.write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
+    tmp = script_path.with_suffix(".tmp")
+    tmp.write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
+    tmp.replace(script_path)
     print(f"Wrote {len(scenes)} scenes to {script_path} and set pipeline.script = complete")
 
 

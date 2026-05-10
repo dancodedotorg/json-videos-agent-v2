@@ -233,8 +233,9 @@ def main():
         script = write_metadata(script, "gemini", "per_scene", args.voice)
         print("[mode] per_scene")
 
-    with open(script_path, "w", encoding="utf-8") as f:
-        json.dump(script, f, indent=2, ensure_ascii=False)
+    tmp = script_path.with_suffix(".tmp")
+    tmp.write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
+    tmp.replace(script_path)
 
     print(f"[done] script.json written → {script_path}")
 

@@ -116,14 +116,23 @@ Examples:
         sys.exit(2)
 
     # ── Embed images in scene HTML ──
+    # HTML may live in scenes[].html (old behavior) or in scenes/scene_NN.html files
+    # (deferred-insertion behavior). Try both, preferring the inline field.
+    scenes_dir = input_path.parent / "scenes"
     image_total = 0
     for i, scene in enumerate(data.get("scenes", [])):
         html = scene.get("html", "")
         if not html:
-            continue
+            scene_file = scenes_dir / f"scene_{i + 1:02d}.html"
+            if scene_file.exists():
+                html = scene_file.read_text(encoding="utf-8")
+                print(f"  Scene {i + 1}: loaded HTML from scenes/", file=sys.stderr)
+            else:
+                print(f"  WARNING: Scene {i + 1}: no html field and no {scene_file.name}", file=sys.stderr)
+                continue
         new_html, count = embed_local_images(html)
+        scene["html"] = new_html
         if count:
-            scene["html"] = new_html
             image_total += count
             print(f"  Scene {i + 1}: embedded {count} image(s)", file=sys.stderr)
 
