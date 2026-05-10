@@ -1,6 +1,6 @@
 ---
 name: video-script
-description: Generates the voiceover script (scene comments and speech) for a video project by reading source materials. Includes human check-ins for mode selection and script approval.
+description: Generates the voiceover script (scene comments and speech) for a video project by reading source materials and the video's planned mode. Includes a human check-in for script approval.
 ---
 
 # video-script
@@ -10,7 +10,6 @@ Generate the voiceover script for a video.
 ## Progress checklist
 
 - [ ] Path detection + prereq check
-- [ ] Mode selection (wait for user)
 - [ ] Load source materials as artifacts
 - [ ] Apply target_objectives lens
 - [ ] Generate scenes (read mode style guide first)
@@ -41,25 +40,13 @@ All steps below use SCRIPT_PATH and SOURCE_PATH derived above.
 ## Step 1: Read script.json metadata
 
 Read SCRIPT_PATH. Extract:
-- `target_objectives` (new-style only) — the objectives this video must address
-- Confirm `pipeline.grounding == "complete"` before continuing
+- `target_objectives` — the objectives this video must address
+- `mode` — the generation mode (concept / summary / re-teach / co-create)
+- `brief` — the co-create brief string, or null
 
-## Step 2: Mode Selection (ask the user)
+Confirm `pipeline.grounding == "complete"` before continuing.
 
-Ask the user to choose a generation mode before doing anything:
-
-> **How should I generate the script for "$VIDEO"?**
->
-> - **concept** — One scene per slide with detailed narration; explains each slide fully. Best for tutorial/teaching videos.
-> - **summary** — Fewer scenes covering key takeaways; groups related slides. Best for overview/review videos.
-> - **re-teach** — A remediation video for students who completed the lesson but need reinforcement. Stays grounded in the original lesson; explains concepts more explicitly and walks through student tasks. Best for review/support videos.
-> - **co-create** — You provide a custom brief (audience, angle, focus) and I generate scenes accordingly.
->
-> Which mode? (concept / summary / re-teach / co-create)
-
-Wait for the user's response before proceeding. If `co-create`, also ask for the brief.
-
-## Step 3: Load Source Material as Artifacts
+## Step 2: Load Source Material as Artifacts
 
 **Phase A — Ensure artifacts are loaded:**
 
@@ -89,7 +76,7 @@ When `lesson_levels.json` is the primary source, use the level content to unders
 - `Multi`: multiple choice question with `questions[].text` and `answers[].text`/`correct`
 - `External`: standalone markdown page with `markdown` content
 
-## Step 4: Apply target_objectives lens (new-style videos only)
+## Step 3: Apply target_objectives lens (new-style videos only)
 
 If `target_objectives` is set in script.json, use those objectives as the **primary lens** for script generation:
 
@@ -98,14 +85,18 @@ If `target_objectives` is set in script.json, use those objectives as the **prim
 - If the source material covers topics beyond the target objectives, de-emphasize or omit those topics in the script (the other videos in this lesson will cover them)
 - The script should feel complete and coherent on its own while staying focused on the chosen objectives
 
-## Step 5: Generate Scenes
+## Step 4: Generate Scenes
 
-Before generating, use `load_skill_resource` to read the style guide for the chosen mode and follow all guidance there:
+Before generating, use `load_skill_resource` to read the style guide for the mode stored in `script.json`:
 
-- **concept**: Use `load_skill_resource` to read `references/concept-style-guide.md` in full. That file covers: required intro scene, one scene per slide, handling slides with no speaker notes, scene length targets, tone, and `comment` field conventions.
-- **summary**: Use `load_skill_resource` to read `references/summary-style-guide.md` in full. That file covers: required intro scene, grouping criteria, key-takeaway framing, scene length targets, and what to compress or skip.
-- **re-teach**: Use `load_skill_resource` to read `references/reteach-style-guide.md` in full. That file covers: required intro scene, structure and length targets, content rules (elaboration pass, activity walkthroughs, no new analogies), lesson-referencing conventions (student actions only, never teacher actions), tone and language, and Question of the Day handling.
-- **co-create**: Use `load_skill_resource` to read `references/co-create-style-guide.md` in full. That file covers: what a complete brief contains, defaults for thin briefs, scene structure, tone, and when to flag brief/objective conflicts.
+- **concept**: load `references/concept-style-guide.md`
+- **summary**: load `references/summary-style-guide.md`
+- **re-teach**: load `references/reteach-style-guide.md`
+- **co-create**: load `references/co-create-style-guide.md`
+
+For **co-create**: use the style guide for structural rules and scene guardrails; use the `brief` field from `script.json` for creative direction (audience, angle, tone, length). If `brief` is null on a co-create video, apply the defaults from the co-create style guide.
+
+For **all modes**: if `brief` is non-null, incorporate it as supplemental guidance alongside the reference doc.
 
 Each scene object:
 ```json
@@ -115,7 +106,7 @@ Each scene object:
 }
 ```
 
-## Step 6: Write to script.json
+## Step 5: Write to script.json
 
 Write the generated scenes array to a temp file alongside the script, then use `write-scenes.py` to merge it in:
 
@@ -125,7 +116,7 @@ python .agents/skills/video-script/scripts/write-scenes.py SCRIPT_PATH SCENES_DR
 
 Where `SCENES_DRAFT_PATH` is a JSON file containing only the scenes array (e.g., `generation/units/UNIT/lessons/LESSON/videos/VIDEO/scenes_draft.json`). The script replaces the `scenes` field in `script.json` and sets `pipeline.script = "complete"` atomically — do not manually edit `script.json` to insert scenes.
 
-## Step 7: Human Check-In
+## Step 6: Human Check-In
 
 Present the generated script to the user in a readable format (numbered list of comment + speech pairs). Then ask:
 

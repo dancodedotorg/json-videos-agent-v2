@@ -83,6 +83,8 @@ def create_video(unit: str, lesson: str, video: dict) -> Path:
         "lesson": lesson,
         "target_objectives": video.get("target_objectives", []),
         "target_vocabulary": video.get("target_vocabulary", []),
+        "mode": video.get("mode", "concept"),
+        "brief": video.get("brief", None),
         **SCRIPT_TEMPLATE,
     }
 

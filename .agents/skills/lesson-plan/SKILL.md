@@ -37,13 +37,39 @@ Read `generation/units/$UNIT/lessons/$LESSON_SLUG/lesson-state.json`. If `ground
 If `lesson-plan.json` already exists in the lesson folder, show the user:
 ```
 A video plan already exists for this lesson:
-  <list the video names and their objectives>
+  <list the video names and their modes>
 
 Re-plan from scratch? [y/n]
 ```
 If no: stop. If yes: proceed (the existing plan will be replaced).
 
-## Step 2: Read source materials
+## Step 2: Ask what types of videos the user wants
+
+Use `load_skill_resource` to read `references/mode-guide.md` from the video-script skill. Then ask:
+
+```
+What type of video(s) do you want to make for this lesson?
+
+  concept   — one scene per slide; thorough tutorial narration
+  summary   — 3–8 scenes, thematic grouping; best for review/overview
+  re-teach  — remediation for students who completed the lesson
+    ↳ If you choose re-teach, I'll analyze the lesson objectives next
+      and recommend how many re-teach videos to make.
+  co-create — you provide a custom brief (audience, angle, tone, length)
+
+You can mix types (e.g., "one concept and some re-teach videos").
+What type(s) do you want?
+```
+
+Wait for the user's response.
+
+- **Do not ask "how many" for re-teach** — count is determined by the coupling analysis in Step 4, not the user upfront.
+- For **concept / summary**: default to one video per lesson unless the user specifies otherwise.
+- For **co-create**: collect the brief now, following the thin-brief rules in `mode-guide.md`.
+
+Store the requested types and any co-create briefs.
+
+## Step 3: Read source materials
 
 Read all of the following:
 - `generation/units/$UNIT/lessons/$LESSON_SLUG/source/objectives.md`
@@ -57,17 +83,23 @@ Read all of the following:
 - If no `lesson_*_levels.json` files exist: skip the levels-mapping section of the analysis guide and note it. Do not stop.
 - Proceed with whatever source materials are available. A lesson with only objectives and vocabulary is enough to generate a plan.
 
-## Step 3: Analyze
+## Step 4: Coupling analysis and plan generation (conditional)
+
+Run this step **only if**:
+- The user requested re-teach video(s), OR
+- The user requested multiple videos and needs help deciding how to group content
+
+For **concept, summary, or single co-create** requests: skip this step entirely and proceed to Step 5.
+
+When running this step:
 
 Read [analysis-guide.md](references/analysis-guide.md) for the full framework. Perform each section in order and show your reasoning explicitly before generating plans.
-
-## Step 4: Generate plans
 
 Always generate at least Plans A and B. Generate additional plans (C, D, …) for each meaningfully different grouping suggested by the coupling analysis.
 
 - **Plan A — fully split:** one video per objective (or per tightly-coupled pair that cannot be separated). Maximum reuse; most videos.
 - **Plan B — fully combined:** all objectives in one video. Note if estimated length exceeds 3 minutes.
-- **Plan C, D, … — intermediate splits:** one plan per distinct grouping of objectives that the coupling analysis supports. For example, if objectives 1 and 3 are tightly coupled and 2 and 4 are tightly coupled, one plan might be [1,3] + [2,4]; another might be [1,3] + [2] + [4]. Generate at most 2 intermediate plans to avoid overwhelming the user.
+- **Plan C, D, … — intermediate splits:** one plan per distinct grouping of objectives that the coupling analysis supports. Generate at most 2 intermediate plans to avoid overwhelming the user.
 
 Present each plan as a table:
 
@@ -93,10 +125,10 @@ Plan C — 2 videos
 
 After the tables, apply the recommendation criteria in two passes:
 
-**Step 1 — Eliminate disqualified plans:**
+**Pass 1 — Eliminate disqualified plans:**
 - **Never exceed 3 minutes per video.** Any plan where a video's estimated scene count pushes past the 3-minute limit is eliminated. (Exception: if all plans are disqualified, flag it and recommend the least-bad option.)
 
-**Step 2 — Rank remaining plans (apply in order):**
+**Pass 2 — Rank remaining plans (apply in order):**
 1. **Prefer independent videos.** A video focused on one objective (or one tightly-coupled cluster) is easier to reuse, update, and target. Split unless there is a concrete reason not to.
 2. **Shorter is fine.** A 1-minute video is not a problem. Do not pad or combine objectives just to reach a minimum length.
 3. **Keep prerequisites together.** If understanding objective B requires objective A, they belong in the same video even if other criteria would split them.
@@ -111,7 +143,7 @@ Which plan? (A / B / C / D / … or describe a custom split)
 
 ## Step 5: Confirm video names
 
-Once the user selects a plan, confirm the video names:
+Once the video set is determined (either from Step 4 plan selection, or directly for concept/summary/co-create), confirm the video names:
 ```
 Using Plan C:
   1. how-ai-thinks
@@ -140,7 +172,9 @@ Write `generation/units/$UNIT/lessons/$LESSON_SLUG/lesson-plan.json`:
       "target_vocabulary": [
         "<vocab word>",
         ...
-      ]
+      ],
+      "mode": "<concept|summary|re-teach|co-create>",
+      "brief": "<brief string or null>"
     },
     ...
   ]
@@ -148,6 +182,8 @@ Write `generation/units/$UNIT/lessons/$LESSON_SLUG/lesson-plan.json`:
 ```
 
 `target_vocabulary` entries are the vocabulary *words* (e.g. `"probability"`, `"prompt"`), not definitions. Use the exact word strings from vocabulary.md.
+
+`mode` is the mode chosen in Step 2. `brief` is the co-create brief string, or `null` for all other modes (unless the user provided supplemental customization notes, in which case store those as the brief).
 
 ## Step 7: Initialize video folders
 
@@ -163,7 +199,7 @@ Print the script output directly.
 ✅ Video plan initialized for "$LESSON_SLUG".
 
   Plan: <N> videos
-  <list: video-name → N objectives>
+  <list: video-name → mode → N objectives>
 
   lesson-plan.json: generation/units/$UNIT/lessons/$LESSON_SLUG/lesson-plan.json
   Video folders:   generation/units/$UNIT/lessons/$LESSON_SLUG/videos/

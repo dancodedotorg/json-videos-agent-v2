@@ -1,6 +1,6 @@
 ---
 name: video-init
-description: Initializes a new video project folder within an existing grounded lesson. Checks lesson grounding, prompts objective selection, creates the video folder with audio/images/scenes, and writes an initial script.json.
+description: Initializes a new video project folder within an existing grounded lesson. Checks lesson grounding, prompts objective selection, asks for mode and brief, creates the video folder with audio/images/scenes, and writes an initial script.json.
 ---
 
 # video-init
@@ -56,7 +56,28 @@ Which vocabulary terms should this video define? (enter letters, or press Enter 
 
 Wait for both responses. Store as TARGET_OBJECTIVES and TARGET_VOCABULARY. If the user skips vocabulary, assign terms whose words appear in the selected objective texts.
 
-## Step 3: Write script.json
+## Step 3: Select mode and brief
+
+Use `load_skill_resource` to read `references/mode-guide.md` from the video-script skill. Then ask:
+
+```
+How should this video be generated?
+
+  concept   — one scene per slide; thorough tutorial narration
+  summary   — 3–8 scenes, thematic grouping; best for review/overview
+  re-teach  — remediation for students who completed the lesson
+  co-create — you provide a custom brief (audience, angle, tone, length)
+
+Which mode? (concept / summary / re-teach / co-create)
+```
+
+Wait for the user's response. Store as MODE.
+
+If **co-create**: ask for the brief, following the thin-brief rules in `mode-guide.md` (one follow-up question for the most important gap; never ask multiple). Store as BRIEF.
+
+For all other modes: BRIEF is null unless the user volunteers customization notes, in which case store those as BRIEF.
+
+## Step 4: Write script.json
 
 The `write_file` tool creates parent directories automatically, so no separate folder creation step is needed.
 
@@ -69,6 +90,8 @@ Use `write_file` to write `generation/units/$UNIT/lessons/$LESSON/videos/$VIDEO/
   "lesson": "$LESSON",
   "target_objectives": [<TARGET_OBJECTIVES array>],
   "target_vocabulary": [<TARGET_VOCABULARY array>],
+  "mode": "<MODE>",
+  "brief": <BRIEF string or null>,
   "width": 1600,
   "height": 900,
   "pipeline": {
@@ -94,6 +117,7 @@ Print:
 ✅ Video "$VIDEO" initialized in lesson "$LESSON".
 
   Location: generation/units/$UNIT/lessons/$LESSON/videos/$VIDEO/
+  Mode: <MODE>
   Target objectives: <N> selected
   Source materials: shared from generation/units/$UNIT/lessons/$LESSON/source/
 
