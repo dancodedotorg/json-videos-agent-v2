@@ -122,6 +122,9 @@ def ground_lesson(
     # Step 3: Fetch
     # ------------------------------------------------------------------
     if not dry_run:
+        if force and source_dir.exists():
+            import shutil
+            shutil.rmtree(source_dir)
         source_dir.mkdir(parents=True, exist_ok=True)
 
     fetch_count = 0

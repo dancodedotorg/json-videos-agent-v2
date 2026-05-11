@@ -1,0 +1,1 @@
+- multimodal model: an AI system that can process information from multiple types of input

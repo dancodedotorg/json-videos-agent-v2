@@ -1,0 +1,38 @@
+[
+  {
+    "comment": "Title slide: 'Revisiting: AI, Privacy, and Ethics in Multimedia' with a subtle 'reinforcement' visual cue.",
+    "speech": "Welcome back. In this video, we're going to revisit the important topic of AI, privacy, and ethics, especially when we're dealing with multimedia data like images and videos."
+  },
+  {
+    "comment": "Visual of a smartphone camera taking a picture, with a thought bubble above it showing AI processing the image.",
+    "speech": "When you upload an image to an AI tool, you might not always think about what happens behind the scenes. AI models can interpret and analyze images in incredibly sophisticated ways, but this raises some serious privacy questions."
+  },
+  {
+    "comment": "A simplified diagram showing an image being fed into an AI model, and the AI outputting various interpretations (e.g., location, objects, people).",
+    "speech": "Remember when we discussed the benefits and risks of AI interpreting images without human context? An AI might identify objects or even people in your photo, even if you didn't intend for that information to be shared or analyzed."
+  },
+  {
+    "comment": "A visual representing data flowing from personal images into a larger, interconnected network, highlighting potential privacy breaches.",
+    "speech": "This means that an AI could potentially infer a lot about your life – where you are, what you own, who you're with – just from an image. This data can then be used in ways you might not expect or consent to."
+  },
+  {
+    "comment": "A visual depicting a reverse image search in action, showing a user uploading an image and results showing its origin and other appearances online.",
+    "speech": "We also looked at reverse image search. This technology allows anyone to upload an image and find out where else it exists online, or even identify the people in it. While it has its uses, it also opens up a debate about privacy and ethics."
+  },
+  {
+    "comment": "A scale balancing 'technological advancement' on one side and 'individual privacy/ethics' on the other.",
+    "speech": "The power of AI to analyze and connect information from images is growing rapidly. This power comes with a responsibility to consider the ethical implications. How do we ensure these tools are used fairly and don't infringe on individual rights?"
+  },
+  {
+    "comment": "A stylized representation of a student filling out a section in a unit guide titled 'Privacy and Ethical Concerns.'",
+    "speech": "In Level 1, you were asked to complete sections in your Unit Guide about privacy and ethical concerns. This activity was designed to get you thinking critically about these very real issues."
+  },
+  {
+    "comment": "A checklist visual with points like 'Who has access?', 'How will it be used?', 'Am I comfortable with this?'.",
+    "speech": "Before sharing any image online, especially with AI tools, it's crucial to ask yourself a few questions. Who has access to this data? How might an AI interpret it? And are you comfortable with the potential implications of that interpretation?"
+  },
+  {
+    "comment": "A visual emphasizing critical thinking, perhaps a thought bubble with a question mark and a shield icon.",
+    "speech": "Understanding the privacy and ethical considerations of AI with multimedia data is essential. It empowers you to make informed decisions about your digital footprint and advocate for responsible AI development."
+  }
+]
