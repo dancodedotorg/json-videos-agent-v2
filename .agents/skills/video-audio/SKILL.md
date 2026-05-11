@@ -40,7 +40,7 @@ Wait for the user's answer before proceeding.
 
 ## Step 2: Run Audio Generation
 
-Run exactly one of these commands. Do not modify the command or add flags.
+Use `execute` to run exactly one of these commands. Do not modify the command or add flags.
 
 **ElevenLabs:**
 ```bash

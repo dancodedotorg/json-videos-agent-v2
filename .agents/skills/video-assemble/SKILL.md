@@ -32,6 +32,7 @@ OUTPUT_PATH = `<VIDEO_ROOT>/script_assembled_base64.json`
 
 ### 1. Embed all assets (images + audio)
 
+Use `execute` to run:
 ```bash
 python .agents/skills/video-assemble/scripts/embed-data.py <SCRIPT_PATH> <OUTPUT_PATH>
 ```

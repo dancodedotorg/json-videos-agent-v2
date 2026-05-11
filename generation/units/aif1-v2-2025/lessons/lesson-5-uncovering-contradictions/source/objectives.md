@@ -1,0 +1,3 @@
+- Analyze how AI's reliance on probability-based models can lead to inconsistencies.
+- Evaluate the implications of AI-generated contradictions in real-world applications.
+- Experiment with AI to uncover contradictions and explain why they occur.

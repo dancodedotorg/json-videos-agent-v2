@@ -1,0 +1,2 @@
+- context: additional information or data surrounding a prompt or query that helps the AI generate more accurate and relevant responses
+- contradiction: when an AI generates conflicting or opposing responses based on a similar input, making it impossible for both responses to be correct at the same time

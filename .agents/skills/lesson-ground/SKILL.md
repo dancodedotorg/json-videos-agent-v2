@@ -93,8 +93,9 @@ For the full list of output files produced by each type, see [source-types.md](r
 
 ## Step 3: Run ground-lesson.py
 
+Use `execute` to run:
 ```bash
-python scripts/ground-lesson.py $UNIT $LESSON_SLUG [--force] [--dry-run]
+python .agents/skills/lesson-ground/scripts/ground-lesson.py $UNIT $LESSON_SLUG [--force] [--dry-run]
 ```
 
 Pass `--force` if the user confirmed a re-fetch in Step 1.

@@ -20,16 +20,17 @@ The unit slug is the URL slug used on studio.code.org — e.g., `problem-solving
 
 ## Step 1: Create folder structure
 
+Use `execute` to run:
 ```bash
 mkdir -p generation/units/$ARGUMENTS
 ```
 
 ## Step 2: Fetch lessons and resources
 
-Run the fetch script, which saves `lessons.json` and `resources.json` to `generation/units/$ARGUMENTS/`:
+Use `execute` to run the fetch script, which saves `lessons.json` and `resources.json` to `generation/units/$ARGUMENTS/`:
 
 ```bash
-python scripts/fetch_unit.py $ARGUMENTS
+python .agents/skills/unit-init/scripts/fetch_unit.py $ARGUMENTS
 ```
 
 The script prints the lesson list on success.
@@ -38,10 +39,10 @@ If it exits with code 2, relay the instructions the script printed to the user e
 
 ## Step 3: Generate unit.json
 
-Run `filter_resources.py` to produce the clean unit.json:
+Use `execute` to run `filter_resources.py` to produce the clean unit.json:
 
 ```bash
-python scripts/filter_resources.py generation/units/$ARGUMENTS/resources.json generation/units/$ARGUMENTS/lessons.json
+python .agents/skills/unit-init/scripts/filter_resources.py generation/units/$ARGUMENTS/resources.json generation/units/$ARGUMENTS/lessons.json
 ```
 
 This writes `generation/units/$ARGUMENTS/unit.json` directly.
@@ -71,10 +72,10 @@ This will run init_all_lessons.py and create a folder for every lesson in unit.j
 Reply "yes" to proceed, or "no" to skip.
 ```
 
-If the user says **yes**, run:
+If the user says **yes**, use `execute` to run:
 
 ```bash
-python scripts/init_all_lessons.py $ARGUMENTS
+python .agents/skills/unit-init/scripts/init_all_lessons.py $ARGUMENTS
 ```
 
 Then confirm:
@@ -93,10 +94,10 @@ It requires Google API credentials to be configured in generation/tools/.env.
 Reply "yes" to proceed, or "no" to skip.
 ```
 
-If the user says **yes**, run:
+If the user says **yes**, use `execute` to run:
 
 ```bash
-python scripts/ground-all.py $ARGUMENTS
+python .agents/skills/unit-init/scripts/ground-all.py $ARGUMENTS
 ```
 
 Then confirm:

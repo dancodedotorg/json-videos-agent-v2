@@ -55,7 +55,7 @@ Copy this checklist into your reply at the start of a session:
 
 ## Step 1: Read Script Safely
 
-Run base64_clean to get a safe-to-read version:
+Use `execute` to run base64_clean:
 ```bash
 python .agents/skills/video-html/scripts/base64_clean.py $VIDEO_ROOT/script.json
 ```
@@ -72,7 +72,7 @@ Read the **entire** `$VIDEO_ROOT/script_cleaned.json` before assessing any indiv
 > - **Yes** — I'll regenerate. Script edits (splits, speech adjustments) are enabled.
 > - **No** — Keep existing audio. Script edits are disabled.
 
-If **Yes**: Run:
+If **Yes**: Use `execute` to run:
 ```bash
 python .agents/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json audio=pending audio_tags=pending
 ```
@@ -300,7 +300,7 @@ Each scene uses whatever approach the approved plan specifies.
 
 1. Use the Visual Preset declared in Step 5a
 2. Assemble the prompt using the formula in `references/image-generation.md`
-3. Run the tool:
+3. Use `execute` to run:
    ```bash
    python .agents/skills/video-html/scripts/gemini-image-gen.py "FINAL_PROMPT" --aspect-ratio 16:9 --output-dir $VIDEO_ROOT/images
    ```
@@ -332,7 +332,7 @@ HTML files are **not** inserted into `script.json` at this stage — `embed-data
 
 ## Step 10: Update script.json
 
-Run the appropriate command based on the mode used:
+Use `execute` to run the appropriate command based on the mode used:
 
 **Mode C:**
 ```bash

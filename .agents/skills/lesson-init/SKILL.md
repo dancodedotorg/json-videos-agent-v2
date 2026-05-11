@@ -47,10 +47,10 @@ If the user says no, stop.
 
 ## Step 2: Run init_lesson.py with the lesson ID
 
-Run:
+Use `execute` to run:
 
 ```bash
-python scripts/init_lesson.py $UNIT $LESSON_ID
+python .agents/skills/lesson-init/scripts/init_lesson.py $UNIT $LESSON_ID
 ```
 
 Where `$LESSON_ID` is the integer `id` from the matched lesson in unit.json. Print the script output directly.

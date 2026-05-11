@@ -1,0 +1,9 @@
+description,type,value
+Examining Ai Contradictions,google_doc,https://docs.google.com/document/d/1h9wgXbJZFF6FMUopFYq-SqhExAi7Yn4E2QBAuv9_oV0/edit?usp=drivesdk
+Lesson Slides,google_slides,https://docs.google.com/presentation/d/1aB64LHdkG6gd2iXMQOFhWyzDEiFR2FU8RD2Ixbbs6f0/edit?usp=drivesdk
+Lesson Levels,level_summary,9520959
+context,vocabulary,context: additional information or data surrounding a prompt or query that helps the AI generate more accurate and relevant responses
+contradiction,vocabulary,"contradiction: when an AI generates conflicting or opposing responses based on a similar input, making it impossible for both responses to be correct at the same time"
+Objective: Analyze how AI's reliance on probability-based models can...,objective,Analyze how AI's reliance on probability-based models can lead to inconsistencies.
+Objective: Evaluate the implications of AI-generated contradictions ...,objective,Evaluate the implications of AI-generated contradictions in real-world applications.
+Objective: Experiment with AI to uncover contradictions and explain ...,objective,Experiment with AI to uncover contradictions and explain why they occur.

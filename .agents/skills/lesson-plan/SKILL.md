@@ -187,8 +187,9 @@ Write `generation/units/$UNIT/lessons/$LESSON_SLUG/lesson-plan.json`:
 
 ## Step 7: Initialize video folders
 
+Use `execute` to run:
 ```bash
-python scripts/init_videos.py $UNIT $LESSON_SLUG
+python .agents/skills/lesson-plan/scripts/init_videos.py $UNIT $LESSON_SLUG
 ```
 
 Print the script output directly.

@@ -1,0 +1,62 @@
+[
+  {
+    "comment": "Opening shot of a digital 'Unit Guide' cover, perhaps with an animation highlighting 'Problem Solving with AI'.",
+    "speech": "Welcome, educators, to a brief overview of the 'Problem Solving with AI' Unit Guide. This guide is your essential companion to understanding what your students will experience in this unit, and how you can best support their learning journey into the world of Artificial Intelligence."
+  },
+  {
+    "comment": "An infographic showing the unit's core questions and big ideas, with a teacher's hand pointing.",
+    "speech": "This unit is designed to introduce students to the fundamental concepts of AI, exploring how it functions and its widespread impact on our society. Throughout the twelve lessons, students will engage with key questions about AI's capabilities, learning processes, ethical considerations, and societal roles."
+  },
+  {
+    "comment": "Visual of students brainstorming different types of AI, with a thought bubble showing examples.",
+    "speech": "In Lesson 1, 'What is AI?', students kick off their exploration by defining AI and identifying various forms of AI they encounter daily. For teachers, the guide provides detailed lesson objectives, key vocabulary, and specific activity instructions to facilitate discussions and initial explorations into what constitutes artificial intelligence."
+  },
+  {
+    "comment": "Animation depicting a simple machine learning process, showing data input leading to a learned outcome.",
+    "speech": "Moving into Lesson 2, 'How do AIs learn?', students dive into the basics of machine learning, understanding how AI systems are trained and improve. The teacher notes for this lesson offer insights into explaining complex concepts like training data and algorithms, along with guidance for hands-on activities that demonstrate AI learning."
+  },
+  {
+    "comment": "Visual representation of a neural network, simplifying its complexity for a general audience.",
+    "speech": "Lesson 3, titled 'The AI's Brain', introduces students to the concept of neural networks and how they mimic human brain function. The unit guide for this lesson supports teachers with clear explanations of these abstract ideas, providing resources and discussion points to help students grasp the foundational architecture behind many AI systems."
+  },
+  {
+    "comment": "A scales of justice icon balanced with AI elements, highlighting ethical dilemmas.",
+    "speech": "As students progress, Lesson 4, 'AI and Ethics', challenges them to consider the moral and ethical implications of AI. Teachers will find structured activities and discussion prompts in the guide to lead conversations around bias, fairness, and responsible AI development, fostering critical thinking about technology's impact."
+  },
+  {
+    "comment": "A montage of diverse real-world applications of AI, showing its impact across different sectors.",
+    "speech": "Lesson 5, 'AI and Society', broadens the perspective, encouraging students to analyze AI's current and future roles in society. The guide equips teachers with scenarios and case studies to explore AI's influence on jobs, privacy, and daily life, prompting students to envision a future with AI."
+  },
+  {
+    "comment": "Students working on a project, applying AI concepts to a real-world problem.",
+    "speech": "In Lesson 6, 'Building with AI', students transition from understanding to application, engaging in hands-on activities that involve building simple AI models or interacting with AI development tools. The unit guide offers step-by-step instructions and project ideas for teachers to facilitate these practical experiences."
+  },
+  {
+    "comment": "A diagram showing the flow of data through an AI system, emphasizing inputs and outputs.",
+    "speech": "Lesson 7, 'Data and AI', focuses on the crucial role of data in AI systems. Students will learn about data collection, cleaning, and how different datasets can influence AI behavior. Teachers will find resources in the guide to explain data privacy, bias in data, and the importance of diverse data sources."
+  },
+  {
+    "comment": "A visual metaphor for AI decision-making, perhaps a branching path or a set of rules being applied.",
+    "speech": "Lesson 8, 'AI Decision Making', delves into the logic and algorithms behind AI decisions. Students will explore how AI makes choices and the factors that influence these decisions. The guide provides teachers with examples and activities to illustrate rule-based AI versus machine learning approaches to problem-solving."
+  },
+  {
+    "comment": "Students collaborating on a presentation about AI's impact on a specific industry.",
+    "speech": "Lesson 9, 'AI in Industries', explores the diverse applications of AI across various sectors, from healthcare to entertainment. Teachers can utilize the provided case studies in the unit guide to spark discussions about career opportunities and the transformative power of AI in the modern workforce."
+  },
+  {
+    "comment": "An illustration of a robot or AI assistant interacting with a human, highlighting ethical considerations.",
+    "speech": "Lesson 10, 'Advanced AI Ethics', revisits ethical considerations with more complex scenarios and debates. Students will grapple with advanced topics like autonomous systems, surveillance, and the future of human-AI interaction. The guide equips teachers with robust debate prompts and ethical frameworks."
+  },
+  {
+    "comment": "Students participating in a hackathon-style event, creatively solving problems with AI tools.",
+    "speech": "Lesson 11, 'AI Project Showcase', is where students apply all their learned knowledge to a capstone project. They will design, develop, and present their own AI-powered solutions to real-world problems. The unit guide offers project rubrics, assessment strategies, and ideas for inspiring student innovation."
+  },
+  {
+    "comment": "A concluding visual of a globe or connected network, symbolizing the global impact and future of AI, with a teacher overlooking.",
+    "speech": "Finally, Lesson 12, 'The Future of AI', encourages students to look ahead, envisioning the evolving landscape of AI and their potential roles within it. The guide provides discussion points and futuristic scenarios for teachers to facilitate thoughtful contemplation on AI's trajectory and societal evolution."
+  },
+  {
+    "comment": "A teacher confidently navigating the digital unit guide, with students actively engaged in AI-related activities in the background.",
+    "speech": "In summary, the 'Problem Solving with AI' Unit Guide is an invaluable resource, offering comprehensive support for each of its twelve lessons. It ensures teachers are well-prepared to guide students through a relevant and engaging exploration of artificial intelligence, empowering them to become informed and responsible participants in our AI-driven world. We hope this expanded overview helps you confidently navigate and leverage this powerful teaching tool."
+  }
+]

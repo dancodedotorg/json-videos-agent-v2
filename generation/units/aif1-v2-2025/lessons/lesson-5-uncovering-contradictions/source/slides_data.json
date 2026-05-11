@@ -1,0 +1,158 @@
+[
+  {
+    "index": 0,
+    "slide_id": "gca418c6afa_0_1070",
+    "notes": "",
+    "png_base64": null
+  },
+  {
+    "index": 1,
+    "slide_id": "gca418c6afa_0_109",
+    "notes": "Warm Up (10 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 2,
+    "slide_id": "g2694c47731d_0_16",
+    "notes": "Two Truths and a Lie (10 mins)\n\n☑️ Do This: Ask the class for a topic (e.g., space, animals, history, music, etc.).",
+    "png_base64": null
+  },
+  {
+    "index": 3,
+    "slide_id": "g338ced92cd9_0_14",
+    "notes": "☑️ Do This: Use Lesson 5, Level 1 to demo entering the following prompt: \"Tell me 2 truths and a lie about [insert topic]. Don't tell me which ones are truths or lies.\"",
+    "png_base64": null
+  },
+  {
+    "index": 4,
+    "slide_id": "g338ced92cd9_0_30",
+    "notes": "☑️ Do This: Have students partner up and try to guess which AI-generated statements are true and which is the lie.",
+    "png_base64": null
+  },
+  {
+    "index": 5,
+    "slide_id": "g338ced92cd9_0_35",
+    "notes": "🎙️ Say: AI might not always produce the results that is expected. The result might even be contradictory. Therefore, fact-checking AI's results is an important step of the process.\n\n☑️ Do This: Demonstrate fact-checking by researching online using Google and credible websites to verify which statements are true and which is a lie.",
+    "png_base64": null
+  },
+  {
+    "index": 6,
+    "slide_id": "g338ab0e84e3_0_18",
+    "notes": "💬 Discuss: Click through the animated slide to display the prompts.\nWhy might AI generate a lie or inaccurate information?\nHow do we ensure accuracy when using AI?\n\n💡 Discussion Goal: Students should understand that AI generates responses based on patterns in data rather than verified facts. They should discuss how AI lacks direct knowledge, can misinterpret ambiguous prompts, and sometimes \"hallucinates\" information because it is designed to predict plausible-sounding text rather than confirm truth. Student highlight the importance of human judgement in verifying AI-generated content. Students should identify fact-checking strategies, such as cross-referencing multiple reliable sources (using official or expert-verified information) and critically analyze responses for logical consistency.",
+    "png_base64": null
+  },
+  {
+    "index": 7,
+    "slide_id": "g1b0012b9552_0_230",
+    "notes": "☑️ Do This: Introduce the lesson objectives.",
+    "png_base64": null
+  },
+  {
+    "index": 8,
+    "slide_id": "g1b0012b9552_0_235",
+    "notes": "☑️ Do This: Introduce the Question of the Day.",
+    "png_base64": null
+  },
+  {
+    "index": 9,
+    "slide_id": "gca418c6afa_0_49",
+    "notes": "Activity (30 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 10,
+    "slide_id": "g338ac58fd36_1_0",
+    "notes": "Contradictions in Real World Contexts (15 mins)\n\n☑️ Do This: Define contradiction.",
+    "png_base64": null
+  },
+  {
+    "index": 11,
+    "slide_id": "g2694c47731d_3_317",
+    "notes": "📄 Distribute: Give each pair of students a copy of the Examining AI Contradictions activity guide.",
+    "png_base64": null
+  },
+  {
+    "index": 12,
+    "slide_id": "g338ac58fd36_1_32",
+    "notes": "☑️ Do This: Using their activity guide, students will review two contradictory AI responses from a telehealth chatbot.\nStep 1: Students review both AI-generated responses.\nStep 2: Students highlight contradictions, vague statements, or misleading claims, such as the conflicting advice on whether or not immediate medical attention is necessary.\nStep 3: Students fact-check the AI's claims using reliable sources (e.g., trusted medical websites or professional guidelines).\nStep 4: Students refine the provided prompt to get a more consistent and clearer response from the AI.",
+    "png_base64": null
+  },
+  {
+    "index": 13,
+    "slide_id": "g338ac58fd36_1_19",
+    "notes": "💬 Discuss: Click through the animated slide to display the prompts.\nHow does the AI's lack of specialization in the medical field contribute to contradictions?\nHow can fact-checking and prompt refinement help improve AI-generated responses in real-world contexts?\n\n💡 Discussion Goal: Students should recognized that AI models do not have deep expertise like medical professionals. They should discuss how AI relies on broad datasets that may contain conflicting or outdated information, which leads to contradictions. Students should understand that fact-checking ensures accuracy by verifying AI-generated information against trusted sources. They should also recognize that refining prompts (e.g. specifying a reliable source, adding context, etc) helps AI produce clearer and more relevant responses.",
+    "png_base64": null
+  },
+  {
+    "index": 14,
+    "slide_id": "g2694c47731d_3_332",
+    "notes": "🎙️ Say: AI models do not have deep expertise like medical professionals. AI relies on broad datasets that may contain conflicting or outdated information, which leads to contradictions. Fact-checking ensures accuracy by verifying AI-generated information against trusted sources. Refining prompts by doing things like specifying a reliable source or adding context helps AI produce clearer and more relevant responses.\n\n☑️ Do This: Explain the differences between where an AI and a medical professional acquire information.",
+    "png_base64": null
+  },
+  {
+    "index": 15,
+    "slide_id": "g338ac58fd36_1_58",
+    "notes": "AI Contradictions in Practice (10 mins)\n\n💻 Transition: Direct students to Lesson 5, Level 3 to complete Levels 3 and 4. Students choose a different topic in this choice level (e.g., government, technology, education, social media). In pairs, students practice with the various forms of questioning provided and discuss the results. Have them add their reflections to the last page of their Activity Guide.",
+    "png_base64": null
+  },
+  {
+    "index": 16,
+    "slide_id": "g338ac58fd36_1_99",
+    "notes": "☑️ Do This: Click through the animated slide to review the three different ways in which students were asked to refine the prompt in the previous activity.",
+    "png_base64": null
+  },
+  {
+    "index": 17,
+    "slide_id": "g338ac58fd36_1_3",
+    "notes": "☑️ Do This: Define context.",
+    "png_base64": null
+  },
+  {
+    "index": 18,
+    "slide_id": "g2694c47731d_3_322",
+    "notes": "💻 Transition: Direct students to Lesson 5, Level 5. In pairs, students practice prompting the AI Chat with different framings of their own questions to see if they can produce AI contradictions and can experience themselves how their framing can alter the response an AI outputs.\n\nTeaching Tip\nIf students aren’t sure what topic to choose, direct them to choose one of the examples from the level:\nMandatory physical education in school\nFree higher education\nUse of AI in school assignments\nThe current US voting age\n\nIf students need help with prompting the AI, direct to them to modify the prompt examples from the level:\nPositive framing\nNegative framing\nPositive framing with a reliable source",
+    "png_base64": null
+  },
+  {
+    "index": 19,
+    "slide_id": "g338c71f4ae1_2_0",
+    "notes": "☑️ Do This: Direct students to Lesson 5, Level 7 to complete the formative assessment on Levels 7 and 8.\n\nAssessment Opportunity\nThis level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\nReview responses to see whether students can explain why AI might contradict itself and how that differs from human contradictions. If students struggle to articulate these differences, have them revisit the telehealth example (or another real-world scenario) and prompt them to highlight exactly where the AI's contradiction arose—and contrast it with how a human might revise a diagnosis after new data.\nSee whether students can identify specific potential harms, and if not, direct them back to the telehealth chatbot examples provided in the lesson. You could also show short clips or articles about AI’s role in other high-stakes fields (finance, insurance) to further underscore the importance of verifying AI outputs.",
+    "png_base64": null
+  },
+  {
+    "index": 20,
+    "slide_id": "gca418c6afa_0_13",
+    "notes": "Wrap Up (5 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 21,
+    "slide_id": "g111726a1132_0_199",
+    "notes": "☑️ Do This: Review the lesson objectives.",
+    "png_base64": null
+  },
+  {
+    "index": 22,
+    "slide_id": "g1b0012b9552_0_737",
+    "notes": "☑️ Do This: Review the Question of the Day.",
+    "png_base64": null
+  },
+  {
+    "index": 23,
+    "slide_id": "g2694c47731d_3_41",
+    "notes": "Future Predictions (5 mins)\n\n☑️ Do This: Have students take out their Problem Solving with AI Unit Guide.",
+    "png_base64": null
+  },
+  {
+    "index": 24,
+    "slide_id": "g2694c47731d_3_46",
+    "notes": "☑️ Do This: In their Unit Guide, students answer the Question of the Day.\n\n☑️ Do This: Students make a prediction about how the ability of AI to contradict itself might evolve over the next 10 years.",
+    "png_base64": null
+  },
+  {
+    "index": 25,
+    "slide_id": "g2694c47731d_3_56",
+    "notes": "☑️ Do This: Review the Key Vocabulary.",
+    "png_base64": null
+  }
+]

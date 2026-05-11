@@ -1,13 +1,13 @@
 ---
 name: video-init
-description: Initializes a new video project folder within an existing grounded lesson. Checks lesson grounding, prompts objective selection, asks for mode and brief, creates the video folder with audio/images/scenes, and writes an initial script.json.
+description: Initializes a new video project folder within an existing grounded lesson. Checks lesson grounding, asks for video name and mode, prompts objective and vocabulary selection, and writes an initial script.json.
 ---
 
 # video-init
 
 Initialize a new video at `generation/units/<unit>/lessons/<lesson>/videos/<video>/`.
 
-Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
+Extract UNIT and LESSON from the user's message. VIDEO and MODE are collected during the steps below — do not ask for all of them upfront.
 
 ## Step 0: Resolve lesson slug
 
@@ -32,9 +32,32 @@ If the file does not exist, or `grounding != "complete"`, exit with:
    Run /lesson-ground $UNIT $LESSON first to fetch source materials.
 ```
 
-## Step 2: Load objectives
+## Step 2: Ask for video name and mode
 
-Read `generation/units/$UNIT/lessons/$LESSON/source/objectives.md` to get the available objectives.
+Use `load_skill_resource` to read `references/mode-guide.md` from the video-script skill. Then ask:
+
+```
+What would you like to name this video? (e.g. ai-contradictions)
+
+What type of video do you want to make?
+
+  concept   — one scene per slide; thorough tutorial narration
+  summary   — 3–8 scenes, thematic grouping; best for review/overview
+  re-teach  — remediation for students who completed the lesson
+  co-create — you provide a custom brief (audience, angle, tone, length)
+
+Which mode? (concept / summary / re-teach / co-create)
+```
+
+Wait for both answers. Store the name as VIDEO and the mode as MODE.
+
+If **co-create**: ask for the brief, following the thin-brief rules in `mode-guide.md` (one follow-up question for the most important gap; never ask multiple). Store as BRIEF.
+
+For all other modes: BRIEF is null unless the user volunteers customization notes, in which case store those as BRIEF.
+
+## Step 3: Select objectives and vocabulary
+
+Read `generation/units/$UNIT/lessons/$LESSON_SLUG/source/objectives.md` to get the available objectives.
 
 If it doesn't exist, fall back to reading objectives from `generation/units/$UNIT/unit.json` (find the lesson by slug match on title).
 
@@ -55,27 +78,6 @@ Which vocabulary terms should this video define? (enter letters, or press Enter 
 ```
 
 Wait for both responses. Store as TARGET_OBJECTIVES and TARGET_VOCABULARY. If the user skips vocabulary, assign terms whose words appear in the selected objective texts.
-
-## Step 3: Select mode and brief
-
-Use `load_skill_resource` to read `references/mode-guide.md` from the video-script skill. Then ask:
-
-```
-How should this video be generated?
-
-  concept   — one scene per slide; thorough tutorial narration
-  summary   — 3–8 scenes, thematic grouping; best for review/overview
-  re-teach  — remediation for students who completed the lesson
-  co-create — you provide a custom brief (audience, angle, tone, length)
-
-Which mode? (concept / summary / re-teach / co-create)
-```
-
-Wait for the user's response. Store as MODE.
-
-If **co-create**: ask for the brief, following the thin-brief rules in `mode-guide.md` (one follow-up question for the most important gap; never ask multiple). Store as BRIEF.
-
-For all other modes: BRIEF is null unless the user volunteers customization notes, in which case store those as BRIEF.
 
 ## Step 4: Write script.json
 

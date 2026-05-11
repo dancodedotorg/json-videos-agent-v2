@@ -108,7 +108,7 @@ Each scene object:
 
 ## Step 5: Write to script.json
 
-Write the generated scenes array to a temp file alongside the script, then use `write-scenes.py` to merge it in:
+Write the generated scenes array to a temp file alongside the script, then use `execute` to run `write-scenes.py` to merge it in:
 
 ```bash
 python .agents/skills/video-script/scripts/write-scenes.py SCRIPT_PATH SCENES_DRAFT_PATH
