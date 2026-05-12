@@ -3,7 +3,7 @@
   "lesson": "lesson-1-talking-to-machines",
   "videos": [
     {
-      "name": "how-ai-thinks",
+      "name": "ai-and-probability",
       "target_objectives": [
         "Explain that AI models use probability and statistics to generate responses."
       ],
@@ -11,9 +11,7 @@
         "abstraction",
         "artificial intelligence (AI)",
         "probability"
-      ],
-      "mode": "concept",
-      "brief": null
+      ]
     },
     {
       "name": "prompting-and-patterns",
@@ -24,9 +22,7 @@
       ],
       "target_vocabulary": [
         "prompt"
-      ],
-      "mode": "concept",
-      "brief": null
+      ]
     }
   ]
 }

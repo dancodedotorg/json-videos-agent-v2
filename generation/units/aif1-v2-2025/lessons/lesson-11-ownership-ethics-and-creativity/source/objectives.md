@@ -1,0 +1,2 @@
+- Evaluate the role of AI as a collaborator in creative work, including how it can support or undermine the contributions of human creators.
+- Justify how AI should be used in creative situations, considering ethical, practical, and societal values.

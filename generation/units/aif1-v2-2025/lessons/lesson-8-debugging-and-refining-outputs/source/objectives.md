@@ -1,0 +1,2 @@
+- Apply debugging techniques to improve AI-generated responses.
+- Explain how prompt refinement improves AI outputs.

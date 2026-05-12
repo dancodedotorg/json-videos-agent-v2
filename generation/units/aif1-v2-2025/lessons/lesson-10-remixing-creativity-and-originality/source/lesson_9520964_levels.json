@@ -1,0 +1,51 @@
+{
+  "83055": {
+    "id": 83055,
+    "type": "Aichat",
+    "longInstructions": "## You as Pilot. AI as Co-Pilot.\n\nOn this level:\n- **You** will act as the **pilot**, making all the updates to the social media post yourself.\n- **AI Chat** will act as a **co-pilot**, giving you suggestions to improve your social media post.\n\n### Do This:\n\n1. Input the **social media** you recorded in your activity guide into AI Chat.\n2. **Pick which area you want AI give you suggestions** on how to improve your post.\n    * Clarity - Is it easy to understand?\n\t* Engagement - Does it capture interest?\n\t* Originality - Does it feel unique?\"\n\n_Note: **DO NOT ask AI to revise** the content for you - only ask for **ideas and suggestions**._\n3. **Revise your original post** based on the feedback and any suggestions you want to implement from the AI and **record it in your Activity Guide**.\n    - *Note: it is fine if you don't want to implement any of AI's suggestions. Just make sure to note this in your activity guide and reasons why.*\n\n**Try it out!**\n\n---\n\n**Struggling with creating your post?**\nHere are some examples of what your social media post might look like:\n- **Event Promotion**\n    - _Example: 🎭 Don't miss our spring play \"The Curious Incident of the Dog in the Night-Time\" this Friday at 7PM in the auditorium. Tickets on sale now! #SchoolTheater #SupportTheArts_\n- **Celebrations and Recognitions**\n    - _Example: 👏 Huge congrats to Maya R. for winning 1st place at the district science fair! We're proud of your hard work and creativity. #StudentSpotlight #ProudSchool_\n- **Awareness**\n    - _Example: 🧠 Feeling overwhelmed? Our counselors are here for you. Drop by the counseling office or check our wellness resources online. #MentalHealthMatters #YouAreNotAlone_\n- **Outreach and Recruitment**\n    - *Example: 💬 \"The best part of our school is __________.\"\nFuture students want to know - drop your answer below! 👇 #WhyOurSchool #FutureTigers*"
+  },
+  "83056": {
+    "id": 83056,
+    "type": "Aichat",
+    "longInstructions": "## AI as Pilot. You as Co-Pilot.\n\nSwitch roles by prompting AI to make the same type of creative content that you did in the previous part.\n\nOn this level:\n- **AI Chat** will act as the **pilot**, drafting and making all the updates to the social media post.\n- **You** will act as a **co-pilot**, giving AI Chat suggestions to improve the social media post it writes.\n\n### Do This:\n\n1. Tell AI to write the same type of **social media post** you did earlier\n   - For example, *\"Write a post hyping up an upcoming volleyball game against our rivals the Coyotes.\"*\n2. **Record AI's initial response** in your Activity Guide.\n3. Give AI **suggestions on how to improve** the post and **prompt AI to refine** the output.\n    - For example, _\"The part about the bird leaving its cage doesn't make sense. Revise it so that it does.\" or \"There aren't any emojis in your post . Revise it to include some.\"_\n5. **Refine AI's output** one more time by giving the AI at least one more suggestion\n6. Record AI's final **refined output** in your Activity Guide.\n\n**Try it out!**\n\n---\n\n**Not sure what format to tell the AI to refine?**\nGo back to Lesson 8: Debugging and Refining Outputs in your Unit Guide to review the information on the **Five Key Elements of a Prompt:**\n- **Task** - Specific and actionable instructions\n- **Context** - Relevant background details\n- **Format** - How the response should be structured\n- **Reference** - Additional examples or resources\n- **Tone** - The style in which the output is given"
+  },
+  "82707": {
+    "id": 82707,
+    "type": "Multi",
+    "questions": [
+      {
+        "text": "In this lesson, I learned something new about how computer science is used in careers."
+      }
+    ],
+    "answers": [
+      {
+        "text": "Strongly disagree",
+        "correct": true
+      },
+      {
+        "text": "Disagree",
+        "correct": true
+      },
+      {
+        "text": "Slightly disagree",
+        "correct": true
+      },
+      {
+        "text": "Neither",
+        "correct": true
+      },
+      {
+        "text": "Slightly agree",
+        "correct": true
+      },
+      {
+        "text": "Agree",
+        "correct": true
+      },
+      {
+        "text": "Strongly agree",
+        "correct": true
+      }
+    ]
+  }
+}

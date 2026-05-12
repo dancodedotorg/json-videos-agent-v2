@@ -12,7 +12,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394839,
+              "id": 14510567,
               "key": "plan_a_perfect_trip_with_chatgpt",
               "name": "Plan a Perfect Trip with ChatGPT",
               "url": "https://www.youtube.com/watch?v=J3Oh2-cVrgs",
@@ -24,7 +24,7 @@
               "type": "Video"
             },
             {
-              "id": 17394840,
+              "id": 14510568,
               "key": "problem_solving_with_ai",
               "name": "Problem Solving with AI",
               "url": "https://www.youtube.com/watch?v=O_VjO1cx-No",
@@ -36,7 +36,7 @@
               "type": "Video"
             },
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -50,7 +50,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -135,7 +135,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -149,7 +149,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -237,7 +237,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394835,
+              "id": 14510562,
               "key": "how_chatbots_and_large_language_models_work",
               "name": "How Chatbots and Large Language Models Work",
               "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
@@ -249,7 +249,7 @@
               "type": "Video"
             },
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -261,7 +261,7 @@
               "type": "Activity Guide"
             },
             {
-              "id": 17394843,
+              "id": 14510578,
               "key": "unplugged_neural_networks",
               "name": "Unplugged Neural Networks",
               "url": "https://docs.google.com/document/d/168FsA22aT-Tup4H9OHIvffToo6N2PDSL8u07AgdJgec/edit?usp=drivesdk",
@@ -275,7 +275,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -351,7 +351,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -365,7 +365,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -422,7 +422,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394833,
+              "id": 14510558,
               "key": "examining_ai_contradictions",
               "name": "Examining AI Contradictions",
               "url": "https://docs.google.com/document/d/1h9wgXbJZFF6FMUopFYq-SqhExAi7Yn4E2QBAuv9_oV0/edit?usp=drivesdk",
@@ -434,7 +434,7 @@
               "type": "Activity Guide"
             },
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -448,7 +448,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -510,7 +510,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394826,
+              "id": 14510541,
               "key": "ai_audit",
               "name": "AI Audit",
               "url": "https://docs.google.com/document/d/1AWjOcaVEHH6Ac4AvFvkzW7q2YRMmgviebXg5H8zi5WM/edit?usp=drivesdk",
@@ -522,7 +522,7 @@
               "type": "Activity Guide"
             },
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -536,7 +536,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -602,7 +602,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394834,
+              "id": 14510561,
               "key": "hallucination_case_studies",
               "name": "Hallucination Case Studies",
               "url": "https://docs.google.com/document/d/1sULqyWw0YVmt_n3XNSwuTJqGhUqB2HQtDVnr2Ufrf3o/edit?usp=drivesdk",
@@ -614,7 +614,7 @@
               "type": "Activity Guide"
             },
             {
-              "id": 17394836,
+              "id": 14510563,
               "key": "jigsaw_articles",
               "name": "Jigsaw Articles",
               "url": "https://docs.google.com/document/d/1Ts7OnRbtooAKrlj92wMV76XE_PANXwENCMIFz7gFUPM/edit?usp=drivesdk",
@@ -626,7 +626,7 @@
               "type": "Handout"
             },
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -640,7 +640,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -695,7 +695,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394830,
+              "id": 14510546,
               "key": "ai_s_hottest_new_job_pays_up_to_250k_a_year_so_i_applied_wsj_",
               "name": "AI’s Hottest New Job Pays Up to $250K a Year. So I Applied. | WSJ ",
               "url": "https://www.youtube.com/watch?v=whkge1rEamU",
@@ -707,7 +707,7 @@
               "type": "Video"
             },
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -721,7 +721,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -774,7 +774,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394831,
+              "id": 14510555,
               "key": "collaborate_on_a_product_launch",
               "name": "Collaborate on a Product Launch",
               "url": "https://docs.google.com/document/d/1DVcGVVtJlZkDlP2v-JGoFNcGLcCqvEh7RTpjRGmfDjU/edit?usp=drive_link",
@@ -786,7 +786,7 @@
               "type": "Activity Guide"
             },
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -800,7 +800,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -849,7 +849,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394829,
+              "id": 14510545,
               "key": "ai_remix_challenge",
               "name": "AI Remix Challenge",
               "url": "https://docs.google.com/document/d/1tm3V4fSes25EiVYMKfYIGgFVe8ZZykhVanhopJeHeVs/edit?usp=drivesdk",
@@ -861,7 +861,7 @@
               "type": "Activity Guide"
             },
             {
-              "id": 17394832,
+              "id": 14510556,
               "key": "create_a_game_using_ai",
               "name": "Create a Game Using AI",
               "url": "https://www.youtube.com/shorts/WVWayzc07Ug?si=5o6-VsfhK2XMcEN5",
@@ -873,7 +873,7 @@
               "type": "Video"
             },
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -887,7 +887,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -934,7 +934,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394837,
+              "id": 14510564,
               "key": "ownership_and_ai_stations",
               "name": "Ownership and AI Stations",
               "url": "https://docs.google.com/document/d/1BBvvbW5e3rCXOLsvZ58fHR2SNNzHU27uSnBsXxUDUsY/edit?usp=drivesdk",
@@ -946,7 +946,7 @@
               "type": "Activity Guide"
             },
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -960,7 +960,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394838,
+              "id": 14510565,
               "key": "ownership_and_ai_stations_1",
               "name": "Ownership and AI Stations",
               "url": "https://docs.google.com/document/d/1Eh2TASGZ7z0Wncry96Yg1ZZgiPQOOpUqizRQY8RnxO0/edit?usp=drivesdk",
@@ -972,7 +972,7 @@
               "type": "Resource"
             },
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -1040,7 +1040,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394827,
+              "id": 14510543,
               "key": "ai_in_grocery_stores_-_1",
               "name": "AI In Grocery Stores - 1 ",
               "url": "https://drive.google.com/file/d/1-MykYtR1K7qzncS7F7v34_2kCkJCa7DN/view",
@@ -1052,7 +1052,7 @@
               "type": "Resource"
             },
             {
-              "id": 17394828,
+              "id": 14510544,
               "key": "ai_in_the_community",
               "name": "AI in the Community",
               "url": "https://docs.google.com/document/d/1swk3Ytu52zPLdffHXsKMbNDrTTI87NIX9nZzSHQtBag/edit?usp=drivesdk",
@@ -1064,7 +1064,7 @@
               "type": "Activity Guide"
             },
             {
-              "id": 17394841,
+              "id": 14510569,
               "key": "problem_solving_with_ai_unit_guide",
               "name": "Problem Solving with AI Unit Guide",
               "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
@@ -1076,7 +1076,7 @@
               "type": "Activity Guide"
             },
             {
-              "id": 17394842,
+              "id": 14510576,
               "key": "unicef_youth_advocate_ayshka_on_mental_health",
               "name": "UNICEF Youth Advocate Ayshka on Mental Health",
               "url": "https://youtu.be/zsiMg1zRdWU?si=hcMihJqh28_QfkwD",
@@ -1090,7 +1090,7 @@
           ],
           "Teacher": [
             {
-              "id": 17394219,
+              "id": 14510539,
               "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
               "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
               "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
@@ -1141,7 +1141,7 @@
         "resources": {
           "Student": [
             {
-              "id": 17394224,
+              "id": 14510550,
               "key": "ai_time_capsule_project_planning_guide",
               "name": "AI Time Capsule Project Planning Guide",
               "url": "https://docs.google.com/document/d/12ERoL_ehwCFg2KE9PhQpNr59XCZIT_CtnLKkTfNyAkQ/edit?usp=drivesdk",

@@ -1,0 +1,23 @@
+{
+  "video_name": "ai-as-co-creator",
+  "unit": "aif1-v2-2025",
+  "lesson": "lesson-9-ai-as-a-co-creator",
+  "target_objectives": [
+    "Analyze the strengths and weaknesses of AI-generated creative work compared to human-created content."
+  ],
+  "target_vocabulary": [
+    "co-creating"
+  ],
+  "width": 1600,
+  "height": 900,
+  "pipeline": {
+    "grounding": "complete",
+    "script": "pending",
+    "html": "pending",
+    "audio_tags": "pending",
+    "audio": "pending",
+    "assembled": false
+  },
+  "tts": {},
+  "scenes": []
+}

@@ -1,0 +1,2 @@
+- Analyze the role of human creativity in AI-assisted content generation.
+- Evaluate the strengths and limitations of generative AI.

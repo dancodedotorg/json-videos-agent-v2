@@ -1,0 +1,56 @@
+{
+  "scenes": [
+    {
+      "comment": "Title slide: 'AI and Probability'",
+      "speech": "In this video, you'll find out how AI actually decides what to generate - and why it sometimes gets things right and sometimes gets things completely wrong. The answer comes down to two ideas: probability and abstraction."
+    },
+    {
+      "comment": "Intro connecting 'Yes, and' warm-up to AI prediction",
+      "speech": "In the warm-up, you played the 'Yes, and' game - each person building on the last sentence. You also saw how AI does something similar: it reads existing text and predicts what word would most likely come next. This video digs into exactly how that prediction works."
+    },
+    {
+      "comment": "Definition slide: Artificial Intelligence (AI) - what it is and what it can do",
+      "speech": "First, let's pin down what AI actually is. Artificial intelligence, or AI, is a technology that mimics human intelligence. It can understand language, recognize patterns, and make decisions."
+    },
+    {
+      "comment": "AI Chat as a concrete example of AI - connects to student experience",
+      "speech": "The AI Chat you used in your lesson is one type of AI - it reads what you write and generates a response."
+    },
+    {
+      "comment": "The dog barked at the... - showing student guesses alongside AI output",
+      "speech": "In Level 1, you predicted what would complete the sentence: 'The dog barked at the...' You probably guessed something like squirrel, mailman, or stranger. When you sent that same prompt to AI Chat, its answer was likely pretty similar."
+    },
+    {
+      "comment": "Key insight: humans and AI both predict the most likely next word",
+      "speech": "That's because both you and the AI were doing the same thing - predicting the most likely word to come next."
+    },
+    {
+      "comment": "Definition: Probability - likelihood scale with word frequency examples",
+      "speech": "That process is called probability - the likelihood that a specific outcome might occur. AI has been trained on thousands of sentences. It knows that after 'The dog barked at the,' words like 'mailman' show up way more often than 'calculator.' So it picks the word with the highest probability."
+    },
+    {
+      "comment": "Key insight: AI picks by frequency, not meaning",
+      "speech": "AI isn't deciding what makes sense - it's just picking whatever shows up most often in its training data."
+    },
+    {
+      "comment": "Successful predictions slide - completions: door, thank you, pencils",
+      "speech": "When patterns are strong, probability works really well. Your lesson showed examples AI completed correctly: 'He heard a knock at the... door.' 'As the bell rang, they put down their... pencils.' These worked because AI had seen those phrase patterns thousands of times. High probability - right answer."
+    },
+    {
+      "comment": "Failed prediction: 'Draw the keys are on the table' with resulting odd image",
+      "speech": "But probability has limits. When given 'Draw the keys are on the table,' AI produced an image of a single key sitting awkwardly on a table. It got some individual words right, but completely missed what the sentence actually meant."
+    },
+    {
+      "comment": "What AI did: focused on key/on/table - definition of abstraction introduced",
+      "speech": "Here's why. AI focused on the words 'key,' 'on,' and 'table,' and abstracted away everything else. Abstraction means focusing on only the essential details and ignoring everything else."
+    },
+    {
+      "comment": "Why abstraction failed here - AI uses statistics, not meaning",
+      "speech": "AI decided those three words were the important ones - and it was wrong. That's the tricky part: AI abstracts based on statistics, not meaning. When meaning depends on context, AI can miss it."
+    },
+    {
+      "comment": "Summary: AI + probability + abstraction - vocabulary review",
+      "speech": "So here's how it all fits together. AI uses probability to decide what to generate next, and abstraction to figure out which parts of your input matter. When patterns are clear, AI does really well. When meaning depends on more than just the words, it can fall short. That's the key to understanding how AI works - and it's the foundation for the rest of this unit."
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+[
+  {
+    "index": 0,
+    "slide_id": "gca418c6afa_0_1070",
+    "notes": "",
+    "png_base64": null
+  },
+  {
+    "index": 1,
+    "slide_id": "gca418c6afa_0_109",
+    "notes": "Warm Up (10 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 2,
+    "slide_id": "g2694c47731d_3_61",
+    "notes": "AI Assumptions\n\n🎙️ Say: AI models learn by analyzing vast amounts of data. They recognize patterns and use them to make predictions. This is an example of an AI that is trained to play rock, paper, scissors. It has been trained on images of hands and has to predict what the user played.\n\n☑️ Do This: Ask students if AI would label this image as rock, paper, or scissors? Discuss how it looks similar to other hands in the “Paper” category so AI would likely label this as “Paper” as well. \n\nTeaching Tip\nAsk students to identify patterns in the data. For example, the AI Bot might recognize this hand as “Paper” because it sees 5 outstretched fingers. It might recognize that “Scissors” has two outstretched fingers, and “Rock” has none.",
+    "png_base64": null
+  },
+  {
+    "index": 3,
+    "slide_id": "g357bb9cba7e_0_26",
+    "notes": "AI Assumptions, continued\n\n💬 Discuss: Ask students how AI might label this image. \n\n💡 Discussion Goal: Explain that AI might incorrectly label this image because it was not trained on images of hands held up in the air and was only trained on images of hands straight out. This is an example of bias in the training data, because the AI Bot was only trained to recognize hands from certain angles.",
+    "png_base64": null
+  },
+  {
+    "index": 4,
+    "slide_id": "g357bb9cba7e_0_48",
+    "notes": "💬 Discuss: What, or who, is not represented by these images? Give examples of some images that should be added to this dataset to improve the AI model.\n\n💡 Discussion Goal: Students should understand that AI models learn patterns and replicate biases. In order to to reduce or eliminate bias, more images should be added to the training dataset. Examples of images that should be added include, hands from different angles, hands missing fingers, hands with rings or other jewelry, etc.\n\nTeaching Tip\nIf you have time, test out this trained model from Teachable Machine: https://teachablemachine.withgoogle.com/models/fadF6RxOcF/. \n\nThis model was built with Kaggle data from thousands of pictures of hands: https://www.kaggle.com/datasets/drgfreeman/rockpaperscissors. Note, this dataset primarily features images of the back of hands held straight up in the air and shows bias against hands viewed from the side or from the palm.\n\nAs an extension activity, consider creating your own Rock, Paper, Scissors model using Teachable Machine: https://teachablemachine.withgoogle.com/",
+    "png_base64": null
+  },
+  {
+    "index": 5,
+    "slide_id": "g1b0012b9552_0_230",
+    "notes": "☑️ Do This: Introduce the lesson objectives.",
+    "png_base64": null
+  },
+  {
+    "index": 6,
+    "slide_id": "g1b0012b9552_0_235",
+    "notes": "☑️ Do This: Introduce the Question of the Day.",
+    "png_base64": null
+  },
+  {
+    "index": 7,
+    "slide_id": "gca418c6afa_0_49",
+    "notes": "Activity (25 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 8,
+    "slide_id": "g34450d6cd79_0_377",
+    "notes": "Bias Intro: Career Clothing (10 mins)\n\n🎯 Goal of this activity: Students explore AI's assumptions and analyze how training data influences AI-generated responses. Students analyze AI's initial responses, identify potential biases, and refine their prompts to create more neutral and inclusive descriptions.\n\n☑️ Do This: Have students take out their Problem Solving with AI Unit Guide.",
+    "png_base64": null
+  },
+  {
+    "index": 9,
+    "slide_id": "g2694c47731d_3_328",
+    "notes": "🎙️ Say: AI learns from patterns in data, but that data isn't always balanced or fair. If certain perspectives or groups are overrepresented, AI will reflect those patterns in its responses. This can lead to AI making assumptions that don’t accurately represent the full picture.\n\n☑️ Do This: Define AI bias.\n\nTeaching Tip\nIf you choose to demonstrate doing a Google Image search for “nurse” or “doctor”, consider searching for animations, e.g. \"nurse cartoon image”, to see more obvious bias.",
+    "png_base64": null
+  },
+  {
+    "index": 10,
+    "slide_id": "g34450d6cd79_0_76",
+    "notes": "☑️ Do This: Place students in pairs.\n\n📄 Distribute: Give each pair of students a copy of the Understanding Bias activity guide.",
+    "png_base64": null
+  },
+  {
+    "index": 11,
+    "slide_id": "g2694c47731d_3_317",
+    "notes": "🎙️ Say: AI generates responses based on patterns in its training data. But what happens when those patterns reflect assumptions about people and professions? Let's investigate by asking AI to describe outfits for two different careers and analyzing its responses.\n\n💻 Transition: Direct students to Lesson 6, Level 1 to explore AI-generated descriptions of clothing worn by different professions – a secretary and a CEO. Students should complete the AI Bias Analysis section of their activity guide as they interact with each task.",
+    "png_base64": null
+  },
+  {
+    "index": 12,
+    "slide_id": "g34450d6cd79_0_56",
+    "notes": "💬 Discuss: Click through the animated slide to display the prompts.\nDid AI assume a default identity in either of the prompts?\nDid the responses differ in the tone, assumptions, or characteristics included?\n\n💡 Discussion Goal: Students should recognize that AI descriptions reflect patterns in training data, which may reinforce stereotypes or assumptions. They should identify differences in language, gender associations, or implied expertise in AI-generated responses.\n\nTeaching Tip\nIf students struggle to articulate differences, prompt them with:\n\"What words or phrases stand out in each description?\"\n\"Does AI use the same level of professionalism, detail, or authority in both responses?\"\n\"Would changing the wording of the prompt lead to a different response?\"",
+    "png_base64": null
+  },
+  {
+    "index": 13,
+    "slide_id": "g34450d6cd79_0_131",
+    "notes": "🎙️ Say: Now that we've seen how AI describes outfits for different professions, let's take it a step further. AI doesn't generate biased responses on purpose—it reflects patterns in the data it has learned from. But we can adjust our inputs to get better, more neutral results. Let's try to refine our prompts and see how AI responds.\n\n☑️ Do This: Return students to Lesson 6, Level 1. Refine the original prompts to improve neutrality. Students document their refined prompts and compare AI's new responses in the AI Bias Analysis Chart section of their activity guide.\n\nTeaching Tip\nIt might be hard to see overt bias in AI Chat’s responses. Consider discussing any nuanced biases which exist in society that are being reflected by the chatbot. For example, the chatbot returns style suggestions for both male and female CEOs but the suggestions differ by gender. Female CEOs are encouraged to wear skirts, dresses, heels, and flats but not chinos, button down shirts, or loafers. This reflects bias in our societal norms that the chatbot is parroting back to us.",
+    "png_base64": null
+  },
+  {
+    "index": 14,
+    "slide_id": "g34450d6cd79_0_194",
+    "notes": "💬 Discuss: What factors in AI's training data may have led to this bias we uncovered?\n\n💡 Discussion Goal: Listen for students to bring up bias in the datasets, connecting back to the warm up activity, other examples they may be familiar with, or their own lived experiences.",
+    "png_base64": null
+  },
+  {
+    "index": 15,
+    "slide_id": "g34450d6cd79_0_167",
+    "notes": "🎙️ Say: We've explored how AI bias emerges and how we can adjust prompts to reduce it. Now, let's think about what AI developers can do to make AI systems more fair and representative.\n\n💻 Transition: Direct students to Lesson 6, Level 2 to complete the formative assessment.\n\n☑️ Do This:\nStudents answer the multiple-select question: \"How could AI developers make adjustments to reduce bias?\"\nUse the \"View Student Responses\" feature to analyze the class results.\nAsk students: \"What do you notice?\" and \"What do you wonder?\" Have them discuss with a partner before selecting a few volunteers to share.\n\nTeaching Tip\nEmphasize that AI bias is not just a coding issue—it's a data issue. Many students assume developers can \"fix\" bias with a simple programming change, but bias originates from the datasets AI is trained on.\n\nAssessment Opportunity\nThis activity helps assess student understanding of AI bias mitigation strategies. Based on student responses, take the following actions:\nIf most students select the correct answer (B), proceed to the next activity (AI Audit).\nIf some students are confused, have them pair up and explain their reasoning to each other. Then, re-pose the question and have students show their answers using their fingers (1-4) before moving on.\nIf many students select incorrect answers (A, C, or D),\nRevisit key slides that explain how bias comes from data, not just code.\nClarify that more data isn't always better—biased data will still lead to biased AI.\nHave students answer the question again using a show of fingers before transitioning.",
+    "png_base64": null
+  },
+  {
+    "index": 16,
+    "slide_id": "g2694c47731d_3_332",
+    "notes": "AI Audit Challenges (15 mins)\n\n🎯 Goal of this activity: Students analyze bias in decision-making by comparing their own candidate selection process with AI’s and exploring how training data influences AI’s choices.\n\n🎙️ Say: AI is increasingly being used to make important decisions—hiring employees, admitting students, and even determining which patients receive medical care first. But how do we know if AI is making fair and unbiased choices? Today, you'll take on a decision-making role and compare your choices to AI’s.\n\n☑️ Do This: Direct students to Lesson 6, Level 3. Students choose one decision-making role:\nHospital Triage Nurse: Prioritizes patients for urgent care.\nCollege Admissions Officer: Picks students for acceptance.\nHiring Manager: Selects top candidates for job interviews.\n\nThen students review the candidate pool and select two candidates based on their qualifications. They record and justify selections in the activity guide.\n\n🔁 Circulate: Listen for students discussing why certain candidates stood out over others. If students struggle, ask:\n\"What specific qualifications made you choose these candidates?\"\n\"Did you consider factors beyond qualifications, like personal background?\"",
+    "png_base64": null
+  },
+  {
+    "index": 17,
+    "slide_id": "g34450d6cd79_0_240",
+    "notes": "🎙️ Say: Now, let's see how AI makes the same decision. AI doesn't have opinions or instincts—it relies on patterns in data. You'll ask AI to select candidates for your decision-making role, analyze its reasoning, and compare it to your own. Finally, you'll refine your prompt to see if AI's choices can better match your priorities.\n\n☑️ Do This: Direct students to Lesson 6, Level 4, where they will ask AI Chat to select candidates for the same decision-making role they previously chose. Students will then compare AI's selections to their own. After reviewing AI's choices, students will refine their prompt to better align with their group's priorities, specifying which qualities AI should prioritize while abstracting away irrelevant details.",
+    "png_base64": null
+  },
+  {
+    "index": 18,
+    "slide_id": "g34450d6cd79_0_271",
+    "notes": "☑️ Do This: Form student groups of three, ensuring each student has a different role, to share their findings.",
+    "png_base64": null
+  },
+  {
+    "index": 19,
+    "slide_id": "g34450d6cd79_0_290",
+    "notes": "☑️ Do This: Define alignment and share two mitigation strategies for reducing AI bias.",
+    "png_base64": null
+  },
+  {
+    "index": 20,
+    "slide_id": "g398b765e3ac_0_0",
+    "notes": "💬 Discuss: Besides the scenarios we just looked at, where else could biased AI cause harm?\n\n💡 Discussion Goal: Listen for students to identify real-world areas where biased AI could cause harm. Use this discussion to gauge students’ awareness of AI’s social impact beyond the examples discussed. If students are struggling to come up with examples, you can point to a few example applications like: housing, medicine, or policing.",
+    "png_base64": null
+  },
+  {
+    "index": 21,
+    "slide_id": "gca418c6afa_0_13",
+    "notes": "Wrap Up (10 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 22,
+    "slide_id": "g111726a1132_0_199",
+    "notes": "☑️ Do This: Review the lesson objectives.",
+    "png_base64": null
+  },
+  {
+    "index": 23,
+    "slide_id": "g1b0012b9552_0_737",
+    "notes": "☑️ Do This: Review the Question of the Day.",
+    "png_base64": null
+  },
+  {
+    "index": 24,
+    "slide_id": "g2694c47731d_3_41",
+    "notes": "3-2-1 Reflection and Discussion (10 mins)\n\n☑️ Do This: In the Unit Guide, students reflect on 3 examples of AI bias from this lesson, 2 things to help reduce AI bias, and 1 cause of AI bias. After, they discuss their responses with the class.\n\n☑️ Do This: Assign students numbers in small groups and give them a discussion prompt. After a short discussion, randomly call out a number—students with that number share their group's response.\n\nTeaching Tip\nRotate which number is called in future discussions to ensure all students participate over time.",
+    "png_base64": null
+  },
+  {
+    "index": 25,
+    "slide_id": "g2694c47731d_3_56",
+    "notes": "☑️ Do This: Review the Key Vocabulary.",
+    "png_base64": null
+  }
+]

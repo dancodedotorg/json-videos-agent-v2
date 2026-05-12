@@ -1,0 +1,4 @@
+- large language model (LLM): a general purpose form of AI that is trained on a very, very large body of knowledge
+- neural network: an interconnected network that makes decisions using weights and hidden layers. It is used to represent the relationship between words
+- training: the process of teaching an AI model by exposing it to large amounts of data, allowing it to learn patterns, improve accuracy, and refine its predictions over time
+- training data: the structured or unstructured information, such as text, images, or code, used to train an AI model and shape its ability to recognize patterns and generate accurate responses

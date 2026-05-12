@@ -1,0 +1,140 @@
+[
+  {
+    "index": 0,
+    "slide_id": "gca418c6afa_0_1070",
+    "notes": "",
+    "png_base64": null
+  },
+  {
+    "index": 1,
+    "slide_id": "gca418c6afa_0_109",
+    "notes": "Warm Up (10 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 2,
+    "slide_id": "g341e24d37a9_1_2",
+    "notes": "Hallucination Chain (10 mins)\n\n🎯 Goal of this activity: Reveal how AI can generate misinformation by mimicking human knowledge gaps.\n\n☑️ Do This: Place students in groups of four.\n\n📄 Distribute: Give each group 12-15 sticky notes. Each students needs at least three.\n\nTeaching Tip\nIf needed, adjust the number of sticky notes based on group size so each student has three.",
+    "png_base64": null
+  },
+  {
+    "index": 3,
+    "slide_id": "g2694c47731d_0_16",
+    "notes": "☑️ Do This: Have students each write three facts about the Great Wall of China on sticky notes - one fact per sticky note. Tell students that if they are unsure, they can make up something that sounds believable.\n\n🔁 Circulate: Check that students are writing individual facts and not collaborating at this stage. If students hesitate, remind them that they can create facts if they’re unsure.",
+    "png_base64": null
+  },
+  {
+    "index": 4,
+    "slide_id": "g338c946b077_0_0",
+    "notes": "☑️ Do This: Have groups examine their sticky notes and categorize them as similarities, contradictions, or inaccuracies.\n\n🔁 Circulate: Watch for students who categorize everything as similar or accurate—prompt them to look for contradictions.\n\nTeaching Tip\nIf students struggle, prompt them with: \"How do we know if something is inaccurate?\" or \"What makes two facts similar?\"",
+    "png_base64": null
+  },
+  {
+    "index": 5,
+    "slide_id": "g2694c47731d_3_61",
+    "notes": "💬 Discuss: Click through the animated slide to display the prompts.\nWhat might happen if we published these \"facts\" on a public website? \nHow does this activity mimic the way that AI generates responses?\n\n💡 Discussion Goal: Guide students to recognize just like we created statements that sounded true but weren't, AI can hallucinate and generate misinformation that seems convincing. AI models learn from human input—if that input contains misinformation, AI can amplify and spread it.",
+    "png_base64": null
+  },
+  {
+    "index": 6,
+    "slide_id": "g1b0012b9552_0_230",
+    "notes": "☑️ Do This: Introduce the lesson objectives.",
+    "png_base64": null
+  },
+  {
+    "index": 7,
+    "slide_id": "g1b0012b9552_0_235",
+    "notes": "☑️ Do This: Introduce the Question of the Day.",
+    "png_base64": null
+  },
+  {
+    "index": 8,
+    "slide_id": "gca418c6afa_0_49",
+    "notes": "Activity (30 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 9,
+    "slide_id": "g2694c47731d_3_317",
+    "notes": "Hallucination Case Studies (15 mins)\n\n🎯 Goal of this activity: Show how AI hallucinations cause harm in real-world applications.\n\n📄 Distribute: Give each student a copy of the Hallucination Case Studies Activity Guide and a Jigsaw Article.\n\n☑️ Do This: Explain that students will read about real-world AI hallucinations in industries like law, travel, healthcare, and transportation. They will read independently first, then discuss their findings with their group.",
+    "png_base64": null
+  },
+  {
+    "index": 10,
+    "slide_id": "g3583d38af50_0_6",
+    "notes": "☑️ Do This: Explain that hallucinations exist because AI doesn’t have a database of “true” facts. It predicts based on patterns in data. If it is trained on a large set of data that haven’t been fact-checked, it can generate biased and inaccurate output.",
+    "png_base64": null
+  },
+  {
+    "index": 11,
+    "slide_id": "g2694c47731d_3_322",
+    "notes": "☑️ Do This: Instruct students to read their assigned Jigsaw Article individually. Each student should annotate their article by highlighting key terms (e.g., AI Hallucination, accuracy, fairness, impact) and writing notes or questions in the margins. Students should also answer the reflection questions in their Hallucination Case Studies Activity Guide​ as they read their article.\n\n🔁 Circulate: Walk around and check that students are actively annotating and engaging with the text, jotting down notes in their activity guides. If students struggle, ask: \n\"What was the AI hallucination in your article?\" \n\"What was the real-world impact?\" \n\"Would a human have made the same mistake?\"\n\nIf students are only highlighting without writing notes, encourage them to add margin notes or questions to deepen their analysis.\n\nTeaching Tip\nIf students finish early, have them jot down a real-world example where they've seen AI generate incorrect or misleading information (e.g., a chatbot making up a statistic, an AI-generated image mislabeling an object). This helps students connect their reading to prior knowledge and real-world experiences.",
+    "png_base64": null
+  },
+  {
+    "index": 12,
+    "slide_id": "g341e24d37a9_1_28",
+    "notes": "☑️ Do This: Have students share their article summaries with their group members. Each student should briefly explain what their article was about, what the AI hallucination was, and its consequences. After each student shares, the group discusses the real-world impact of AI hallucinations and what could have been done differently.\n\n🔁 Circulate: Listen for common themes in student discussions. If students struggle to identify AI's impact, ask: \n\"Who was affected by this AI mistake?\" \n\"What industries could be impacted by similar hallucinations?\" \n\"What steps could have been taken to avoid this hallucination?\"\n\nTeaching Tip\nIf groups struggle to connect their article’s AI hallucination to broader issues, encourage them to think about similar situations in other fields (e.g., misinformation in journalism, AI-generated legal errors, biased hiring algorithms).",
+    "png_base64": null
+  },
+  {
+    "index": 13,
+    "slide_id": "g3a0b625d8e9_0_0",
+    "notes": "☑️ Do This: Briefly explain that data centers, which are huge facilities full of computers, power AI tools. These computers use significant electricity, similar to the energy consumption of entire countries. As AI use expands, so does that demand.",
+    "png_base64": null
+  },
+  {
+    "index": 14,
+    "slide_id": "g3a0b625d8e9_0_8",
+    "notes": "💬 Discuss: Should this be part of how we judge AI?\n\n💡 Discussion Goal: Students recognize that generative AI’s environmental impact through energy use and emissions—is an important factor to consider when evaluating AI systems and their real-world effects. Listen for students who:\nAcknowledge trade-offs between AI’s benefits and its environmental costs\nRecognize that small individual use scales up to large global impact\nConnect environmental impact to fairness or equity issues",
+    "png_base64": null
+  },
+  {
+    "index": 15,
+    "slide_id": "g2694c47731d_3_328",
+    "notes": "Reduce Hallucinations and Assessment (15 mins)\n\n🎯 Goal of this activity: Students get practice with evaluating AI responses that contain hallucinations.\n\n🎙️ Say: Now that we've seen the real-world impact of AI hallucinations, let's look at three strategies we can use to minimize misinformation when working with AI.\n\n☑️ Do This: Click through the animated slide to explain how it helps prevent AI misinformation. Use real-world examples where possible, such as AI misquoting sources or giving outdated information. Remind students that AI doesn't fact-check—it predicts likely responses based on past data.\n\nTeaching Tip\nEncourage students to connect these strategies to their own experiences using AI tools or searching for information online. If students struggle to see the relevance, ask: \"What happens if you search for a fact and only look at the first result without verifying it?\"",
+    "png_base64": null
+  },
+  {
+    "index": 16,
+    "slide_id": "g2694c47731d_3_332",
+    "notes": "💻 Transition: Direct students to Lesson 7, Level 1 to complete Levels 1 through 2.\nLevel #1: Students review how to reduce AI hallucinations.\nLevel #2: Students complete a formative assessment.\n\n🔁 Circulate: Observe students as they complete the assessment. Look for signs that they understand AI hallucinations and how to counter them. Note if students struggle to connect fact-checking techniques to real-world examples.\n\nAssessment Opportunity\nUse student responses to assess how well they grasp the risks of AI hallucinations and the strategies to counter them. Teachers can determine next steps based on common student responses:\nIf students identify hallucinations but struggle to explain their impact:\nHave students revisit the Hallucination Case Studies slide and discuss their notes in small groups.\nAsk: “Why does AI misinformation matter in real-world settings?”\nIf students don’t apply fact-checking strategies:\nDirect them to the Reduce AI Hallucinations slide and have them match each strategy (careful prompting, skepticism, fact-checking) to a real-world example.\nAsk: “Which strategy would help verify this AI-generated claim?”\nIf students effectively explain AI hallucinations, impacts, and fact-checking strategies:\nMove on to the wrap-up discussion.\nHave students share how they would explain AI hallucinations to someone unfamiliar with them.",
+    "png_base64": null
+  },
+  {
+    "index": 17,
+    "slide_id": "gca418c6afa_0_13",
+    "notes": "Wrap Up (5 mins)",
+    "png_base64": null
+  },
+  {
+    "index": 18,
+    "slide_id": "g111726a1132_0_199",
+    "notes": "☑️ Do This: Review the lesson objectives.",
+    "png_base64": null
+  },
+  {
+    "index": 19,
+    "slide_id": "g359676c470d_0_0",
+    "notes": "☑️ Do This: Have students take out their Problem Solving with AI Unit Guide.",
+    "png_base64": null
+  },
+  {
+    "index": 20,
+    "slide_id": "g1b0012b9552_0_737",
+    "notes": "☑️ Do This:  Instruct students to take a minute to write a response to the Question of the Day in their Unit Guide. Encourage them to use specific examples from the lesson, such as case studies or AI-generated errors they encountered.\n\nAssessment Opportunity\nThe Question of the Day can be used as a formative assessment to check whether students can recall real-world examples of AI hallucinations and their impacts. If students struggle to provide examples, review key moments from the lesson, such as the case studies and AI panel discussion.",
+    "png_base64": null
+  },
+  {
+    "index": 21,
+    "slide_id": "g2694c47731d_3_41",
+    "notes": "🎯 Goal of this activity: Engage students in critical thinking about AI hallucinations.\n\n☑️ Do This: Explain that students will respond to statements about AI hallucinations by standing up if they agree or staying seated if they disagree. Emphasize that there are no right or wrong answers—the goal is to encourage reasoning and discussion.",
+    "png_base64": null
+  },
+  {
+    "index": 22,
+    "slide_id": "g338c946b077_3_55",
+    "notes": "☑️ Do This: Read each statement aloud. Pause after each statement and let students vote by standing or sitting. Ask a standing student and a seated student to share their reasoning. Use the follow-up prompts:\nWhat makes hallucinations easy or hard to spot?\nCan you think of a real-world example where an AI hallucination was helpful or harmful?\nWhat factors make AI hallucinations dangerous in some cases but not others?\n\nTeaching Tip\nIf students all agree on a statement, challenge them by asking: \"Can you argue the other side?\" or \"What might change your perspective?\"",
+    "png_base64": null
+  }
+]

@@ -1,0 +1,1 @@
+- Analyze the strengths and weaknesses of AI-generated creative work compared to human-created content.

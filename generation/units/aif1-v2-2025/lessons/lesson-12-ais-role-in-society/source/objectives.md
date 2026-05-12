@@ -1,0 +1,3 @@
+- Assess the environmental costs of AI, including energy consumption and carbon emissions.
+- Evaluate AI's societal impact by investigating its effects on different community groups.
+- Propose equitable AI solutions to ensure responsible and inclusive implementation.

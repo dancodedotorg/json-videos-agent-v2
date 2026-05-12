@@ -1,0 +1,61 @@
+{
+  "83088": {
+    "id": 83088,
+    "type": "Aichat",
+    "longInstructions": "## Marketing Research Chat\n\nUse AI Chat to do some market research for your product or app.\n\nFocus on ideas that connect to your assigned role (e.g., name + slogan, visuals, script, or jingle).\n\n### Do This:\n1. Use AI Chat to do some market research for your product or app.\n    - What do students want or need in a product like yours?\n    - What problems are you trying to solve?\n    - Are there similar products already out there?\n    - Are there images or documents you can provide to AI?\n2. In your Activity Guide under Stage 1: Market Research, write:\n\t- The question or prompt you gave to AI\n\t- A summary of what the AI told you\n3. Want better results? Try asking AI about a specific audience - like middle schoolers, students with busy schedules, or students who use tech often."
+  },
+  "83089": {
+    "id": 83089,
+    "type": "Aichat",
+    "longInstructions": "## Brainstorming Initial Ideas Chat\n\nUse AI Chat to help you come up with early ideas for your product launch.\n\nFocus on ideas that connect to your assigned role (e.g., name + slogan, visuals, script, or jingle).\n\n### Do This:\n1. Use AI Chat to brainstorm creative possibilities for your product or campaign.\n    - What could this product include or do?\n    - What are some possible names, taglines, looks, sounds, or messages?\n    - How might this appeal to students to solve a real problem?\n    - What images or documents can you provide to AI Chat?\n2. In your Activity Guide under Stage 2: Brainstorming Initial Ideas, write:\n\t- The question or prompt you gave to AI\n\t- A summary of what the AI told you\n3. Want better results? Try asking AI to give you options in different styles - like playful, futuristic, sleek, or tech-savvy."
+  },
+  "83090": {
+    "id": 83090,
+    "type": "Aichat",
+    "longInstructions": "## Generating Content Chat\n\nUse AI Chat to generate content you could actually use in your product launch.\n\nFocus on content that connect to your assigned role (e.g., name + slogan, visuals, script, or jingle).\n\n### Do This:\n1. Use AI Chat to turn your best idea from brainstorming into real content.\n    - What do you want AI to help you write or describe?\n    - What should it sound or feel like?\n    - What should it include?\n    - Are there images or documents you can provide to AI Chat?\n2. In your Activity Guide under Stage 3: Generating Content, write:\n\t- The question or prompt you gave to AI\n\t- A summary of what the AI told you\n3. Want better results? Use specific language in your prompt - like the tone you want, key phrases to include, or the audience you're trying to reach."
+  },
+  "83091": {
+    "id": 83091,
+    "type": "Aichat",
+    "longInstructions": "## Refining and Editing Chat\n\nUse AI Chat to revise and improve the content you generated earlier.\n\nFocus on making your final product clearer, catchier, or more creative - based on your assigned role.\n\n### Do This:\n1. Use AI Chat to revise or upgrade the draft you created in the last stage.\n    - Ask AI to make it shorter, stronger, funnier, more persuasive, or more student-friendly.\n    - Tell AI what you like or want to change.\n2. In your Activity Guide under Stage 3: Generating Content, write:\n\t- The question or prompt you gave to AI\n\t- A summary of what the AI told you\n3. Want better results? Give AI feedback on what didn't work in the first version and ask for a new take."
+  },
+  "82715": {
+    "id": 82715,
+    "type": "Multi",
+    "questions": [
+      {
+        "text": "In this lesson, I learned something new about how computer science is used in careers."
+      }
+    ],
+    "answers": [
+      {
+        "text": "Strongly disagree",
+        "correct": true
+      },
+      {
+        "text": "Disagree",
+        "correct": true
+      },
+      {
+        "text": "Slightly disagree",
+        "correct": true
+      },
+      {
+        "text": "Neither",
+        "correct": true
+      },
+      {
+        "text": "Slightly agree",
+        "correct": true
+      },
+      {
+        "text": "Agree",
+        "correct": true
+      },
+      {
+        "text": "Strongly agree",
+        "correct": true
+      }
+    ]
+  }
+}

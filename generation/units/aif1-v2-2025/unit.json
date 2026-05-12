@@ -6,7 +6,7 @@
       "title": "Lesson 1: Talking to Machines",
       "resources": [
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         }
@@ -40,7 +40,7 @@
         },
         {
           "id": 7821843,
-          "description": "Experiment with different prompts to observe how AI's responses change."
+          "description": "Experiment with different prompts to observe how AI’s responses change."
         },
         {
           "id": 7821868,
@@ -58,7 +58,7 @@
       "title": "Lesson 2: Beyond Words",
       "resources": [
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         }
@@ -77,7 +77,7 @@
         },
         {
           "id": 7821831,
-          "description": "Experiment with different media inputs to observe AI's interpretation and limitations."
+          "description": "Experiment with different media inputs to observe AI’s interpretation and limitations."
         },
         {
           "id": 7821852,
@@ -95,12 +95,12 @@
       "title": "Lesson 3: The AI's Brain",
       "resources": [
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         },
         {
-          "id": 17394843,
+          "id": 14510578,
           "key": "unplugged_neural_networks",
           "url": "https://docs.google.com/document/d/168FsA22aT-Tup4H9OHIvffToo6N2PDSL8u07AgdJgec/edit?usp=drivesdk"
         }
@@ -134,7 +134,7 @@
         },
         {
           "id": 7821869,
-          "description": "Evaluate how AI's learning affects accuracy and reliability."
+          "description": "Evaluate how AI’s learning affects accuracy and reliability."
         },
         {
           "id": 7821845,
@@ -152,7 +152,7 @@
       "title": "Lesson 4: Smart or Just Predictable?",
       "resources": [
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         }
@@ -161,21 +161,21 @@
         {
           "key": "hallucination",
           "word": "hallucination",
-          "definition": "when the model makes up false or misleading information that sounds real but isn't true"
+          "definition": "when the model makes up false or misleading information that sounds real but isn’t true"
         }
       ],
       "objectives": [
         {
           "id": 7821832,
-          "description": "Compare AI and human performance to identify AI's strengths and weaknesses."
+          "description": "Compare AI and human performance to identify AI’s strengths and weaknesses."
         },
         {
           "id": 7821864,
-          "description": "Evaluate AI's reliability and when human oversight is needed."
+          "description": "Evaluate AI’s reliability and when human oversight is needed."
         },
         {
           "id": 7821847,
-          "description": "Justify when AI should or shouldn't be used in real-world cases."
+          "description": "Justify when AI should or shouldn’t be used in real-world cases."
         }
       ]
     },
@@ -185,12 +185,12 @@
       "title": "Lesson 5: Uncovering Contradictions",
       "resources": [
         {
-          "id": 17394833,
+          "id": 14510558,
           "key": "examining_ai_contradictions",
           "url": "https://docs.google.com/document/d/1h9wgXbJZFF6FMUopFYq-SqhExAi7Yn4E2QBAuv9_oV0/edit?usp=drivesdk"
         },
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         }
@@ -210,7 +210,7 @@
       "objectives": [
         {
           "id": 7821857,
-          "description": "Analyze how AI's reliance on probability-based models can lead to inconsistencies."
+          "description": "Analyze how AI’s reliance on probability-based models can lead to inconsistencies."
         },
         {
           "id": 7821848,
@@ -228,12 +228,12 @@
       "title": "Lesson 6: Understanding Bias",
       "resources": [
         {
-          "id": 17394826,
+          "id": 14510541,
           "key": "ai_audit",
           "url": "https://docs.google.com/document/d/1AWjOcaVEHH6Ac4AvFvkzW7q2YRMmgviebXg5H8zi5WM/edit?usp=drivesdk"
         },
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         }
@@ -247,7 +247,7 @@
         {
           "key": "alignment",
           "word": "alignment",
-          "definition": "ensuring an AI system's goals and outputs match human values, fairness, and safety"
+          "definition": "ensuring an AI system’s goals and outputs match human values, fairness, and safety"
         }
       ],
       "objectives": [
@@ -275,12 +275,12 @@
       "title": "Lesson 7: AI's Wild Imagination",
       "resources": [
         {
-          "id": 17394834,
+          "id": 14510561,
           "key": "hallucination_case_studies",
           "url": "https://docs.google.com/document/d/1sULqyWw0YVmt_n3XNSwuTJqGhUqB2HQtDVnr2Ufrf3o/edit?usp=drivesdk"
         },
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         }
@@ -311,7 +311,7 @@
       "title": "Lesson 8: Debugging and Refining Outputs",
       "resources": [
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         }
@@ -340,12 +340,12 @@
       "title": "Lesson 9: AI as a Co-Creator",
       "resources": [
         {
-          "id": 17394831,
+          "id": 14510555,
           "key": "collaborate_on_a_product_launch",
           "url": "https://docs.google.com/document/d/1DVcGVVtJlZkDlP2v-JGoFNcGLcCqvEh7RTpjRGmfDjU/edit?usp=drive_link"
         },
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         }
@@ -370,12 +370,12 @@
       "title": "Lesson 10: Remixing, Creativity, and Originality",
       "resources": [
         {
-          "id": 17394829,
+          "id": 14510545,
           "key": "ai_remix_challenge",
           "url": "https://docs.google.com/document/d/1tm3V4fSes25EiVYMKfYIGgFVe8ZZykhVanhopJeHeVs/edit?usp=drivesdk"
         },
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         }
@@ -398,17 +398,17 @@
       "title": "Lesson 11: Ownership, Ethics, and Creativity",
       "resources": [
         {
-          "id": 17394837,
+          "id": 14510564,
           "key": "ownership_and_ai_stations",
           "url": "https://docs.google.com/document/d/1BBvvbW5e3rCXOLsvZ58fHR2SNNzHU27uSnBsXxUDUsY/edit?usp=drivesdk"
         },
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         },
         {
-          "id": 17394838,
+          "id": 14510565,
           "key": "ownership_and_ai_stations_1",
           "url": "https://docs.google.com/document/d/1Eh2TASGZ7z0Wncry96Yg1ZZgiPQOOpUqizRQY8RnxO0/edit?usp=drivesdk"
         }
@@ -452,17 +452,17 @@
       "title": "Lesson 12: AI's Role in Society",
       "resources": [
         {
-          "id": 17394827,
+          "id": 14510543,
           "key": "ai_in_grocery_stores_-_1",
           "url": "https://drive.google.com/file/d/1-MykYtR1K7qzncS7F7v34_2kCkJCa7DN/view"
         },
         {
-          "id": 17394828,
+          "id": 14510544,
           "key": "ai_in_the_community",
           "url": "https://docs.google.com/document/d/1swk3Ytu52zPLdffHXsKMbNDrTTI87NIX9nZzSHQtBag/edit?usp=drivesdk"
         },
         {
-          "id": 17394841,
+          "id": 14510569,
           "key": "problem_solving_with_ai_unit_guide",
           "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk"
         }
@@ -475,7 +475,7 @@
         },
         {
           "id": 7821858,
-          "description": "Evaluate AI's societal impact by investigating its effects on different community groups."
+          "description": "Evaluate AI’s societal impact by investigating its effects on different community groups."
         },
         {
           "id": 7821833,
@@ -489,7 +489,7 @@
       "title": "Lesson 13: AI Time Capsule Project",
       "resources": [
         {
-          "id": 17394224,
+          "id": 14510550,
           "key": "ai_time_capsule_project_planning_guide",
           "url": "https://docs.google.com/document/d/12ERoL_ehwCFg2KE9PhQpNr59XCZIT_CtnLKkTfNyAkQ/edit?usp=drivesdk"
         }

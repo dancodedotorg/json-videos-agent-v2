@@ -1,0 +1,4 @@
+- Create a presentation that explains how you collaborated with AI to shape and improve your final prediction.
+- Develop a future prediction by combining research with AI-generated insights.
+- Evaluate AI outputs for accuracy, inclusivity, and real-world relevance.
+- Refine predictions by improving prompts and applying human reasoning.

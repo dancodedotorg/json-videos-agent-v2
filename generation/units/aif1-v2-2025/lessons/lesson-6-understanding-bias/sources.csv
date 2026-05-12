@@ -1,0 +1,10 @@
+description,type,value
+Ai Audit,google_doc,https://docs.google.com/document/d/1AWjOcaVEHH6Ac4AvFvkzW7q2YRMmgviebXg5H8zi5WM/edit?usp=drivesdk
+Slides,google_slides,https://docs.google.com/presentation/d/1ANcnbmp1suC5qroS7YZdZbhFsrM8J3rWWgaFyqTniNs/view
+Lesson Levels,level_summary,9520960
+AI bias,vocabulary,AI bias: when a model favors certain information over others
+alignment,vocabulary,"alignment: ensuring an AI system's goals and outputs match human values, fairness, and safety"
+Objective: Analyze AI-generated responses to identify bias and asses...,objective,Analyze AI-generated responses to identify bias and assess its impact on fairness.
+Objective: Experiment with AI prompts and data inputs to explore how...,objective,Experiment with AI prompts and data inputs to explore how they affect AI bias.
+Objective: Explain how AI bias emerges from training data and influe...,objective,Explain how AI bias emerges from training data and influences AI-generated outputs.
+Objective: Identify strategies for mitigating bias in AI systems and...,objective,Identify strategies for mitigating bias in AI systems and evaluating ethical considerations.

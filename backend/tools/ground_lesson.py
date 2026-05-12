@@ -15,6 +15,8 @@ PROJECT_ROOT = pathlib.Path(__file__).parent.parent.parent
 _BACKEND_DIR = pathlib.Path(__file__).parent.parent
 INIT_LESSON_SCRIPT = _BACKEND_DIR / "skills" / "lesson-init" / "scripts" / "init_lesson.py"
 GROUND_LESSON_SCRIPT = _BACKEND_DIR / "skills" / "lesson-ground" / "scripts" / "ground-lesson.py"
+FETCH_UNIT_SCRIPT = _BACKEND_DIR / "skills" / "unit-init" / "scripts" / "fetch_unit.py"
+FILTER_RESOURCES_SCRIPT = _BACKEND_DIR / "skills" / "unit-init" / "scripts" / "filter_resources.py"
 
 
 # ---------------------------------------------------------------------------
@@ -132,6 +134,82 @@ def _resolve_lesson(
         f"Lesson '{lesson}' not found in unit '{unit}' "
         "(checked existing folders, unit.json, and Code.org API).",
     )
+
+
+# ---------------------------------------------------------------------------
+# Unit bootstrap (auto-initialize a unit that isn't on disk yet)
+# ---------------------------------------------------------------------------
+
+def _create_minimal_unit_json(lessons_json_path: pathlib.Path, unit_json_path: pathlib.Path) -> None:
+    """Write a minimal unit.json from lessons.json when the resources page needs auth.
+
+    Each lesson gets the correct id/title but empty resources, vocabularies, and
+    objectives.  init_lesson.py can use it to create sources.csv with at least a
+    Lesson Levels row; the user fills in the rest during the sources.csv review.
+    """
+    with open(lessons_json_path, encoding="utf-8") as f:
+        lessons_data = json.load(f)
+    lessons = [
+        {
+            "id": entry.get("id"),
+            "key": entry.get("name", ""),
+            "title": entry.get("name", ""),
+            "resources": [],
+            "vocabularies": [],
+            "objectives": [],
+        }
+        for entry in lessons_data
+    ]
+    with open(unit_json_path, "w", encoding="utf-8") as f:
+        json.dump({"lessons": lessons}, f, indent=2, ensure_ascii=False)
+
+
+def _bootstrap_unit(unit: str, units_root: pathlib.Path) -> str | None:
+    """Fetch unit data from Code.org and write unit.json so init_lesson.py can run.
+
+    Returns None on success, an error string on failure.
+
+    Two outcomes:
+    - Resources page accessible → full unit.json via filter_resources.py
+    - Resources need auth (fetch_unit.py exit 2) → minimal unit.json from lessons.json
+    """
+    unit_dir = units_root / unit
+    unit_dir.mkdir(parents=True, exist_ok=True)
+
+    fetch_result = subprocess.run(
+        [sys.executable, str(FETCH_UNIT_SCRIPT), unit],
+        capture_output=True,
+        text=True,
+    )
+    if fetch_result.returncode == 1:
+        return (
+            f"Could not fetch lesson list for unit '{unit}' from Code.org API. "
+            f"Check that the unit slug is correct and the site is reachable."
+        )
+
+    lessons_json_path = unit_dir / "lessons.json"
+    resources_json_path = unit_dir / "resources.json"
+    unit_json_path = unit_dir / "unit.json"
+
+    if resources_json_path.exists():
+        filter_result = subprocess.run(
+            [
+                sys.executable,
+                str(FILTER_RESOURCES_SCRIPT),
+                str(resources_json_path),
+                str(lessons_json_path),
+            ],
+            capture_output=True,
+            text=True,
+        )
+        if filter_result.returncode != 0 or not unit_json_path.exists():
+            # Fallback to minimal if filter unexpectedly fails
+            _create_minimal_unit_json(lessons_json_path, unit_json_path)
+    else:
+        # Resources required authentication — build minimal unit.json from lessons list
+        _create_minimal_unit_json(lessons_json_path, unit_json_path)
+
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -273,6 +351,19 @@ async def ground_lesson(unit: str, lesson: str, tool_context: ToolContext) -> di
                     "Provide the exact lesson slug or run /lesson-init first."
                 ],
             }
+
+        # Auto-bootstrap unit if unit.json is missing (unit not yet on disk)
+        unit_json_path = units_root / unit / "unit.json"
+        if not unit_json_path.exists():
+            bootstrap_err = _bootstrap_unit(unit, units_root)
+            if bootstrap_err:
+                return {
+                    "status": "error",
+                    "lesson_slug": slug,
+                    "sources_fetched": 0,
+                    "errors": [bootstrap_err],
+                }
+
         result = subprocess.run(
             [sys.executable, str(INIT_LESSON_SCRIPT), unit, str(lesson_id)],
             capture_output=True,
