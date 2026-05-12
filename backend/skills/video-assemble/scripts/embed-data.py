@@ -29,6 +29,7 @@ import json
 import mimetypes
 import re
 import sys
+import zipfile
 from pathlib import Path
 
 
@@ -63,6 +64,25 @@ def path_to_data_uri(src: str, relative_to: Path = None) -> str | None:
     mime = mime or "application/octet-stream"
     data = base64.b64encode(path.read_bytes()).decode("ascii")
     return f"data:{mime};base64,{data}"
+
+
+def create_source_archive(video_root: Path, archive_path: Path) -> int:
+    """Zip script.json + scenes/ + images/ + audio/ for portable re-assembly. Returns file count."""
+    EXCLUDE = {archive_path.name, "script_assembled_base64.json", "script_cleaned.json", "scenes_draft.json"}
+    file_count = 0
+    with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+        script = video_root / "script.json"
+        if script.exists():
+            zf.write(script, "script.json")
+            file_count += 1
+        for subdir in ("scenes", "images", "audio"):
+            d = video_root / subdir
+            if d.exists():
+                for f in sorted(d.iterdir()):
+                    if f.is_file() and f.name not in EXCLUDE:
+                        zf.write(f, f"{subdir}/{f.name}")
+                        file_count += 1
+    return file_count
 
 
 def embed_local_images(html: str) -> tuple[str, int]:
@@ -171,6 +191,10 @@ Examples:
 
     output_path.write_text(json.dumps(data, indent=4, ensure_ascii=False), encoding="utf-8")
     print(f"Done. {image_total} image(s) embedded -> {output_path}", file=sys.stderr)
+
+    archive_path = input_path.parent / "video_archive.zip"
+    archive_count = create_source_archive(input_path.parent, archive_path)
+    print(f"Archive: {archive_count} source file(s) -> {archive_path}", file=sys.stderr)
 
 
 if __name__ == "__main__":

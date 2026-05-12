@@ -30,7 +30,7 @@ mkdir -p generation/units/$ARGUMENTS
 Use `execute` to run the fetch script, which saves `lessons.json` and `resources.json` to `generation/units/$ARGUMENTS/`:
 
 ```bash
-python .agents/skills/unit-init/scripts/fetch_unit.py $ARGUMENTS
+python backend/skills/unit-init/scripts/fetch_unit.py $ARGUMENTS
 ```
 
 The script prints the lesson list on success.
@@ -42,7 +42,7 @@ If it exits with code 2, relay the instructions the script printed to the user e
 Use `execute` to run `filter_resources.py` to produce the clean unit.json:
 
 ```bash
-python .agents/skills/unit-init/scripts/filter_resources.py generation/units/$ARGUMENTS/resources.json generation/units/$ARGUMENTS/lessons.json
+python backend/skills/unit-init/scripts/filter_resources.py generation/units/$ARGUMENTS/resources.json generation/units/$ARGUMENTS/lessons.json
 ```
 
 This writes `generation/units/$ARGUMENTS/unit.json` directly.
@@ -75,7 +75,7 @@ Reply "yes" to proceed, or "no" to skip.
 If the user says **yes**, use `execute` to run:
 
 ```bash
-python .agents/skills/unit-init/scripts/init_all_lessons.py $ARGUMENTS
+python backend/skills/unit-init/scripts/init_all_lessons.py $ARGUMENTS
 ```
 
 Then confirm:
@@ -97,7 +97,7 @@ Reply "yes" to proceed, or "no" to skip.
 If the user says **yes**, use `execute` to run:
 
 ```bash
-python .agents/skills/unit-init/scripts/ground-all.py $ARGUMENTS
+python backend/skills/unit-init/scripts/ground-all.py $ARGUMENTS
 ```
 
 Then confirm:

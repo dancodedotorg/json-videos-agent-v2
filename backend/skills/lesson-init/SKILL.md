@@ -50,7 +50,7 @@ If the user says no, stop.
 Use `execute` to run:
 
 ```bash
-python .agents/skills/lesson-init/scripts/init_lesson.py $UNIT $LESSON_ID
+python backend/skills/lesson-init/scripts/init_lesson.py $UNIT $LESSON_ID
 ```
 
 Where `$LESSON_ID` is the integer `id` from the matched lesson in unit.json. Print the script output directly.

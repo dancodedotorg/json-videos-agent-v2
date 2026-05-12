@@ -44,17 +44,17 @@ Use `execute` to run exactly one of these commands. Do not modify the command or
 
 **ElevenLabs:**
 ```bash
-python .agents/skills/video-audio/scripts/elevenlabs-gen.py $SCRIPT_PATH --voice <VOICE>
+python backend/skills/video-audio/scripts/elevenlabs-gen.py $SCRIPT_PATH --voice <VOICE>
 ```
 
 **Gemini:**
 ```bash
-python .agents/skills/video-audio/scripts/gemini-audio-gen.py $SCRIPT_PATH --voice <VOICE>
+python backend/skills/video-audio/scripts/gemini-audio-gen.py $SCRIPT_PATH --voice <VOICE>
 ```
 
 **Fake:**
 ```bash
-python .agents/skills/video-audio/scripts/elevenlabs-gen.py $SCRIPT_PATH --fake
+python backend/skills/video-audio/scripts/elevenlabs-gen.py $SCRIPT_PATH --fake
 ```
 
 The scripts write all `tts.*` fields and `pipeline.audio = "complete"` to `script.json` automatically. No manual JSON edits are needed after the script exits.

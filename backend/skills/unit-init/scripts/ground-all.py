@@ -22,7 +22,7 @@ import sys
 from pathlib import Path
 
 _REPO_ROOT = Path(__file__).resolve().parents[4]
-GROUND_LESSON = _REPO_ROOT / ".agents" / "skills" / "lesson-ground" / "scripts" / "ground-lesson.py"
+GROUND_LESSON = _REPO_ROOT / "backend" / "skills" / "lesson-ground" / "scripts" / "ground-lesson.py"
 
 
 # ---------------------------------------------------------------------------

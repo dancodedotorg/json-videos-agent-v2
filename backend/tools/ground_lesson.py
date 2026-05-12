@@ -12,12 +12,9 @@ from google.adk.tools.tool_context import ToolContext
 
 PROJECT_ROOT = pathlib.Path(__file__).parent.parent.parent
 
-INIT_LESSON_SCRIPT = (
-    PROJECT_ROOT / ".agents" / "skills" / "lesson-init" / "scripts" / "init_lesson.py"
-)
-GROUND_LESSON_SCRIPT = (
-    PROJECT_ROOT / ".agents" / "skills" / "lesson-ground" / "scripts" / "ground-lesson.py"
-)
+_BACKEND_DIR = pathlib.Path(__file__).parent.parent
+INIT_LESSON_SCRIPT = _BACKEND_DIR / "skills" / "lesson-init" / "scripts" / "init_lesson.py"
+GROUND_LESSON_SCRIPT = _BACKEND_DIR / "skills" / "lesson-ground" / "scripts" / "ground-lesson.py"
 
 
 # ---------------------------------------------------------------------------

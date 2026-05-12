@@ -34,7 +34,7 @@ OUTPUT_PATH = `<VIDEO_ROOT>/script_assembled_base64.json`
 
 Use `execute` to run:
 ```bash
-python .agents/skills/video-assemble/scripts/embed-data.py <SCRIPT_PATH> <OUTPUT_PATH>
+python backend/skills/video-assemble/scripts/embed-data.py <SCRIPT_PATH> <OUTPUT_PATH>
 ```
 
 This writes `script_assembled_base64.json` with all local assets embedded as base64 data URIs in a single pass:
@@ -50,10 +50,24 @@ This writes `script_assembled_base64.json` with all local assets embedded as bas
 ✅ Assembly complete.
 
 Output:  <OUTPUT_PATH>
+Archive: <VIDEO_ROOT>/video_archive.zip
 Source:  <SCRIPT_PATH> (unchanged)
 
-To preview: open index.html in the player (via http-server), click "Load JSON",
-and select script_assembled_base64.json.
-
 Note: the assembled file may be large due to embedded audio and images — this is expected.
+```
+
+### 3. Save output as downloadable artifacts
+
+Call `save_video_output(unit=UNIT, lesson=LESSON_SLUG, video=VIDEO)`.
+
+Do NOT read script.json or script_assembled_base64.json into context — they are too large and will exceed token limits.
+
+Then tell the user:
+
+```
+📦 Your output files are saved as artifacts and are ready to download from the artifacts panel:
+  - script_assembled_base64.json — the player-ready file (load this in the json-video-player)
+  - video_archive.zip — source files (script.json + scenes, images, audio) for re-editing later
+
+⚠️  These artifacts exist only for this session. Download them before closing.
 ```

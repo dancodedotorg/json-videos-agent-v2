@@ -111,7 +111,7 @@ Each scene object:
 Write the generated scenes array to a temp file alongside the script, then use `execute` to run `write-scenes.py` to merge it in:
 
 ```bash
-python .agents/skills/video-script/scripts/write-scenes.py SCRIPT_PATH SCENES_DRAFT_PATH
+python backend/skills/video-script/scripts/write-scenes.py SCRIPT_PATH SCENES_DRAFT_PATH
 ```
 
 Where `SCENES_DRAFT_PATH` is a JSON file containing only the scenes array (e.g., `generation/units/UNIT/lessons/LESSON/videos/VIDEO/scenes_draft.json`). The script replaces the `scenes` field in `script.json` and sets `pipeline.script = "complete"` atomically — do not manually edit `script.json` to insert scenes.

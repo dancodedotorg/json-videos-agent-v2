@@ -11,6 +11,7 @@ refactor-agent-to-skills.md
 
 generation/tools/generated-images/
 resource_page_experiments/
+docker-test-command.sh
 
 *.mp3
 *.png
@@ -18,3 +19,5 @@ resource_page_experiments/
 /generation/**/*.html
 /**/__pycache__/
 /**/retired/
+cloud-run-env.yaml
+docker-test-command.sh

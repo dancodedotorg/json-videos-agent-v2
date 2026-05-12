@@ -95,7 +95,7 @@ For the full list of output files produced by each type, see [source-types.md](r
 
 Use `execute` to run:
 ```bash
-python .agents/skills/lesson-ground/scripts/ground-lesson.py $UNIT $LESSON_SLUG [--force] [--dry-run]
+python backend/skills/lesson-ground/scripts/ground-lesson.py $UNIT $LESSON_SLUG [--force] [--dry-run]
 ```
 
 Pass `--force` if the user confirmed a re-fetch in Step 1.

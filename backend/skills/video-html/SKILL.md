@@ -27,7 +27,7 @@ All steps below use VIDEO_ROOT derived above.
 
 - `pipeline.script` must be `"complete"` in `script.json`
 - Check `pipeline.audio`: if `"complete"`, present the audio check-in at Step 2 before proceeding
-- Scripts are bundled in `.agents/skills/video-html/scripts/`
+- Scripts are bundled in `backend/skills/video-html/scripts/`
 
 ## Gotchas
 
@@ -57,7 +57,7 @@ Copy this checklist into your reply at the start of a session:
 
 Use `execute` to run base64_clean:
 ```bash
-python .agents/skills/video-html/scripts/base64_clean.py $VIDEO_ROOT/script.json
+python backend/skills/video-html/scripts/base64_clean.py $VIDEO_ROOT/script.json
 ```
 Read the **entire** `$VIDEO_ROOT/script_cleaned.json` before assessing any individual scene. Never read the raw `script.json` — it may contain base64 image data.
 
@@ -74,7 +74,7 @@ Read the **entire** `$VIDEO_ROOT/script_cleaned.json` before assessing any indiv
 
 If **Yes**: Use `execute` to run:
 ```bash
-python .agents/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json audio=pending audio_tags=pending
+python backend/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json audio=pending audio_tags=pending
 ```
 Set AUDIO_LOCKED = false.
 
@@ -248,7 +248,7 @@ Once the content spec is approved, load only the templates and tools the plan ac
 - This includes SVG pattern templates (`svg-flow`, `svg-bar-chart`, `svg-word-display`) — load only the specific ones in the plan, not all three.
 
 **If any Image Gen scenes exist (always for Mode C; per plan for Mode D):**
-- `.agents/skills/video-html/scripts/gemini-image-gen.py`
+- `backend/skills/video-html/scripts/gemini-image-gen.py`
 
 ---
 
@@ -302,7 +302,7 @@ Each scene uses whatever approach the approved plan specifies.
 2. Assemble the prompt using the formula in `references/image-generation.md`
 3. Use `execute` to run:
    ```bash
-   python .agents/skills/video-html/scripts/gemini-image-gen.py "FINAL_PROMPT" --aspect-ratio 16:9 --output-dir $VIDEO_ROOT/images
+   python backend/skills/video-html/scripts/gemini-image-gen.py "FINAL_PROMPT" --aspect-ratio 16:9 --output-dir $VIDEO_ROOT/images
    ```
    Add `--reference-image /path/to/prior_scene.png` for connected image sequences.
 4. Capture the filename from the filepath printed to stdout. The tool may print an absolute Windows path — extract just the filename.
@@ -336,17 +336,17 @@ Use `execute` to run the appropriate command based on the mode used:
 
 **Mode C:**
 ```bash
-python .agents/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=ai_images
+python backend/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=ai_images
 ```
 
 **Mode D — no image gen used:**
 ```bash
-python .agents/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=html_templates_only
+python backend/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=html_templates_only
 ```
 
 **Mode D — image gen used for one or more scenes:**
 ```bash
-python .agents/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=html_including_image_templates
+python backend/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=html_including_image_templates
 ```
 
 Tell the user to continue with the video-audio-tags skill for $UNIT / $LESSON / $VIDEO to add TTS expression tags.

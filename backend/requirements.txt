@@ -1,9 +1,15 @@
 google-adk>=1.29.0
 python-dotenv
+uvicorn
+fastapi
+aiosqlite                 # async SQLite driver required by session_service_uri
 
-# Script dependencies — packages used by .agents/skills/video-*/scripts/
-google-genai       # gemini-image-gen.py, gemini-audio-gen.py
-elevenlabs         # elevenlabs-gen.py
-pydub              # audio MP3 processing
-Pillow             # image handling in gemini-image-gen.py
-pydantic           # used in gemini-image-gen.py
+# Script dependencies — packages used by backend/skills/*/scripts/
+google-genai              # gemini-image-gen.py, gemini-audio-gen.py
+google-api-python-client  # googleapiclient — Slides/Docs fetch in lesson-ground
+google-auth-httplib2      # OAuth transport for service account auth
+xhtml2pdf                 # PDF rendering in lesson-ground lib scripts
+elevenlabs                # elevenlabs-gen.py
+pydub                     # audio MP3 processing
+Pillow                    # image handling in gemini-image-gen.py
+pydantic                  # used in gemini-image-gen.py

@@ -52,7 +52,7 @@ All colors must be referenced via CSS custom properties — no hardcoded hex val
 **Fonts:** Barlow Semi Condensed (headings, bullets, display text), Figtree (body, subheadings, captions)
 **Icons:** SVG icons or Unicode symbols only — no external icon libraries.
 
-Font import is included in the boilerplate — every slide already has it. If writing a new template from scratch, copy the full boilerplate block from `.agents/skills/video-html/assets/boilerplate.html` into `<head>`. Do not write the `:root` rule manually.
+Font import is included in the boilerplate — every slide already has it. If writing a new template from scratch, copy the full boilerplate block from `backend/skills/video-html/assets/boilerplate.html` into `<head>`. Do not write the `:root` rule manually.
 
 **Rem scaling:** All type sizes use `rem`. The boilerplate sets `:root { font-size: calc(16vh / 9) }`, making `1rem = 16px` at the design height of 900px. All rem values scale proportionally as the player resizes — never use bare `px` for font sizes, padding, margins, or layout dimensions.
 

@@ -1,6 +1,6 @@
 """Video Generation Agent — runs the full video pipeline using ADK Skills.
 
-Skills loaded (all from .agents/skills/):
+Skills loaded (all from backend/skills/):
   video-init, video-script, video-html, video-audio-tags,
   video-audio, video-assemble, video-create
 
@@ -25,13 +25,14 @@ from google.adk.tools.load_artifacts_tool import LoadArtifactsTool  # noqa: E402
 from google.adk.tools.skill_toolset import SkillToolset  # noqa: E402
 from backend.tools.load_lesson_sources import load_lesson_sources  # noqa: E402
 from backend.tools.ground_lesson import ground_lesson  # noqa: E402
+from backend.tools.save_video_output import save_video_output  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
 # Skills
 # ---------------------------------------------------------------------------
 
-SKILLS_DIR = PROJECT_ROOT / ".agents" / "skills"
+SKILLS_DIR = pathlib.Path(__file__).parent / "skills"
 
 video_skills = [
     load_skill_from_dir(SKILLS_DIR / "video-init"),
@@ -116,16 +117,20 @@ root_agent = Agent(
         "- load_artifacts — retrieve previously saved artifact content into the current turn's "
         "context as multimodal parts. Prefer this over read_file for PDFs and large JSON source "
         "files; artifact content is not persisted in session history.\n"
+        "- save_video_output — call after video-assemble completes, with unit, lesson, and video. "
+        "Saves script.json and script_assembled_base64.json as downloadable session artifacts. "
+        "Tell the user to download both files from the artifacts panel before closing the session. "
+        "Do NOT read these files into context — they are too large.\n"
         "- read_file — read project files such as script.json; "
         "paths are relative to the project root\n"
         "- write_file — write project files; automatically creates any needed parent directories; "
         "paths are relative to the project root\n"
         "- execute — run shell commands in the project root, including listing directories "
         "(e.g. 'dir generation/units/unit/lessons') and running scripts "
-        "(e.g. 'python .agents/skills/video-script/scripts/write-scenes.py arg1 arg2')\n\n"
+        "(e.g. 'python backend/skills/video-script/scripts/write-scenes.py arg1 arg2')\n\n"
         "Always load the relevant skill first to get detailed step-by-step instructions, "
         "then follow them precisely. Pause at every human check-in point and wait for "
         "the user's response before continuing."
     ),
-    tools=[skill_toolset, env_toolset, LoadArtifactsTool(), load_lesson_sources, ground_lesson],
+    tools=[skill_toolset, env_toolset, LoadArtifactsTool(), load_lesson_sources, ground_lesson, save_video_output],
 )
