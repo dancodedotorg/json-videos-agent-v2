@@ -1,7 +1,7 @@
 google-adk>=1.29.0
 python-dotenv
 
-# Script dependencies — packages used by .agents/skills/video-*/scripts/
+# Script dependencies — packages used by backend/skills/video-*/scripts/
 google-genai       # gemini-image-gen.py, gemini-audio-gen.py
 elevenlabs         # elevenlabs-gen.py
 pydub              # audio MP3 processing

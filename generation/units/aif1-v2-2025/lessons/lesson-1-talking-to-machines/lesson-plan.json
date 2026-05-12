@@ -11,7 +11,9 @@
         "abstraction",
         "artificial intelligence (AI)",
         "probability"
-      ]
+      ],
+      "mode": "concept",
+      "brief": null
     },
     {
       "name": "prompting-and-patterns",
@@ -22,7 +24,9 @@
       ],
       "target_vocabulary": [
         "prompt"
-      ]
+      ],
+      "mode": "concept",
+      "brief": null
     }
   ]
 }
