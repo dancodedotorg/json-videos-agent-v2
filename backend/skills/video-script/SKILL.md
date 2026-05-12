@@ -120,11 +120,25 @@ Where `SCENES_DRAFT_PATH` is a JSON file containing only the scenes array (e.g.,
 
 Present the generated script to the user in a readable format (numbered list of comment + speech pairs). Then ask:
 
-> Does this script look good? You can ask me to:
-> - Revise specific scenes (e.g., "make scene 3 shorter")
-> - Add or remove scenes
-> - Adjust the tone or level of detail
-> - Approve and move on to HTML slides
+> Does this script look good? You can:
+> - **Approve it** and move on to HTML slides
+> - **Revise specific scenes** ("make scene 3 shorter", "scene 2 feels too technical")
+> - **Ask why** I structured it a certain way or how it maps to the lesson objectives
+> - **Add or remove scenes**
+> - **Adjust the tone or level of detail** for the whole script
+>
+> There's no rush — iterate until you're happy with it.
 
-Iterate on revisions until the user approves. Then tell them:
-- "Tell the user to continue with the video-html skill for $UNIT / $LESSON / $VIDEO to generate HTML slides."
+Iterate on revisions until the user approves. Then print:
+
+```
+Script approved.
+
+Next: video-html will generate an HTML slide for each scene. You'll go through
+  two check-in rounds:
+    1. Scene plan — visual approach (text layout, image gen, or SVG) per scene
+    2. Content spec — exact copy and visuals per slide
+
+  Say: "Run video-html for $UNIT / $LESSON / $VIDEO"
+  Or ask me any questions before continuing.
+```

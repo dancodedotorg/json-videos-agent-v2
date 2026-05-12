@@ -41,12 +41,13 @@ What would you like to name this video? (e.g. ai-contradictions)
 
 What type of video do you want to make?
 
-  concept   — one scene per slide; thorough tutorial narration
-  summary   — 3–8 scenes, thematic grouping; best for review/overview
-  re-teach  — remediation for students who completed the lesson
+  concept   — one scene per idea; thorough tutorial narration; best for first exposure to a topic
+  summary   — 3-8 scenes; thematic grouping; best for review or overview after the lesson
+  re-teach  — targeted remediation for students who already completed the lesson
   co-create — you provide a custom brief (audience, angle, tone, length)
 
 Which mode? (concept / summary / re-teach / co-create)
+Not sure? Ask me to describe what any mode looks like.
 ```
 
 Wait for both answers. Store the name as VIDEO and the mode as MODE.
@@ -123,5 +124,10 @@ Print:
   Target objectives: <N> selected
   Source materials: shared from generation/units/$UNIT/lessons/$LESSON/source/
 
-Next: continue with the video-script skill for $UNIT / $LESSON / $VIDEO
+Next: video-script will read the lesson source materials and generate the voiceover
+  narration for each scene. You'll review and approve the script before HTML slides
+  are generated.
+
+  Say: "Run video-script for $UNIT / $LESSON / $VIDEO"
+  Or ask me any questions about the setup before continuing.
 ```

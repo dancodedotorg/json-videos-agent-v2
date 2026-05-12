@@ -27,14 +27,16 @@ Read `generation/units/$UNIT/lessons/$LESSON/lesson-state.json`. If it doesn't e
 
 ## Pipeline Overview
 
+The full pipeline has 6 stages and 4 human check-in points (script, html plan, audio tags, audio voice selection). A typical run takes 20-40 minutes of active work.
+
 ```
-Stage 0: /video-init       → scaffold video folder, select target objectives
-Stage 1: (grounding done)  → lesson source/ is the grounding
-Stage 2: /video-script     → generate voiceover script (check-in: approve script)
-Stage 3: /video-html       → evaluate scenes, generate HTML slides (check-in: script edits if proposed, mode, scene plan)
-Stage 4: /video-audio-tags → add expression tags (check-in: approve tags)
-Stage 5: /video-audio      → generate audio (check-in: voice + real/fake)
-Stage 6: /video-assemble   → embed assets, finalize JSON
+Stage 0: /video-init       → scaffold video folder, pick mode and objectives
+Stage 1: (grounding done)  → lesson source/ is shared across all videos in this lesson
+Stage 2: /video-script     → generate voiceover script       [check-in: approve script]
+Stage 3: /video-html       → generate HTML slides             [check-in: scene plan + content]
+Stage 4: /video-audio-tags → add TTS expression tags          [check-in: approve tags]
+Stage 5: /video-audio      → generate MP3 audio               [check-in: pick voice + real/fake]
+Stage 6: /video-assemble   → embed all assets into player JSON
 ```
 
 ## Execution
@@ -51,16 +53,16 @@ Stage 6: /video-assemble   → embed assets, finalize JSON
 
 ## Resuming
 
-If run on a project that's already partially complete, skip completed stages and pick up from where the pipeline left off. Report current status first:
+If run on a project that's already partially complete, skip completed stages and pick up from where the pipeline left off. Report current status first, with a one-line description of each stage:
 
 ```
 📋 "$VIDEO" pipeline status:
-  ✅ grounding
-  ✅ script
-  ⏳ html (next)
-  ⏸ audio_tags
-  ⏸ audio
-  ⏸ assembled
+  ✅ grounding   — lesson source materials fetched
+  ✅ script      — voiceover narration written and approved
+  ⏳ html        — generate HTML slides (next)
+  ⏸ audio_tags  — add TTS expression tags to narration
+  ⏸ audio       — generate MP3 audio files
+  ⏸ assembled   — embed all assets into final player JSON
 ```
 
 ## Important: pre-pipeline steps are NOT part of this skill

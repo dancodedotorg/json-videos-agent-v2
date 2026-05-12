@@ -67,7 +67,12 @@ Then tell the user:
 ```
 📦 Your output files are saved as artifacts and are ready to download from the artifacts panel:
   - script_assembled_base64.json — the player-ready file (load this in the json-video-player)
-  - video_archive.zip — source files (script.json + scenes, images, audio) for re-editing later
+  - video_archive.zip — source files (script.json + scenes/, images/, audio/) for re-editing
 
 ⚠️  These artifacts exist only for this session. Download them before closing.
+
+To re-edit later: unzip video_archive.zip — it contains the original script.json and all
+  scene HTML, image, and audio files. Re-run the pipeline from whichever stage you changed.
+
+Ask me if you have any questions about the output files or next steps.
 ```
