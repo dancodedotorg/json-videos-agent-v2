@@ -60,7 +60,7 @@ env_toolset = EnvironmentToolset(
 # ---------------------------------------------------------------------------
 
 root_agent = Agent(
-    model="gemini-3-flash-preview",
+    model="gemini-2.5-flash",
     name="video_generation_agent",
     description="Generates educational video content through a multi-stage pipeline of specialized skills.",
     instruction=(
