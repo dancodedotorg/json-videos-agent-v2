@@ -4,6 +4,7 @@ python-dotenv
 uvicorn
 fastapi
 aiofiles                  # required by FastAPI StaticFiles for async file serving
+ag-ui-adk                 # AG-UI protocol bridge for CopilotKit frontend
 aiosqlite                 # async SQLite driver — local dev fallback
 asyncpg                   # async PostgreSQL driver — required for Cloud SQL sessions
 

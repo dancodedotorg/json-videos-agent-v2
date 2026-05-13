@@ -76,10 +76,10 @@ All 11 skills are available via the `Skill` tool. The 4 lesson setup skills run 
 
 ```bash
 adk web backend/              # ADK web UI at localhost:8080 (bypasses main.py — preview routes not available)
-uvicorn main:app --reload     # full server including preview routes and /player/ static mount
+uvicorn main:app --reload --port 8080  # full server including preview routes and /player/ static mount
 ```
 
-Use `uvicorn main:app --reload` when you need the live preview (`/preview/...`) to work locally.
+Use `uvicorn main:app --reload --port 8080` when you need the live preview (`/preview/...`) to work locally.
 
 **Production — Cloud Run**
 

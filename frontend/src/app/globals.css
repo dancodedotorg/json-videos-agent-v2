@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  --bg-base: #030712;
+  --bg-panel: #0f172a;
+  --bg-card: #1e293b;
+  --border: #1e293b;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-base);
+  color: white;
+  font-family: system-ui, sans-serif;
+}
+
+/* CopilotKit chat panel sizing */
+.copilotKitChat {
+  height: 100% !important;
+}

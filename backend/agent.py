@@ -26,6 +26,7 @@ from google.adk.tools.skill_toolset import SkillToolset  # noqa: E402
 from backend.tools.load_lesson_sources import load_lesson_sources  # noqa: E402
 from backend.tools.ground_lesson import ground_lesson  # noqa: E402
 from backend.tools.save_video_output import save_video_output  # noqa: E402
+from backend.tools.sync_video_state import sync_to_state, apply_from_state  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -187,6 +188,14 @@ root_agent = Agent(
         "Saves script.json and script_assembled_base64.json as downloadable session artifacts. "
         "Tell the user to download both files from the artifacts panel before closing the session. "
         "Do NOT read these files into context — they are too large.\n"
+        "- sync_to_state — call after every pipeline skill completes successfully "
+        "(video-init, video-script, video-html, video-audio-tags, video-audio, video-assemble). "
+        "Reads script.json from disk, strips scenes[n].html (too large for state), and writes "
+        "the result to session state so the preview UI reflects the latest pipeline progress.\n"
+        "- apply_from_state — call before running video-script, video-html, video-audio-tags, "
+        "video-audio, or video-assemble. Reads session state and writes any user-edited scene "
+        "fields (speech, comment, duration) back to disk script.json before the skill reads it. "
+        "If it returns 'no_state', there are no edits to apply — proceed normally.\n"
         "- read_file — read project files such as script.json; "
         "paths are relative to the project root\n"
         "- write_file — write project files; automatically creates any needed parent directories; "
@@ -198,5 +207,5 @@ root_agent = Agent(
         "then follow them precisely. Pause at every human check-in point and wait for "
         "the user's response before continuing."
     ),
-    tools=[skill_toolset, env_toolset, LoadArtifactsTool(), load_lesson_sources, ground_lesson, save_video_output],
+    tools=[skill_toolset, env_toolset, LoadArtifactsTool(), load_lesson_sources, ground_lesson, save_video_output, sync_to_state, apply_from_state],
 )

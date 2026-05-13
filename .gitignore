@@ -22,3 +22,8 @@ docker-test-command.sh
 cloud-run-env.yaml
 docker-test-command.sh
 sessions.db
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
