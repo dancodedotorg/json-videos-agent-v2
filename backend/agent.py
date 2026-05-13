@@ -59,8 +59,11 @@ env_toolset = EnvironmentToolset(
 # Agent
 # ---------------------------------------------------------------------------
 
+# GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MODEL = "gemini-3-flash-preview"
+
 root_agent = Agent(
-    model="gemini-2.5-flash",
+    model=GEMINI_MODEL,
     name="video_generation_agent",
     description="Generates educational video content through a multi-stage pipeline of specialized skills.",
     instruction=(
@@ -95,6 +98,12 @@ root_agent = Agent(
         "generation instructions.'\n"
         "- After a long tool call: brief summary of what was returned.\n"
         "Skip narration for minor file reads within a skill step.\n\n"
+        "Continuing between pipeline stages:\n"
+        "When a skill finishes and the user says anything affirmative ('yes', 'go ahead', "
+        "'continue', 'looks good', 'ok', 'sure', etc.), automatically load and run the next "
+        "skill in the pipeline. Do NOT ask the user to retype the unit, lesson, or video name — "
+        "you already have UNIT, LESSON_SLUG, and VIDEO in context. Pass them through to the "
+        "next skill directly. Only ask for identifiers if they are genuinely unknown.\n\n"
         "Entry point for new lessons:\n"
         "When the user wants to make a video and provides a unit and lesson (number, name, or slug):\n"
         "1. Call ground_lesson(unit=<unit>, lesson=<lesson>) to check grounding status.\n"

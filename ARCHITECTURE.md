@@ -6,7 +6,7 @@
 
 `backend/agent.py` defines the root agent:
 
-- **Model:** `gemini-2.5-flash`
+- **Model:** `gemini-3-flash-preview`
 - **Name:** `video_generation_agent`
 - **Tools:** `SkillToolset` (video pipeline skills), `EnvironmentToolset` (file I/O + shell execution), `LoadArtifactsTool`, plus three custom Python tools
 - **Working directory:** project root (via `LocalEnvironment`)
@@ -219,7 +219,7 @@ generation/
     standalone/
       lessons/                ← lessons not tied to a curriculum unit (user-chosen slugs)
 
-main.py                       ← FastAPI entry point: get_fast_api_app(agents_dir, session_service_uri)
+main.py                       ← FastAPI entry point: detects CLOUDSQL_INSTANCE + ARTIFACT_BUCKET env vars; routes to Cloud SQL sessions + GCS artifacts on Cloud Run, SQLite + InMemory locally
 Dockerfile                    ← builds from python:3.12-slim; bakes backend/ + generation/units/ + generation/tools/*.py
 cloud-run-env.yaml            ← env vars for Cloud Run deployment (gitignored — contains secrets)
 DEPLOY_INSTRUCTIONS.md        ← step-by-step Cloud Run + IAP deployment guide
@@ -229,4 +229,8 @@ DEPLOY_INSTRUCTIONS.md        ← step-by-step Cloud Run + IAP deployment guide
 
 ## Session state
 
-ADK sessions use SQLite for local development (`sessions.db` in the working directory). On Cloud Run the same SQLite file lives in the container — sessions do not persist across container restarts. Artifacts (PDFs, JSON, assembled video files) are stored per-session in `.adk/artifacts/` locally.
+**Local development:** ADK sessions use SQLite (`sessions.db` in the working directory). Artifacts are stored per-session in `.adk/artifacts/` locally.
+
+**Cloud Run:** Sessions are persisted to Cloud SQL (PostgreSQL) when `CLOUDSQL_INSTANCE` is set. Artifacts are stored in the GCS bucket named by `ARTIFACT_BUCKET`. Both survive container restarts and scale-to-zero. Without these env vars, Cloud Run falls back to SQLite + in-memory artifacts — not suitable for production.
+
+`main.py` detects both env vars at startup and configures the appropriate backends automatically. See [GCS_SETUP_INSTRUCTIONS.md](GCS_SETUP_INSTRUCTIONS.md) and [SQL_SETUP_INSTRUCTIONS.md](SQL_SETUP_INSTRUCTIONS.md) for one-time infrastructure setup.

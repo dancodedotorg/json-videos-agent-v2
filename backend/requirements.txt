@@ -1,8 +1,10 @@
 google-adk>=1.29.0
+google-cloud-storage      # required by GcsArtifactService
 python-dotenv
 uvicorn
 fastapi
-aiosqlite                 # async SQLite driver required by session_service_uri
+aiosqlite                 # async SQLite driver — local dev fallback
+asyncpg                   # async PostgreSQL driver — required for Cloud SQL sessions
 
 # Script dependencies — packages used by backend/skills/*/scripts/
 google-genai              # gemini-image-gen.py, gemini-audio-gen.py

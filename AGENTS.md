@@ -52,8 +52,10 @@ generation/
 ```
 
 ### Entry point and deployment
-- `main.py` — FastAPI entry point used by both `adk web` and Cloud Run
+- `main.py` — FastAPI entry point used by both `adk web` and Cloud Run. Detects `CLOUDSQL_INSTANCE` and `ARTIFACT_BUCKET` env vars at startup: if set, sessions go to Cloud SQL (PostgreSQL) and artifacts to GCS; otherwise falls back to SQLite + in-memory (local dev only).
 - `Dockerfile` — bakes `generation/units/` data snapshot and `backend/` into the image at build time
+
+See `GCS_SETUP_INSTRUCTIONS.md` and `SQL_SETUP_INSTRUCTIONS.md` for one-time Cloud Run infrastructure setup.
 
 ---
 

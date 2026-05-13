@@ -73,12 +73,23 @@ GOOGLE_API_KEY: "your_google_api_key_here"
 ELEVENLABS_API_KEY: "your_elevenlabs_api_key_here"
 GOOGLE_SERVICE_ACCOUNT_JSON: "your_base64_encoded_service_account_json_here"
 GOOGLE_GENAI_USE_VERTEXAI: "False"
+ARTIFACT_BUCKET: "video-agent-artifacts"
+CLOUDSQL_INSTANCE: "ai-tutor-dev-videos:us-central1:video-agent-sessions"
+DB_USER: "video_agent"
+DB_PASS: "your_db_password_here"
+DB_NAME: "video_agent_sessions"
 ```
 
 The values for all three secrets are already in `generation/tools/.env`:
 - `GOOGLE_API_KEY` — the `AIzaSy...` string
 - `ELEVENLABS_API_KEY` — the `sk_...` string
 - `GOOGLE_SERVICE_ACCOUNT_JSON` — the long `ewogIC...` base64 string
+- `ARTIFACT_BUCKET` — the GCS bucket name for artifact storage (literal string `video-agent-artifacts`)
+- `CLOUDSQL_INSTANCE` / `DB_USER` / `DB_PASS` / `DB_NAME` — Cloud SQL credentials (see `SQL_SETUP_INSTRUCTIONS.md`)
+
+> **Before deploying for the first time with GCS artifacts:** Complete the one-time IAM setup in `GCS_SETUP_INSTRUCTIONS.md` so the Cloud Run service account has permission to read and write the bucket.
+
+> **Before deploying for the first time with Cloud SQL sessions:** Complete the one-time setup in `SQL_SETUP_INSTRUCTIONS.md` to create the Cloud SQL instance, database, user, and IAM binding.
 
 ### 2b. Make sure `cloud-run-env.yaml` is gitignored
 
@@ -140,6 +151,7 @@ gcloud run deploy video-agent \
   --timeout=600 \
   --concurrency=1 \
   --memory=2Gi \
+  --add-cloudsql-instances=ai-tutor-dev-videos:us-central1:video-agent-sessions \
   --env-vars-file cloud-run-env.yaml
 ```
 
@@ -255,6 +267,7 @@ gcloud run deploy video-agent \
   --timeout=600 \
   --concurrency=1 \
   --memory=2Gi \
+  --add-cloudsql-instances=ai-tutor-dev-videos:us-central1:video-agent-sessions \
   --env-vars-file cloud-run-env.yaml
 ```
 

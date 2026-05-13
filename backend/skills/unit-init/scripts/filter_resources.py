@@ -36,7 +36,7 @@ Output:
         }
 
     Resources are merged from Student and Teacher audiences into a single list,
-    and only entries with type "Activity Guide", "Resource", or "Slides" are kept.
+    and only entries with type "Activity Guide", "Handout", "Resource", or "Slides" are kept.
 
 Example:
     python filter_resources.py resource_page_experiments/resources.json resource_page_experiments/lessons.json
@@ -50,7 +50,7 @@ _REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(_REPO_ROOT / "generation" / "tools"))
 from text_utils import normalize_data
 
-ALLOWED_RESOURCE_TYPES = {"Activity Guide", "Resource", "Slides"}
+ALLOWED_RESOURCE_TYPES = {"Activity Guide", "Handout", "Resource", "Slides"}
 
 
 def load_json(path: Path) -> object:

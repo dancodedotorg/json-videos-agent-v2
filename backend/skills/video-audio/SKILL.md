@@ -10,7 +10,7 @@ Generate audio and scene durations for a video.
 
 ## Path detection
 
-Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
+Extract UNIT, LESSON, and VIDEO from the user's message, or from session context if continuing from a previous step. Only ask if genuinely unknown.
 
 Use `execute` to list `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
 
@@ -77,7 +77,7 @@ Tell the user:
 - For Gemini: how many individual MP3 files were created
 
 Then tell them the next step:
-- "Tell the user to continue with the video-assemble skill for $UNIT / $LESSON / $VIDEO to assemble the final player-ready script."
+Ask: "Ready to assemble the final video? Say yes to continue."
 
 ## Gotchas
 

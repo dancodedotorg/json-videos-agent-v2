@@ -10,7 +10,7 @@ Generate HTML slides for a video.
 
 ## Path detection
 
-Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
+Extract UNIT, LESSON, and VIDEO from the user's message, or from session context if continuing from a previous step. Only ask if genuinely unknown.
 
 Use `execute` to list `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
 
@@ -349,4 +349,4 @@ python backend/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.j
 python backend/skills/video-html/scripts/update-pipeline.py $VIDEO_ROOT/script.json html=complete html_mode=html_including_image_templates
 ```
 
-Tell the user to continue with the video-audio-tags skill for $UNIT / $LESSON / $VIDEO to add TTS expression tags.
+Ask: "Ready to add TTS expression tags to the narration? Say yes to continue, or ask any questions about the slides first."

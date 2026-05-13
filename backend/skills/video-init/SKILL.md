@@ -128,6 +128,5 @@ Next: video-script will read the lesson source materials and generate the voiceo
   narration for each scene. You'll review and approve the script before HTML slides
   are generated.
 
-  Say: "Run video-script for $UNIT / $LESSON / $VIDEO"
-  Or ask me any questions about the setup before continuing.
+  Ready to write the voiceover script? Say yes to continue, or ask any questions about the setup first.
 ```

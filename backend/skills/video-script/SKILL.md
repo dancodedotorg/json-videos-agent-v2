@@ -18,7 +18,7 @@ Generate the voiceover script for a video.
 
 ## Path detection
 
-Extract UNIT, LESSON, and VIDEO from the user's message. If any are missing, ask for them before continuing.
+Extract UNIT, LESSON, and VIDEO from the user's message, or from session context if continuing from a previous step. Only ask if genuinely unknown.
 
 Use `execute` to list `generation/units/$UNIT/lessons/` and match LESSON to the closest folder name as LESSON_SLUG. If the unit directory doesn't exist, stop with `❌ Unit "$UNIT" not found.` If nothing matches, stop with `❌ No lesson matching "$LESSON" found.` If you fuzzy-matched, show `⚠️  Resolved "$LESSON" → "$LESSON_SLUG"`.
 
@@ -139,6 +139,5 @@ Next: video-html will generate an HTML slide for each scene. You'll go through
     1. Scene plan — visual approach (text layout, image gen, or SVG) per scene
     2. Content spec — exact copy and visuals per slide
 
-  Say: "Run video-html for $UNIT / $LESSON / $VIDEO"
-  Or ask me any questions before continuing.
+  Ready to generate the HTML slides? Say yes to continue, or ask any questions about the script first.
 ```
