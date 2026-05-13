@@ -28,10 +28,14 @@ These files load directly into a JSON-based video player. They are not MP4 files
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r backend/requirements.txt
-adk web backend/
+adk web backend/                   # ADK web UI only
+# — or —
+uvicorn main:app --reload          # full server: ADK web UI + live preview routes
 ```
 
 Open `http://localhost:8080` — the ADK web UI will show the `video_generation_agent` in the dropdown.
+
+> Use `uvicorn main:app --reload` instead of `adk web` if you want the live preview (`/preview/<unit>/<lesson>/<video>`) to work during pipeline runs. `adk web` bypasses `main.py` and does not register the preview routes.
 
 ## Workflow overview
 

@@ -75,8 +75,11 @@ Called as the final step after `video-assemble`. Saves `script_assembled_base64.
 All 11 skills are available via the `Skill` tool. The 4 lesson setup skills run using Claude Code's native file tools. The 7 video pipeline skills also run via Claude Code, calling Python scripts through `Bash`.
 
 ```bash
-adk web backend/   # starts the ADK web UI at localhost:8080
+adk web backend/              # ADK web UI at localhost:8080 (bypasses main.py — preview routes not available)
+uvicorn main:app --reload     # full server including preview routes and /player/ static mount
 ```
+
+Use `uvicorn main:app --reload` when you need the live preview (`/preview/...`) to work locally.
 
 **Production — Cloud Run**
 
@@ -94,6 +97,13 @@ backend/
   __init__.py                 ← Package init (imports agent for ADK discovery)
   requirements.txt            ← ADK + script dependencies (Python 3.12)
   requirements-py313.txt      ← Python 3.13+ variant (adds audioop-lts backport)
+  static/
+    json-video.js             ← <json-video> web component (served at /player/)
+    json-video-styles.js      ← web component CSS
+  preview/
+    preview.html              ← live preview player page
+    preview_routes.py         ← FastAPI SSE routes: /preview/, /preview/stream/, /preview/data/
+    preview_assemble.py       ← assembles player-ready JSON from current disk state (no zip)
   skills/
     unit-init/
       SKILL.md                ← L2: instructions + frontmatter (name, description, allowed-tools)

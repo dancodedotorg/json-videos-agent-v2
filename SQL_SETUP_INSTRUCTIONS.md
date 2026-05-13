@@ -159,7 +159,7 @@ gcloud run deploy video-agent \
   --project ai-tutor-dev-videos \
   --no-allow-unauthenticated \
   --timeout=600 \
-  --concurrency=1 \
+  --concurrency=2 \
   --memory=2Gi \
   --add-cloudsql-instances=ai-tutor-dev-videos:us-central1:video-agent-sessions \
   --env-vars-file cloud-run-env.yaml

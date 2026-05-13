@@ -149,11 +149,13 @@ gcloud run deploy video-agent \
   --project ai-tutor-dev-videos \
   --no-allow-unauthenticated \
   --timeout=600 \
-  --concurrency=1 \
+  --concurrency=2 \
   --memory=2Gi \
   --add-cloudsql-instances=ai-tutor-dev-videos:us-central1:video-agent-sessions \
   --env-vars-file cloud-run-env.yaml
 ```
+
+> **Why `--concurrency=2`:** The live preview (`/preview/stream/...`) holds a persistent SSE connection open for the duration of a session. With `--concurrency=1`, that connection fills the one allowed slot and agent requests get routed to a different instance with an empty filesystem — the preview never updates. `--concurrency=2` lets the SSE connection and agent requests share the same instance. Each session uses a unique unit/lesson/video path on disk, so two concurrent requests don't conflict.
 
 ### What happens during deployment
 1. Your source is uploaded to Cloud Storage
@@ -265,7 +267,7 @@ gcloud run deploy video-agent \
   --project ai-tutor-dev-videos \
   --no-allow-unauthenticated \
   --timeout=600 \
-  --concurrency=1 \
+  --concurrency=2 \
   --memory=2Gi \
   --add-cloudsql-instances=ai-tutor-dev-videos:us-central1:video-agent-sessions \
   --env-vars-file cloud-run-env.yaml

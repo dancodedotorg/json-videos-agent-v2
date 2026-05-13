@@ -1,6 +1,8 @@
 import os
+from pathlib import Path
 
 import uvicorn
+from fastapi.staticfiles import StaticFiles
 from google.adk.cli.fast_api import get_fast_api_app
 
 AGENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -26,6 +28,14 @@ app = get_fast_api_app(
     allow_origins=["*"],
     web=True,
 )
+
+from backend.preview.preview_routes import router as preview_router
+
+_player_dir = Path(__file__).parent / "backend" / "static"
+if _player_dir.exists():
+    app.mount("/player", StaticFiles(directory=str(_player_dir)), name="player")
+
+app.include_router(preview_router)
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))

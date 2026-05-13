@@ -21,3 +21,4 @@ docker-test-command.sh
 /**/retired/
 cloud-run-env.yaml
 docker-test-command.sh
+sessions.db

@@ -12,6 +12,8 @@ The ADK agent, all skills, and the custom Python tools.
 - `backend/agent.py` — root ADK agent definition (model, skills, tools, instructions)
 - `backend/skills/` — 11 modular skills following the agentskills.io spec
 - `backend/tools/` — 3 custom Python tools registered directly with the agent
+- `backend/static/` — static files served at `/player/` (`json-video.js`, `json-video-styles.js`)
+- `backend/preview/` — live preview SSE server (`preview_routes.py`, `preview_assemble.py`, `preview.html`)
 - `backend/requirements.txt` — dependencies for Cloud Run and local ADK sessions
 
 ### Generation (`generation/`)
