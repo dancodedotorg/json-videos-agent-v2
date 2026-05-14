@@ -1,2 +1,0 @@
-- AI bias: when a model favors certain information over others
-- alignment: ensuring an AI system's goals and outputs match human values, fairness, and safety

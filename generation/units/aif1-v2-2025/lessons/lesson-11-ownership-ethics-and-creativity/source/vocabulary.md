@@ -1,4 +1,0 @@
-- attribution: the act of giving credit to the original creator of a work, especially in the context of using or referencing their material
-- copyright: the legal right granted to the creator of an original work to use, distribute, and modify it
-- ethics: a guide for responsible choices about emerging technologies, ensuring privacy, consent, and safety for everyone
-- transparency: the practice of openly disclosing how something works, especially in terms of decision-making, data use, or AI processes

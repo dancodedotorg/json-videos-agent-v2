@@ -1,1 +1,0 @@
-- hallucination: when the model makes up false or misleading information that sounds real but isn't true

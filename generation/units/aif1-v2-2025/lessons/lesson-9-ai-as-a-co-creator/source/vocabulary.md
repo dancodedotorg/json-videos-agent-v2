@@ -1,1 +1,0 @@
-- co-creating: humans and AI working together, with humans providing creativity and direction, while AI assists by processing data, generating suggestions, or automating tasks

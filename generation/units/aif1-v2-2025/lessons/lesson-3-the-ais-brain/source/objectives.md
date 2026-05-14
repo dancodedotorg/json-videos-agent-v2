@@ -1,4 +1,0 @@
-- Analyze how training data shapes AI behavior and biases.
-- Evaluate how AI's learning affects accuracy and reliability.
-- Experiment with AI responses to identify learning patterns.
-- Explain how AI models, especially LLMs, use neural networks and training data.

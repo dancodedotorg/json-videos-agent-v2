@@ -1,4 +1,0 @@
-- Compare how AI-generated outputs change based on the type of input provided.
-- Experiment with different media inputs to observe AI's interpretation and limitations.
-- Explain that multimodal AI models process information from multiple types of input.
-- Identify privacy and ethical concerns when using AI with multimedia data.

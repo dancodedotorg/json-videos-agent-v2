@@ -1,4 +1,0 @@
-- Evaluate AI-generated content for accuracy and potential hallucinations.
-- Explain the potential risks and consequences of AI hallucinations in real-world scenarios.
-- Identify strategies to reduce AI hallucinations.
-- Recognize AI hallucinations and describe how they happen.

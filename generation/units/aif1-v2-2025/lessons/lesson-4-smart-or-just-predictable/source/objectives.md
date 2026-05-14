@@ -1,3 +1,0 @@
-- Compare AI and human performance to identify AI's strengths and weaknesses.
-- Evaluate AI's reliability and when human oversight is needed.
-- Justify when AI should or shouldn't be used in real-world cases.

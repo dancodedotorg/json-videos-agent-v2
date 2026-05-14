@@ -1,4 +1,0 @@
-- Analyze AI-generated responses to identify bias and assess its impact on fairness.
-- Experiment with AI prompts and data inputs to explore how they affect AI bias.
-- Explain how AI bias emerges from training data and influences AI-generated outputs.
-- Identify strategies for mitigating bias in AI systems and evaluating ethical considerations.
