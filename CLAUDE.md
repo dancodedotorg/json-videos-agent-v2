@@ -22,4 +22,4 @@ Example: `python scripts/fetch_unit.py` in `unit-init` → `python backend/skill
 
 ## Skill context
 
-The 4 lesson/unit setup skills (`unit-init`, `lesson-init`, `lesson-ground`, `lesson-plan`) are **Claude Code only** — they use Claude Code tools (Read, Write, Glob, Bash) and are not registered in the ADK web agent. The 7 video pipeline skills run in both Claude Code and ADK web.
+The 3 lesson/unit setup skills (`unit-init`, `lesson-init`, `lesson-ground`) are **Claude Code only** — they use Claude Code tools (Read, Write, Glob, Bash) and are not registered in the ADK web agent. The remaining 8 skills (`lesson-plan` + the 7 video pipeline skills) run in both Claude Code and ADK web.

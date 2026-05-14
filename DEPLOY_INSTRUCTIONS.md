@@ -91,6 +91,8 @@ The values for all three secrets are already in `generation/tools/.env`:
 
 > **Before deploying for the first time with Cloud SQL sessions:** Complete the one-time setup in `SQL_SETUP_INSTRUCTIONS.md` to create the Cloud SQL instance, database, user, and IAM binding.
 
+> **Before deploying for the first time with the GCS working-files volume:** Complete the one-time setup in `VOLUME_MOUNT_SETUP_INSTRUCTIONS.md` to create the `video-agent-generation-units` bucket, grant IAM, and configure the volume mount on the Cloud Run service.
+
 ### 2b. Make sure `cloud-run-env.yaml` is gitignored
 
 Add it to `.gitignore` if it isn't already:
@@ -155,7 +157,7 @@ gcloud run deploy video-agent \
   --env-vars-file cloud-run-env.yaml
 ```
 
-> **Why `--concurrency=2`:** The live preview (`/preview/stream/...`) holds a persistent SSE connection open for the duration of a session. With `--concurrency=1`, that connection fills the one allowed slot and agent requests get routed to a different instance with an empty filesystem — the preview never updates. `--concurrency=2` lets the SSE connection and agent requests share the same instance. Each session uses a unique unit/lesson/video path on disk, so two concurrent requests don't conflict.
+> **Why `--concurrency=2`:** The live preview (`/preview/stream/...`) holds a persistent SSE connection open for the duration of a session. With `--concurrency=1`, that SSE connection fills the one allowed slot and agent turn requests are queued. `--concurrency=2` lets both share the same instance. Each session uses a unique unit/lesson/video path, so two concurrent requests don't conflict on files. Note: `--max-instances=1` is set separately (via `VOLUME_MOUNT_SETUP_INSTRUCTIONS.md` Step 3) to ensure all requests always hit the same container.
 
 ### What happens during deployment
 1. Your source is uploaded to Cloud Storage
@@ -252,8 +254,8 @@ Expected: `["backend"]`
 1. Open the IAP URL in a browser
 2. Select `backend` from the agent dropdown
 3. Start a new session
-4. Type: `What videos are set up for aif1-v2-2025?`
-5. The agent should respond by listing available lessons/videos from the baked-in snapshot
+4. Type: `Make a video for aif1-v2-2025, lesson 2`
+5. The agent should call `ground_lesson`, fetch lesson metadata, and proceed to lesson planning
 
 ---
 
@@ -274,10 +276,6 @@ gcloud run deploy video-agent \
 ```
 
 Cloud Run creates a new revision and switches traffic to it with zero downtime.
-
-### Redeploy with an updated `generation/units/` snapshot
-
-After grounding new lessons locally (running `/lesson-ground` via `adk web`), redeploy using the same command above. The `Dockerfile` copies `generation/units/` at build time, so the new snapshot is baked into the new image automatically.
 
 > **Tip**: The pip install layer is cached as long as `backend/requirements.txt` hasn't changed. If you haven't touched requirements, the rebuild skips the slow install step and is much faster.
 

@@ -18,8 +18,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy agent package (skills live inside backend/)
 COPY backend/ ./backend/
 
-# Copy generation data snapshot (baked in at build time) and shared tool libraries
-COPY generation/units/ ./generation/units/
+# Create mount point for GCS FUSE volume (generation/units/ is NOT baked in — see VOLUME_MOUNT_SETUP_INSTRUCTIONS.md)
+RUN mkdir -p /app/generation/units
+
+# Copy shared tool libraries (code only, not data)
 COPY generation/tools/paths.py ./generation/tools/paths.py
 COPY generation/tools/text_utils.py ./generation/tools/text_utils.py
 COPY generation/tools/script_tool.py ./generation/tools/script_tool.py

@@ -28,7 +28,7 @@ generation/
 │   ├── script_review.py             ← standalone utility (not called by any skill)
 │   ├── .env                         ← API credentials (ELEVENLABS_API_KEY, GOOGLE_API_KEY, etc.)
 │   └── requirements.txt             ← local dev dependencies for skill scripts
-├── units/                           ← curriculum units (created as you initialize them)
+├── units/                           ← curriculum units — created at runtime by the agent, persisted in GCS (not in the repo or Docker image)
 │   ├── <unit-slug>/
 │   │   ├── unit.json                ← lesson list with resources, vocabulary, objectives per lesson
 │   │   ├── lessons.json             ← raw lesson list from Code.org API
@@ -55,9 +55,9 @@ generation/
 
 ### Entry point and deployment
 - `main.py` — FastAPI entry point used by both `adk web` and Cloud Run. Detects `CLOUDSQL_INSTANCE` and `ARTIFACT_BUCKET` env vars at startup: if set, sessions go to Cloud SQL (PostgreSQL) and artifacts to GCS; otherwise falls back to SQLite + in-memory (local dev only).
-- `Dockerfile` — bakes `generation/units/` data snapshot and `backend/` into the image at build time
+- `Dockerfile` — bakes `backend/` and `generation/tools/*.py` into the image; `generation/units/` is NOT included (it lives in GCS, mounted at runtime)
 
-See `GCS_SETUP_INSTRUCTIONS.md` and `SQL_SETUP_INSTRUCTIONS.md` for one-time Cloud Run infrastructure setup.
+See `GCS_SETUP_INSTRUCTIONS.md`, `SQL_SETUP_INSTRUCTIONS.md`, and `VOLUME_MOUNT_SETUP_INSTRUCTIONS.md` for one-time Cloud Run infrastructure setup.
 
 ---
 
@@ -80,12 +80,12 @@ Each video's `script.json` stores `unit`, `lesson`, and `target_objectives` so a
 The 11 skills are split across two running contexts:
 
 **Claude Code only** (use Skill tool locally; these are NOT registered in the ADK web agent):
-- `unit-init`, `lesson-init`, `lesson-ground`, `lesson-plan`
+- `unit-init`, `lesson-init`, `lesson-ground`
 
 **ADK web + Claude Code** (registered in `backend/agent.py` and available in both contexts):
-- `video-init`, `video-script`, `video-html`, `video-audio-tags`, `video-audio`, `video-assemble`, `video-create`
+- `lesson-plan`, `video-init`, `video-script`, `video-html`, `video-audio-tags`, `video-audio`, `video-assemble`, `video-create`
 
-When running `adk web backend/` or the deployed Cloud Run service, lesson grounding is handled by the `ground_lesson` Python tool rather than the `lesson-ground` skill.
+When running `adk web backend/` or the deployed Cloud Run service, lesson grounding is handled by the `ground_lesson` Python tool rather than the `lesson-ground` skill. Lesson planning (`lesson-plan`) is now registered in the agent and runs as part of the standard entry point flow.
 
 ---
 

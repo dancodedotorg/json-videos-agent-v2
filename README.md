@@ -41,15 +41,26 @@ Open `http://localhost:8080` — the ADK web UI will show the `video_generation_
 
 Video generation follows a staged pipeline. Setup steps run once per unit/lesson; the video pipeline runs per video.
 
+**In the ADK web agent** (the primary workflow):
+
+Tell the agent the unit `/s/` slug and lesson number — it handles grounding, planning, and video generation end-to-end.
+
+| What the agent does | Skill / tool |
+|---|---|
+| Fetches and grounds lesson source materials | `ground_lesson` tool |
+| Analyzes objectives, recommends video split, initializes video folders | `lesson-plan` skill |
+| Runs the full video pipeline per video | `video-script` → `video-html` → `video-audio-tags` → `video-audio` → `video-assemble` |
+
+For standalone videos (no Code.org unit), tell the agent the lesson name and provide your own source materials — it skips lesson-plan and goes directly to video generation.
+
+**In Claude Code** (advanced / bulk operations only):
+
 | Step | Skill | What it does |
 |---|---|---|
 | 1 | `/unit-init <unit-slug>` | Fetches lesson list and resources from Code.org API |
 | 2 | `/lesson-init <unit> <lesson>` | Creates the lesson folder and `sources.csv` |
 | 3 | `/lesson-ground <unit> <lesson>` | Fetches source materials (slides, objectives, vocabulary) |
-| 4 | `/lesson-plan <unit> <lesson>` | Analyzes objectives, recommends video split, initializes all video folders |
-| 5 | `/video-create <unit> <lesson> <video>` | Runs the full video pipeline: script → HTML slides → audio → assembled JSON |
-
-Steps 1–4 run in Claude Code. Step 5 can run in Claude Code or the ADK web UI.
+| 4 | `/video-create <unit> <lesson> <video>` | Runs the full video pipeline |
 
 The `/video-create` skill orchestrates these sub-stages:
 
@@ -68,7 +79,7 @@ The `/video-create` skill orchestrates these sub-stages:
 backend/          ADK agent definition, all skills, custom tools
 generation/       Curriculum data and shared script libraries
   tools/          Shared Python libs (paths.py, script_tool.py, text_utils.py)
-  units/          Curriculum units — populated as you run /unit-init
+  units/          Curriculum units — created by the agent at runtime, persisted in GCS
 main.py           FastAPI entry point (adk web + Cloud Run)
 Dockerfile        Container definition for Cloud Run deployment
 ```

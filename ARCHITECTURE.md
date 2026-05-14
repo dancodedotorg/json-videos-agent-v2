@@ -20,7 +20,7 @@ Skills use the agentskills.io progressive disclosure pattern to keep context usa
 - **L2 (<5,000 tokens):** Full `SKILL.md` instructions. Loaded on demand via `load_skill` when the agent activates a skill.
 - **L3 (as needed):** Reference files in `references/` and `assets/`. Loaded via `load_skill_resource` only when the skill instructions call for them.
 
-This means the agent starts each session with roughly 700 tokens of L1 metadata (7 skills × ~100 tokens) rather than the full instruction set for all skills.
+This means the agent starts each session with roughly 800 tokens of L1 metadata (8 skills × ~100 tokens) rather than the full instruction set for all skills.
 
 ---
 
@@ -33,7 +33,7 @@ This means the agent starts each session with roughly 700 tokens of L1 metadata 
 | `unit-init` | No | Claude Code only | Fetch unit lesson list from Code.org API, create `unit.json` |
 | `lesson-init` | No | Claude Code only | Create lesson folder and auto-populate `sources.csv` |
 | `lesson-ground` | No | Claude Code only | Fetch source materials (slides, levels, objectives, vocab) |
-| `lesson-plan` | No | Claude Code only | Analyze objectives, recommend video split, initialize all video folders |
+| `lesson-plan` | Yes | ADK web + Claude Code | Analyze objectives, recommend video split, initialize all video folders |
 | `video-init` | Yes | ADK web + Claude Code | Initialize video folder and `script.json` |
 | `video-script` | Yes | ADK web + Claude Code | Generate narration scenes from source materials |
 | `video-html` | Yes | ADK web + Claude Code | Generate HTML slides (template or AI image approach) |
@@ -42,7 +42,7 @@ This means the agent starts each session with roughly 700 tokens of L1 metadata 
 | `video-assemble` | Yes | ADK web + Claude Code | Embed all assets as base64, produce final JSON |
 | `video-create` | Yes | ADK web + Claude Code | Orchestrate the full video pipeline (stages above) |
 
-The 4 lesson/unit setup skills use Claude Code tools (`Read`, `Write`, `Glob`, `Bash`) in their `allowed-tools` frontmatter. They are not loaded into the ADK web agent. In ADK web sessions, lesson setup is handled by the `ground_lesson` custom tool instead.
+The 3 remaining lesson/unit setup skills (`unit-init`, `lesson-init`, `lesson-ground`) use Claude Code tools (`Read`, `Write`, `Glob`, `Bash`) and are not loaded into the ADK web agent. In ADK web sessions, lesson grounding is handled by the `ground_lesson` custom tool. `lesson-plan` has been updated to use ADK tool names and is now registered in the agent.
 
 ---
 
@@ -72,7 +72,7 @@ Called as the final step after `video-assemble`. Saves `script_assembled_base64.
 
 **Local development — Claude Code**
 
-All 11 skills are available via the `Skill` tool. The 4 lesson setup skills run using Claude Code's native file tools. The 7 video pipeline skills also run via Claude Code, calling Python scripts through `Bash`.
+All 11 skills are available via the `Skill` tool. The 3 Claude Code-only setup skills (`unit-init`, `lesson-init`, `lesson-ground`) run using Claude Code's native file tools. The remaining 8 skills (`lesson-plan` + the 7 video pipeline skills) also run via Claude Code, calling Python scripts through `Bash`.
 
 ```bash
 adk web backend/              # ADK web UI at localhost:8080 (bypasses main.py — preview routes not available)
@@ -83,7 +83,7 @@ Use `uvicorn main:app --reload` when you need the live preview (`/preview/...`) 
 
 **Production — Cloud Run**
 
-Only the 7 video pipeline skills are registered. The `ground_lesson` tool handles lesson setup. The `generation/units/` snapshot is baked into the Docker image at build time — source materials must be fetched locally first, then the container rebuilt to include them.
+Eight skills are registered (`lesson-plan` + the 7 video pipeline skills). The `ground_lesson` tool handles lesson grounding. `generation/units/` is not in the Docker image — it is a GCS bucket mounted at `/app/generation/units/` via Cloud Run's native GCS FUSE volume mount, so all working files (lesson folders, grounded sources, script.json, scenes, audio) persist across container restarts and redeployments.
 
 See [DEPLOY_INSTRUCTIONS.md](DEPLOY_INSTRUCTIONS.md) for the full deployment guide.
 
@@ -193,7 +193,7 @@ generation/
     requirements.txt          ← local dev pip dependencies for skill scripts
     .env                      ← API keys: GOOGLE_API_KEY, ELEVENLABS_API_KEY, GOOGLE_SERVICE_ACCOUNT_JSON
     .env_example              ← template showing required keys
-  units/                      ← populated as you run /unit-init for each curriculum unit
+  units/                      ← populated at runtime by the agent; stored in GCS (not in repo or Docker image — see VOLUME_MOUNT_SETUP_INSTRUCTIONS.md)
     <unit-slug>/
       unit.json               ← clean lesson list with per-lesson objectives, vocab, resources
       lessons.json            ← raw lesson list from Code.org API (intermediate)
@@ -230,17 +230,23 @@ generation/
       lessons/                ← lessons not tied to a curriculum unit (user-chosen slugs)
 
 main.py                       ← FastAPI entry point: detects CLOUDSQL_INSTANCE + ARTIFACT_BUCKET env vars; routes to Cloud SQL sessions + GCS artifacts on Cloud Run, SQLite + InMemory locally
-Dockerfile                    ← builds from python:3.12-slim; bakes backend/ + generation/units/ + generation/tools/*.py
+Dockerfile                    ← builds from python:3.12-slim; bakes backend/ + generation/tools/*.py; generation/units/ is NOT baked in (GCS volume mount)
 cloud-run-env.yaml            ← env vars for Cloud Run deployment (gitignored — contains secrets)
 DEPLOY_INSTRUCTIONS.md        ← step-by-step Cloud Run + IAP deployment guide
 ```
 
 ---
 
-## Session state
+## Session state and persistence
 
-**Local development:** ADK sessions use SQLite (`sessions.db` in the working directory). Artifacts are stored per-session in `.adk/artifacts/` locally.
+**Local development:** ADK sessions use SQLite (`sessions.db` in the working directory). Artifacts are stored per-session in `.adk/artifacts/` locally. Working files (`generation/units/`) live on the local filesystem.
 
-**Cloud Run:** Sessions are persisted to Cloud SQL (PostgreSQL) when `CLOUDSQL_INSTANCE` is set. Artifacts are stored in the GCS bucket named by `ARTIFACT_BUCKET`. Both survive container restarts and scale-to-zero. Without these env vars, Cloud Run falls back to SQLite + in-memory artifacts — not suitable for production.
+**Cloud Run:** Three separate persistence layers, each solving a different problem:
 
-`main.py` detects both env vars at startup and configures the appropriate backends automatically. See [GCS_SETUP_INSTRUCTIONS.md](GCS_SETUP_INSTRUCTIONS.md) and [SQL_SETUP_INSTRUCTIONS.md](SQL_SETUP_INSTRUCTIONS.md) for one-time infrastructure setup.
+| What | Where | Why |
+|---|---|---|
+| ADK session history | Cloud SQL (PostgreSQL) via `CLOUDSQL_INSTANCE` | Conversation state must survive container restarts and be consistent across requests |
+| Session artifacts (source PDFs, assembled videos) | GCS bucket via `ARTIFACT_BUCKET` | ADK artifact API needs a durable store; assembled JSONs and ZIPs are too large for session history |
+| Working files (`generation/units/`) | GCS bucket mounted at `/app/generation/units/` via Cloud Run GCS FUSE volume | Cloud Run containers are ephemeral — without a persistent mount, any files written during a pipeline run (script.json, scenes/*.html, audio/*.mp3) are lost when the instance restarts or scales to zero. GCS FUSE makes the bucket appear as a local filesystem, so all existing code writes to paths as normal and files survive indefinitely. GCS provides strongly consistent reads after writes, so all instances see the same files — multiple instances are safe. `--max-instances=3` is set to cap scaling for this single-user tool (3 instances × concurrency 2 = 6 slots ≈ 3 simultaneous sessions). |
+
+`main.py` detects `CLOUDSQL_INSTANCE` and `ARTIFACT_BUCKET` at startup and configures the appropriate backends automatically. The GCS volume mount is configured in the Cloud Run service definition (not in `main.py`). See [GCS_SETUP_INSTRUCTIONS.md](GCS_SETUP_INSTRUCTIONS.md), [SQL_SETUP_INSTRUCTIONS.md](SQL_SETUP_INSTRUCTIONS.md), and [VOLUME_MOUNT_SETUP_INSTRUCTIONS.md](VOLUME_MOUNT_SETUP_INSTRUCTIONS.md) for one-time infrastructure setup.

@@ -1,7 +1,7 @@
 ---
 name: lesson-plan
 description: Analyzes lesson source materials and objectives to recommend a video plan, then initializes all video folders from the approved plan. Use when setting up a new lesson — do not use /video-init after running this skill.
-allowed-tools: Read Write Bash(python *) Glob
+allowed-tools: read_file write_file execute load_artifacts load_skill_resource
 metadata:
   argument-hint: "<unit-slug> <lesson-slug>"
 ---
@@ -14,9 +14,12 @@ Parse `$ARGUMENTS` as two parts: `UNIT` (first word) and `LESSON` (everything af
 
 ## Step 0: Resolve lesson slug
 
-Use `Glob` with pattern `generation/units/$UNIT/lessons/*/` to list available lesson folders.
+Use `execute` to list available lesson folders:
+```
+find generation/units/$UNIT/lessons -maxdepth 1 -mindepth 1 -type d
+```
 
-If the unit directory yields no results, stop with `❌ Unit "$UNIT" not found.`
+If the command returns no results or errors, stop with `❌ Unit "$UNIT" not found.`
 
 Match LESSON to a folder name using this priority order:
 1. Exact match (case-insensitive)
@@ -29,12 +32,12 @@ Use `LESSON_SLUG` for all subsequent paths.
 
 ## Step 1: Check grounding
 
-Read `generation/units/$UNIT/lessons/$LESSON_SLUG/lesson-state.json`. If `grounding != "complete"`, stop:
+Use `read_file` to read `generation/units/$UNIT/lessons/$LESSON_SLUG/lesson-state.json`. If `grounding != "complete"`, stop:
 ```
 ❌ Lesson not grounded. Run /lesson-ground $UNIT $LESSON_SLUG first.
 ```
 
-If `lesson-plan.json` already exists in the lesson folder, show the user:
+Use `read_file` to check if `generation/units/$UNIT/lessons/$LESSON_SLUG/lesson-plan.json` exists. If it does, show the user:
 ```
 A video plan already exists for this lesson:
   <list the video names and their modes>
@@ -71,11 +74,13 @@ Store the requested types and any co-create briefs.
 
 ## Step 3: Read source materials
 
-Read all of the following:
-- `generation/units/$UNIT/lessons/$LESSON_SLUG/source/objectives.md`
-- `generation/units/$UNIT/lessons/$LESSON_SLUG/source/vocabulary.md`
-- `generation/units/$UNIT/lessons/$LESSON_SLUG/source/slides_data.json`
-- All `lesson_*_levels.json` files in the source folder
+Call `load_artifacts` with the following artifact names (these were saved when `load_lesson_sources` was called earlier in the session):
+- `$LESSON_SLUG__objectives.md`
+- `$LESSON_SLUG__vocabulary.md`
+- `$LESSON_SLUG__slides_data.json`
+- `$LESSON_SLUG__lesson_levels.json`
+
+Do NOT use `read_file` for source materials — use `load_artifacts` instead (consistent with `video-script`).
 
 ## Gotchas
 
@@ -156,7 +161,7 @@ Video names should be lowercase-hyphenated slugs, descriptive but short (2–4 w
 
 ## Step 6: Write lesson-plan.json
 
-Write `generation/units/$UNIT/lessons/$LESSON_SLUG/lesson-plan.json`:
+Use `write_file` to write `generation/units/$UNIT/lessons/$LESSON_SLUG/lesson-plan.json`:
 
 ```json
 {
