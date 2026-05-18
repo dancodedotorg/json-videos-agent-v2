@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Preview</title>
+  <script type="module" src="/player/json-video.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    json-video { width: min(90vw, 160vh); }
+    #status {
+      color: #888;
+      font-size: 13px;
+      margin-top: 14px;
+    }
+    #stage-bar {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .stage {
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: #222;
+      color: #555;
+    }
+    .stage.done { background: #1a4d2e; color: #4ade80; }
+  </style>
+</head>
+<body>
+  <json-video id="player" controls></json-video>
+  <div id="status">Waiting for pipeline to start...</div>
+  <div id="stage-bar">
+    <div class="stage" id="s-script">script</div>
+    <div class="stage" id="s-html">html</div>
+    <div class="stage" id="s-audio">audio</div>
+    <div class="stage" id="s-assembled">assembled</div>
+  </div>
+
+  <script>
+    const player = document.getElementById('player');
+    const statusEl = document.getElementById('status');
+
+    const es = new EventSource(PREVIEW_STREAM_URL);
+
+    es.onmessage = (e) => {
+      let event;
+      try { event = JSON.parse(e.data); } catch { return; }
+      if (event.type !== 'STATE_SNAPSHOT') return;
+
+      const snap = event.snapshot;
+      if (snap._waiting) {
+        statusEl.textContent = 'Waiting for pipeline to start...';
+        return;
+      }
+
+      player.src = 'data:application/json,' + encodeURIComponent(JSON.stringify(snap));
+
+      const p = snap.pipeline || {};
+      setStage('s-script',    p.script    === 'complete');
+      setStage('s-html',      p.html      === 'complete');
+      setStage('s-audio',     p.audio     === 'complete');
+      setStage('s-assembled', p.assembled === true);
+
+      statusEl.textContent = snap.video_name ? `Previewing: ${snap.video_name}` : 'Generating...';
+    };
+
+    es.onerror = () => {
+      statusEl.textContent = 'Connection lost — retrying...';
+    };
+
+    function setStage(id, done) {
+      document.getElementById(id).className = 'stage' + (done ? ' done' : '');
+    }
+  </script>
+</body>
+</html>

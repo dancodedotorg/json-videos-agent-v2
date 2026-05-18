@@ -1,0 +1,18 @@
+google-adk>=1.29.0
+google-cloud-storage      # required by GcsArtifactService
+python-dotenv
+uvicorn
+fastapi
+aiofiles                  # required by FastAPI StaticFiles for async file serving
+aiosqlite                 # async SQLite driver — local dev fallback
+asyncpg                   # async PostgreSQL driver — required for Cloud SQL sessions
+
+# Script dependencies — packages used by backend/skills/*/scripts/
+google-genai              # gemini-image-gen.py, gemini-audio-gen.py
+google-api-python-client  # googleapiclient — Slides/Docs fetch in lesson-ground
+google-auth-httplib2      # OAuth transport for service account auth
+xhtml2pdf                 # PDF rendering in lesson-ground lib scripts
+elevenlabs                # elevenlabs-gen.py
+pydub                     # audio MP3 processing
+Pillow                    # image handling in gemini-image-gen.py
+pydantic                  # used in gemini-image-gen.py

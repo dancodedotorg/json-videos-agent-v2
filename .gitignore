@@ -3,13 +3,16 @@ pages/
 .env
 .venv
 *.pyc
+.adk/
 
 json_video_agent/
 lesson_summary_experiments/
 refactor-agent-to-skills.md
-documentation/
+
+generation/units/
 generation/tools/generated-images/
 resource_page_experiments/
+docker-test-command.sh
 
 *.mp3
 *.png
@@ -17,3 +20,6 @@ resource_page_experiments/
 /generation/**/*.html
 /**/__pycache__/
 /**/retired/
+cloud-run-env.yaml
+docker-test-command.sh
+sessions.db

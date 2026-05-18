@@ -1,0 +1,37 @@
+# Python environments
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Local ADK session data and artifacts
+.adk/
+session.json
+
+# Skills are now in backend/; the old .agents directory (if any remnants exist) is not needed
+.agents/
+
+# Frontend player — not needed in the container
+video-json-player/
+
+# Documentation and planning — not needed in the container
+documentation/
+plans/
+cloud-run-qa.md
+
+# Credentials — never baked into the image
+.env
+generation/tools/.env
+cloud-run-env.yaml
+docker-test-command.sh
+
+# Generated images produced locally
+generation/tools/generated-images/
+
+# Git history — not needed in the container
+.git/
+.gitignore
+
+# Editor metadata
+.vscode/
+*.code-workspace
