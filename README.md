@@ -4,6 +4,8 @@ An AI agent that generates educational video content for Code.org lessons. Built
 
 This is based on the Claude Skill version of making JSON videos - for a broader overview of the skills and how all this works, [Check out this repo first](https://github.com/dancodedotorg/json-video-generation-claude)
 
+[Click here to see an overview of using Google ADK to generate videos](https://drive.google.com/file/d/1VRPy2zppCBYX8oYeoynNxymsvp_eda4X/view?usp=drive_link)
+
 ## What this produces
 
 Each "video" is a structured JSON file (`script_assembled_base64.json`) containing:
